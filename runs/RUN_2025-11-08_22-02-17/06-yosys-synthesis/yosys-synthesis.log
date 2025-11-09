@@ -1,0 +1,1978 @@
+
+ /----------------------------------------------------------------------------\
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |  Copyright (C) 2012 - 2024  Claire Xenia Wolf <claire@yosyshq.com>         |
+ |  Distributed under an ISC-like license, type "license" to see terms        |
+ \----------------------------------------------------------------------------/
+ Yosys 0.46 (git sha1 e97731b9dda91fa5fa53ed87df7c34163ba59a41, clang++ 17.0.6 -fPIC -O3)
+Loaded SDC plugin
+
+1. Executing Liberty frontend: /home/rg/.volare/volare/sky130/versions/0fe599b2afb6708d281543108caf8310912f54af/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+Imported 428 cell types from liberty file.
+[INFO] Using SDC file '/mnt/c/Users/User/Desktop/Cache_Controller/runs/RUN_2025-11-08_22-02-17/06-yosys-synthesis/synthesis.abc.sdc' for ABC…
+
+2. Executing Verilog-2005 frontend: ./src/Cache_Controller.v
+Parsing SystemVerilog input from `./src/Cache_Controller.v' to AST representation.
+Storing AST representation for module `$abstract\cache_controller'.
+Successfully finished Verilog frontend.
+
+3. Executing Verilog-2005 frontend: ./src/data_array.v
+Parsing SystemVerilog input from `./src/data_array.v' to AST representation.
+Storing AST representation for module `$abstract\data_array'.
+Successfully finished Verilog frontend.
+
+4. Executing Verilog-2005 frontend: ./src/fsm_logic.v
+Parsing SystemVerilog input from `./src/fsm_logic.v' to AST representation.
+Storing AST representation for module `$abstract\fsm_logic'.
+Successfully finished Verilog frontend.
+
+5. Executing Verilog-2005 frontend: ./src/lru_array.v
+Parsing SystemVerilog input from `./src/lru_array.v' to AST representation.
+Storing AST representation for module `$abstract\lru_array'.
+Successfully finished Verilog frontend.
+
+6. Executing Verilog-2005 frontend: ./src/tag_array.v
+Parsing SystemVerilog input from `./src/tag_array.v' to AST representation.
+Storing AST representation for module `$abstract\tag_array'.
+Successfully finished Verilog frontend.
+
+7. Executing HIERARCHY pass (managing design hierarchy).
+
+8. Executing AST frontend in derive mode using pre-parsed AST for module `\cache_controller'.
+Generating RTLIL representation for module `\cache_controller'.
+
+8.1. Analyzing design hierarchy..
+Top module:  \cache_controller
+Parameter \address_width = 32
+Parameter \index_width = 4
+Parameter \offset_width = 3
+Parameter \line_width = 64
+
+8.2. Executing AST frontend in derive mode using pre-parsed AST for module `\fsm_logic'.
+Parameter \address_width = 32
+Parameter \index_width = 4
+Parameter \offset_width = 3
+Parameter \line_width = 64
+Generating RTLIL representation for module `$paramod$f170207f7a34c7ba14419f1c68895dd64f8561d4\fsm_logic'.
+Parameter \index_width = 4
+
+8.3. Executing AST frontend in derive mode using pre-parsed AST for module `\lru_array'.
+Parameter \index_width = 4
+Generating RTLIL representation for module `$paramod\lru_array\index_width=s32'00000000000000000000000000000100'.
+Parameter \index_width = 4
+Parameter \line_width = 64
+
+8.4. Executing AST frontend in derive mode using pre-parsed AST for module `\data_array'.
+Parameter \index_width = 4
+Parameter \line_width = 64
+Generating RTLIL representation for module `$paramod$3b9006f2b30b7cd8747225d117af12cd51d29e53\data_array'.
+Parameter \address_width = 32
+Parameter \index_width = 4
+Parameter \offset_width = 3
+
+8.5. Executing AST frontend in derive mode using pre-parsed AST for module `\tag_array'.
+Parameter \address_width = 32
+Parameter \index_width = 4
+Parameter \offset_width = 3
+Generating RTLIL representation for module `$paramod$eaa5b734c125d073bf4ad71bf18816b7d6471fe9\tag_array'.
+
+8.6. Analyzing design hierarchy..
+Top module:  \cache_controller
+Used module:     $paramod$f170207f7a34c7ba14419f1c68895dd64f8561d4\fsm_logic
+Used module:     $paramod\lru_array\index_width=s32'00000000000000000000000000000100
+Used module:     $paramod$3b9006f2b30b7cd8747225d117af12cd51d29e53\data_array
+Used module:     $paramod$eaa5b734c125d073bf4ad71bf18816b7d6471fe9\tag_array
+
+8.7. Analyzing design hierarchy..
+Top module:  \cache_controller
+Used module:     $paramod$f170207f7a34c7ba14419f1c68895dd64f8561d4\fsm_logic
+Used module:     $paramod\lru_array\index_width=s32'00000000000000000000000000000100
+Used module:     $paramod$3b9006f2b30b7cd8747225d117af12cd51d29e53\data_array
+Used module:     $paramod$eaa5b734c125d073bf4ad71bf18816b7d6471fe9\tag_array
+Removing unused module `$abstract\tag_array'.
+Removing unused module `$abstract\lru_array'.
+Removing unused module `$abstract\fsm_logic'.
+Removing unused module `$abstract\data_array'.
+Removing unused module `$abstract\cache_controller'.
+Removed 5 unused modules.
+Renaming module cache_controller to cache_controller.
+
+9. Generating Graphviz representation of design.
+Writing dot description to `/mnt/c/Users/User/Desktop/Cache_Controller/runs/RUN_2025-11-08_22-02-17/06-yosys-synthesis/hierarchy.dot'.
+Dumping module cache_controller to page 1.
+
+10. Executing TRIBUF pass.
+
+11. Executing HIERARCHY pass (managing design hierarchy).
+
+11.1. Analyzing design hierarchy..
+Top module:  \cache_controller
+Used module:     $paramod$f170207f7a34c7ba14419f1c68895dd64f8561d4\fsm_logic
+Used module:     $paramod\lru_array\index_width=s32'00000000000000000000000000000100
+Used module:     $paramod$3b9006f2b30b7cd8747225d117af12cd51d29e53\data_array
+Used module:     $paramod$eaa5b734c125d073bf4ad71bf18816b7d6471fe9\tag_array
+
+11.2. Analyzing design hierarchy..
+Top module:  \cache_controller
+Used module:     $paramod$f170207f7a34c7ba14419f1c68895dd64f8561d4\fsm_logic
+Used module:     $paramod\lru_array\index_width=s32'00000000000000000000000000000100
+Used module:     $paramod$3b9006f2b30b7cd8747225d117af12cd51d29e53\data_array
+Used module:     $paramod$eaa5b734c125d073bf4ad71bf18816b7d6471fe9\tag_array
+Removed 0 unused modules.
+
+12. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+13. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Marked 2 switch rules as full_case in process $proc$./src/data_array.v:21$45 in module $paramod$3b9006f2b30b7cd8747225d117af12cd51d29e53\data_array.
+Marked 1 switch rules as full_case in process $proc$./src/lru_array.v:14$35 in module $paramod\lru_array\index_width=s32'00000000000000000000000000000100.
+Marked 13 switch rules as full_case in process $proc$./src/fsm_logic.v:111$16 in module $paramod$f170207f7a34c7ba14419f1c68895dd64f8561d4\fsm_logic.
+Marked 1 switch rules as full_case in process $proc$./src/fsm_logic.v:103$15 in module $paramod$f170207f7a34c7ba14419f1c68895dd64f8561d4\fsm_logic.
+Marked 6 switch rules as full_case in process $proc$./src/fsm_logic.v:65$1 in module $paramod$f170207f7a34c7ba14419f1c68895dd64f8561d4\fsm_logic.
+Marked 2 switch rules as full_case in process $proc$./src/tag_array.v:32$66 in module $paramod$eaa5b734c125d073bf4ad71bf18816b7d6471fe9\tag_array.
+Removed a total of 0 dead cases.
+
+14. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 1 redundant assignment.
+Promoted 54 assignments to connections.
+
+15. Executing PROC_INIT pass (extract init attributes).
+
+16. Executing PROC_ARST pass (detect async resets in processes).
+Found async reset \reset in `$paramod$f170207f7a34c7ba14419f1c68895dd64f8561d4\fsm_logic.$proc$./src/fsm_logic.v:103$15'.
+
+17. Executing PROC_ROM pass (convert switches to ROMs).
+Converted 0 switches.
+<suppressed ~24 debug messages>
+
+18. Executing PROC_MUX pass (convert decision trees to multiplexers).
+Creating decoders for process `$paramod$3b9006f2b30b7cd8747225d117af12cd51d29e53\data_array.$proc$./src/data_array.v:21$45'.
+     1/6: $1$memwr$\data1$./src/data_array.v:29$44_EN[63:0]$59
+     2/6: $1$memwr$\data1$./src/data_array.v:29$44_DATA[63:0]$58
+     3/6: $1$memwr$\data1$./src/data_array.v:29$44_ADDR[3:0]$57
+     4/6: $1$memwr$\data0$./src/data_array.v:26$43_EN[63:0]$56
+     5/6: $1$memwr$\data0$./src/data_array.v:26$43_DATA[63:0]$55
+     6/6: $1$memwr$\data0$./src/data_array.v:26$43_ADDR[3:0]$54
+Creating decoders for process `$paramod\lru_array\index_width=s32'00000000000000000000000000000100.$proc$./src/lru_array.v:14$35'.
+     1/3: $1$memwr$\lru_mem$./src/lru_array.v:16$34_EN[0:0]$41
+     2/3: $1$memwr$\lru_mem$./src/lru_array.v:16$34_DATA[0:0]$40
+     3/3: $1$memwr$\lru_mem$./src/lru_array.v:16$34_ADDR[3:0]$39
+Creating decoders for process `$paramod$f170207f7a34c7ba14419f1c68895dd64f8561d4\fsm_logic.$proc$./src/fsm_logic.v:111$16'.
+     1/79: $7\cpu_rdata[63:0]
+     2/79: $5\data_in0[63:0]
+     3/79: $5\data_we0[0:0]
+     4/79: $6\data_in1[63:0]
+     5/79: $6\data_we1[0:0]
+     6/79: $4\lru_in[0:0]
+     7/79: $4\lru_we[0:0]
+     8/79: $2\cpu_ready[0:0]
+     9/79: $6\cpu_rdata[63:0]
+    10/79: $5\data_in1[63:0]
+    11/79: $4\data_in0[63:0]
+    12/79: $5\data_we1[0:0]
+    13/79: $4\data_we0[0:0]
+    14/79: $6\dirty_in[0:0]
+    15/79: $6\valid_in[0:0]
+    16/79: $6\tag_in[24:0]
+    17/79: $6\tag_way[0:0]
+    18/79: $6\tag_we[0:0]
+    19/79: $4\mem_wdata[63:0]
+    20/79: $4\mem_addr[31:0]
+    21/79: $3\mem_wdata[63:0]
+    22/79: $3\mem_addr[31:0]
+    23/79: $2\mem_wdata[63:0]
+    24/79: $2\mem_addr[31:0]
+    25/79: $5\dirty_in[0:0]
+    26/79: $5\valid_in[0:0]
+    27/79: $5\tag_in[24:0]
+    28/79: $5\tag_way[0:0]
+    29/79: $5\tag_we[0:0]
+    30/79: $4\data_in1[63:0]
+    31/79: $4\data_we1[0:0]
+    32/79: $5\cpu_rdata[63:0]
+    33/79: $3\lru_in[0:0]
+    34/79: $3\lru_we[0:0]
+    35/79: $3\data_in1[63:0]
+    36/79: $3\data_we1[0:0]
+    37/79: $4\dirty_in[0:0]
+    38/79: $4\valid_in[0:0]
+    39/79: $4\tag_in[24:0]
+    40/79: $4\tag_way[0:0]
+    41/79: $4\tag_we[0:0]
+    42/79: $4\cpu_rdata[63:0]
+    43/79: $3\dirty_in[0:0]
+    44/79: $3\valid_in[0:0]
+    45/79: $3\tag_in[24:0]
+    46/79: $3\tag_way[0:0]
+    47/79: $3\tag_we[0:0]
+    48/79: $3\data_in0[63:0]
+    49/79: $3\data_we0[0:0]
+    50/79: $3\cpu_rdata[63:0]
+    51/79: $2\lru_in[0:0]
+    52/79: $2\lru_we[0:0]
+    53/79: $2\data_in0[63:0]
+    54/79: $2\data_we0[0:0]
+    55/79: $2\dirty_in[0:0]
+    56/79: $2\valid_in[0:0]
+    57/79: $2\tag_in[24:0]
+    58/79: $2\tag_way[0:0]
+    59/79: $2\tag_we[0:0]
+    60/79: $2\cpu_rdata[63:0]
+    61/79: $2\data_in1[63:0]
+    62/79: $2\data_we1[0:0]
+    63/79: $1\lru_in[0:0]
+    64/79: $1\lru_we[0:0]
+    65/79: $1\data_in1[63:0]
+    66/79: $1\data_in0[63:0]
+    67/79: $1\data_we1[0:0]
+    68/79: $1\data_we0[0:0]
+    69/79: $1\dirty_in[0:0]
+    70/79: $1\valid_in[0:0]
+    71/79: $1\tag_in[24:0]
+    72/79: $1\tag_way[0:0]
+    73/79: $1\tag_we[0:0]
+    74/79: $1\mem_wdata[63:0]
+    75/79: $1\mem_addr[31:0]
+    76/79: $1\mem_write[0:0]
+    77/79: $1\mem_read[0:0]
+    78/79: $1\cpu_ready[0:0]
+    79/79: $1\cpu_rdata[63:0]
+Creating decoders for process `$paramod$f170207f7a34c7ba14419f1c68895dd64f8561d4\fsm_logic.$proc$./src/fsm_logic.v:103$15'.
+     1/1: $0\state[2:0]
+Creating decoders for process `$paramod$f170207f7a34c7ba14419f1c68895dd64f8561d4\fsm_logic.$proc$./src/fsm_logic.v:65$1'.
+     1/6: $6\next_state[2:0]
+     2/6: $5\next_state[2:0]
+     3/6: $4\next_state[2:0]
+     4/6: $3\next_state[2:0]
+     5/6: $2\next_state[2:0]
+     6/6: $1\next_state[2:0]
+Creating decoders for process `$paramod$eaa5b734c125d073bf4ad71bf18816b7d6471fe9\tag_array.$proc$./src/tag_array.v:32$66'.
+     1/36: $2$memwr$\dirty0$./src/tag_array.v:45$62_EN[0:0]$118
+     2/36: $2$memwr$\dirty0$./src/tag_array.v:45$62_DATA[0:0]$117
+     3/36: $2$memwr$\dirty0$./src/tag_array.v:45$62_ADDR[3:0]$116
+     4/36: $2$memwr$\valid0$./src/tag_array.v:44$61_EN[0:0]$115
+     5/36: $2$memwr$\valid0$./src/tag_array.v:44$61_DATA[0:0]$114
+     6/36: $2$memwr$\valid0$./src/tag_array.v:44$61_ADDR[3:0]$113
+     7/36: $2$memwr$\tag0$./src/tag_array.v:43$60_EN[24:0]$112
+     8/36: $2$memwr$\tag0$./src/tag_array.v:43$60_DATA[24:0]$111
+     9/36: $2$memwr$\tag0$./src/tag_array.v:43$60_ADDR[3:0]$110
+    10/36: $2$memwr$\dirty1$./src/tag_array.v:49$65_EN[0:0]$127
+    11/36: $2$memwr$\dirty1$./src/tag_array.v:49$65_DATA[0:0]$126
+    12/36: $2$memwr$\dirty1$./src/tag_array.v:49$65_ADDR[3:0]$125
+    13/36: $2$memwr$\valid1$./src/tag_array.v:48$64_EN[0:0]$124
+    14/36: $2$memwr$\valid1$./src/tag_array.v:48$64_DATA[0:0]$123
+    15/36: $2$memwr$\valid1$./src/tag_array.v:48$64_ADDR[3:0]$122
+    16/36: $2$memwr$\tag1$./src/tag_array.v:47$63_EN[24:0]$121
+    17/36: $2$memwr$\tag1$./src/tag_array.v:47$63_DATA[24:0]$120
+    18/36: $2$memwr$\tag1$./src/tag_array.v:47$63_ADDR[3:0]$119
+    19/36: $1$memwr$\dirty1$./src/tag_array.v:49$65_EN[0:0]$108
+    20/36: $1$memwr$\dirty1$./src/tag_array.v:49$65_DATA[0:0]$107
+    21/36: $1$memwr$\dirty1$./src/tag_array.v:49$65_ADDR[3:0]$106
+    22/36: $1$memwr$\valid1$./src/tag_array.v:48$64_EN[0:0]$105
+    23/36: $1$memwr$\valid1$./src/tag_array.v:48$64_DATA[0:0]$104
+    24/36: $1$memwr$\valid1$./src/tag_array.v:48$64_ADDR[3:0]$103
+    25/36: $1$memwr$\tag1$./src/tag_array.v:47$63_EN[24:0]$102
+    26/36: $1$memwr$\tag1$./src/tag_array.v:47$63_DATA[24:0]$101
+    27/36: $1$memwr$\tag1$./src/tag_array.v:47$63_ADDR[3:0]$100
+    28/36: $1$memwr$\dirty0$./src/tag_array.v:45$62_EN[0:0]$99
+    29/36: $1$memwr$\dirty0$./src/tag_array.v:45$62_DATA[0:0]$98
+    30/36: $1$memwr$\dirty0$./src/tag_array.v:45$62_ADDR[3:0]$97
+    31/36: $1$memwr$\valid0$./src/tag_array.v:44$61_EN[0:0]$96
+    32/36: $1$memwr$\valid0$./src/tag_array.v:44$61_DATA[0:0]$95
+    33/36: $1$memwr$\valid0$./src/tag_array.v:44$61_ADDR[3:0]$94
+    34/36: $1$memwr$\tag0$./src/tag_array.v:43$60_EN[24:0]$93
+    35/36: $1$memwr$\tag0$./src/tag_array.v:43$60_DATA[24:0]$92
+    36/36: $1$memwr$\tag0$./src/tag_array.v:43$60_ADDR[3:0]$91
+
+19. Executing PROC_DLATCH pass (convert process syncs to latches).
+No latch inferred for signal `$paramod$f170207f7a34c7ba14419f1c68895dd64f8561d4\fsm_logic.\cpu_rdata' from process `$paramod$f170207f7a34c7ba14419f1c68895dd64f8561d4\fsm_logic.$proc$./src/fsm_logic.v:111$16'.
+No latch inferred for signal `$paramod$f170207f7a34c7ba14419f1c68895dd64f8561d4\fsm_logic.\cpu_ready' from process `$paramod$f170207f7a34c7ba14419f1c68895dd64f8561d4\fsm_logic.$proc$./src/fsm_logic.v:111$16'.
+No latch inferred for signal `$paramod$f170207f7a34c7ba14419f1c68895dd64f8561d4\fsm_logic.\mem_read' from process `$paramod$f170207f7a34c7ba14419f1c68895dd64f8561d4\fsm_logic.$proc$./src/fsm_logic.v:111$16'.
+No latch inferred for signal `$paramod$f170207f7a34c7ba14419f1c68895dd64f8561d4\fsm_logic.\mem_write' from process `$paramod$f170207f7a34c7ba14419f1c68895dd64f8561d4\fsm_logic.$proc$./src/fsm_logic.v:111$16'.
+No latch inferred for signal `$paramod$f170207f7a34c7ba14419f1c68895dd64f8561d4\fsm_logic.\mem_addr' from process `$paramod$f170207f7a34c7ba14419f1c68895dd64f8561d4\fsm_logic.$proc$./src/fsm_logic.v:111$16'.
+No latch inferred for signal `$paramod$f170207f7a34c7ba14419f1c68895dd64f8561d4\fsm_logic.\mem_wdata' from process `$paramod$f170207f7a34c7ba14419f1c68895dd64f8561d4\fsm_logic.$proc$./src/fsm_logic.v:111$16'.
+No latch inferred for signal `$paramod$f170207f7a34c7ba14419f1c68895dd64f8561d4\fsm_logic.\tag_we' from process `$paramod$f170207f7a34c7ba14419f1c68895dd64f8561d4\fsm_logic.$proc$./src/fsm_logic.v:111$16'.
+No latch inferred for signal `$paramod$f170207f7a34c7ba14419f1c68895dd64f8561d4\fsm_logic.\tag_way' from process `$paramod$f170207f7a34c7ba14419f1c68895dd64f8561d4\fsm_logic.$proc$./src/fsm_logic.v:111$16'.
+No latch inferred for signal `$paramod$f170207f7a34c7ba14419f1c68895dd64f8561d4\fsm_logic.\tag_in' from process `$paramod$f170207f7a34c7ba14419f1c68895dd64f8561d4\fsm_logic.$proc$./src/fsm_logic.v:111$16'.
+No latch inferred for signal `$paramod$f170207f7a34c7ba14419f1c68895dd64f8561d4\fsm_logic.\valid_in' from process `$paramod$f170207f7a34c7ba14419f1c68895dd64f8561d4\fsm_logic.$proc$./src/fsm_logic.v:111$16'.
+No latch inferred for signal `$paramod$f170207f7a34c7ba14419f1c68895dd64f8561d4\fsm_logic.\dirty_in' from process `$paramod$f170207f7a34c7ba14419f1c68895dd64f8561d4\fsm_logic.$proc$./src/fsm_logic.v:111$16'.
+No latch inferred for signal `$paramod$f170207f7a34c7ba14419f1c68895dd64f8561d4\fsm_logic.\data_we0' from process `$paramod$f170207f7a34c7ba14419f1c68895dd64f8561d4\fsm_logic.$proc$./src/fsm_logic.v:111$16'.
+No latch inferred for signal `$paramod$f170207f7a34c7ba14419f1c68895dd64f8561d4\fsm_logic.\data_we1' from process `$paramod$f170207f7a34c7ba14419f1c68895dd64f8561d4\fsm_logic.$proc$./src/fsm_logic.v:111$16'.
+No latch inferred for signal `$paramod$f170207f7a34c7ba14419f1c68895dd64f8561d4\fsm_logic.\data_in0' from process `$paramod$f170207f7a34c7ba14419f1c68895dd64f8561d4\fsm_logic.$proc$./src/fsm_logic.v:111$16'.
+No latch inferred for signal `$paramod$f170207f7a34c7ba14419f1c68895dd64f8561d4\fsm_logic.\data_in1' from process `$paramod$f170207f7a34c7ba14419f1c68895dd64f8561d4\fsm_logic.$proc$./src/fsm_logic.v:111$16'.
+No latch inferred for signal `$paramod$f170207f7a34c7ba14419f1c68895dd64f8561d4\fsm_logic.\lru_we' from process `$paramod$f170207f7a34c7ba14419f1c68895dd64f8561d4\fsm_logic.$proc$./src/fsm_logic.v:111$16'.
+No latch inferred for signal `$paramod$f170207f7a34c7ba14419f1c68895dd64f8561d4\fsm_logic.\lru_in' from process `$paramod$f170207f7a34c7ba14419f1c68895dd64f8561d4\fsm_logic.$proc$./src/fsm_logic.v:111$16'.
+No latch inferred for signal `$paramod$f170207f7a34c7ba14419f1c68895dd64f8561d4\fsm_logic.\next_state' from process `$paramod$f170207f7a34c7ba14419f1c68895dd64f8561d4\fsm_logic.$proc$./src/fsm_logic.v:65$1'.
+
+20. Executing PROC_DFF pass (convert process syncs to FFs).
+Creating register for signal `$paramod$3b9006f2b30b7cd8747225d117af12cd51d29e53\data_array.\rdata0' using process `$paramod$3b9006f2b30b7cd8747225d117af12cd51d29e53\data_array.$proc$./src/data_array.v:21$45'.
+  created $dff cell `$procdff$1053' with positive edge clock.
+Creating register for signal `$paramod$3b9006f2b30b7cd8747225d117af12cd51d29e53\data_array.\rdata1' using process `$paramod$3b9006f2b30b7cd8747225d117af12cd51d29e53\data_array.$proc$./src/data_array.v:21$45'.
+  created $dff cell `$procdff$1054' with positive edge clock.
+Creating register for signal `$paramod$3b9006f2b30b7cd8747225d117af12cd51d29e53\data_array.$memwr$\data0$./src/data_array.v:26$43_ADDR' using process `$paramod$3b9006f2b30b7cd8747225d117af12cd51d29e53\data_array.$proc$./src/data_array.v:21$45'.
+  created $dff cell `$procdff$1055' with positive edge clock.
+Creating register for signal `$paramod$3b9006f2b30b7cd8747225d117af12cd51d29e53\data_array.$memwr$\data0$./src/data_array.v:26$43_DATA' using process `$paramod$3b9006f2b30b7cd8747225d117af12cd51d29e53\data_array.$proc$./src/data_array.v:21$45'.
+  created $dff cell `$procdff$1056' with positive edge clock.
+Creating register for signal `$paramod$3b9006f2b30b7cd8747225d117af12cd51d29e53\data_array.$memwr$\data0$./src/data_array.v:26$43_EN' using process `$paramod$3b9006f2b30b7cd8747225d117af12cd51d29e53\data_array.$proc$./src/data_array.v:21$45'.
+  created $dff cell `$procdff$1057' with positive edge clock.
+Creating register for signal `$paramod$3b9006f2b30b7cd8747225d117af12cd51d29e53\data_array.$memwr$\data1$./src/data_array.v:29$44_ADDR' using process `$paramod$3b9006f2b30b7cd8747225d117af12cd51d29e53\data_array.$proc$./src/data_array.v:21$45'.
+  created $dff cell `$procdff$1058' with positive edge clock.
+Creating register for signal `$paramod$3b9006f2b30b7cd8747225d117af12cd51d29e53\data_array.$memwr$\data1$./src/data_array.v:29$44_DATA' using process `$paramod$3b9006f2b30b7cd8747225d117af12cd51d29e53\data_array.$proc$./src/data_array.v:21$45'.
+  created $dff cell `$procdff$1059' with positive edge clock.
+Creating register for signal `$paramod$3b9006f2b30b7cd8747225d117af12cd51d29e53\data_array.$memwr$\data1$./src/data_array.v:29$44_EN' using process `$paramod$3b9006f2b30b7cd8747225d117af12cd51d29e53\data_array.$proc$./src/data_array.v:21$45'.
+  created $dff cell `$procdff$1060' with positive edge clock.
+Creating register for signal `$paramod\lru_array\index_width=s32'00000000000000000000000000000100.\data_out' using process `$paramod\lru_array\index_width=s32'00000000000000000000000000000100.$proc$./src/lru_array.v:14$35'.
+  created $dff cell `$procdff$1061' with positive edge clock.
+Creating register for signal `$paramod\lru_array\index_width=s32'00000000000000000000000000000100.$memwr$\lru_mem$./src/lru_array.v:16$34_ADDR' using process `$paramod\lru_array\index_width=s32'00000000000000000000000000000100.$proc$./src/lru_array.v:14$35'.
+  created $dff cell `$procdff$1062' with positive edge clock.
+Creating register for signal `$paramod\lru_array\index_width=s32'00000000000000000000000000000100.$memwr$\lru_mem$./src/lru_array.v:16$34_DATA' using process `$paramod\lru_array\index_width=s32'00000000000000000000000000000100.$proc$./src/lru_array.v:14$35'.
+  created $dff cell `$procdff$1063' with positive edge clock.
+Creating register for signal `$paramod\lru_array\index_width=s32'00000000000000000000000000000100.$memwr$\lru_mem$./src/lru_array.v:16$34_EN' using process `$paramod\lru_array\index_width=s32'00000000000000000000000000000100.$proc$./src/lru_array.v:14$35'.
+  created $dff cell `$procdff$1064' with positive edge clock.
+Creating register for signal `$paramod$f170207f7a34c7ba14419f1c68895dd64f8561d4\fsm_logic.\state' using process `$paramod$f170207f7a34c7ba14419f1c68895dd64f8561d4\fsm_logic.$proc$./src/fsm_logic.v:103$15'.
+  created $adff cell `$procdff$1067' with positive edge clock and positive level reset.
+Creating register for signal `$paramod$eaa5b734c125d073bf4ad71bf18816b7d6471fe9\tag_array.\tag_out0' using process `$paramod$eaa5b734c125d073bf4ad71bf18816b7d6471fe9\tag_array.$proc$./src/tag_array.v:32$66'.
+  created $dff cell `$procdff$1068' with positive edge clock.
+Creating register for signal `$paramod$eaa5b734c125d073bf4ad71bf18816b7d6471fe9\tag_array.\tag_out1' using process `$paramod$eaa5b734c125d073bf4ad71bf18816b7d6471fe9\tag_array.$proc$./src/tag_array.v:32$66'.
+  created $dff cell `$procdff$1069' with positive edge clock.
+Creating register for signal `$paramod$eaa5b734c125d073bf4ad71bf18816b7d6471fe9\tag_array.\valid_out0' using process `$paramod$eaa5b734c125d073bf4ad71bf18816b7d6471fe9\tag_array.$proc$./src/tag_array.v:32$66'.
+  created $dff cell `$procdff$1070' with positive edge clock.
+Creating register for signal `$paramod$eaa5b734c125d073bf4ad71bf18816b7d6471fe9\tag_array.\valid_out1' using process `$paramod$eaa5b734c125d073bf4ad71bf18816b7d6471fe9\tag_array.$proc$./src/tag_array.v:32$66'.
+  created $dff cell `$procdff$1071' with positive edge clock.
+Creating register for signal `$paramod$eaa5b734c125d073bf4ad71bf18816b7d6471fe9\tag_array.\dirty_out0' using process `$paramod$eaa5b734c125d073bf4ad71bf18816b7d6471fe9\tag_array.$proc$./src/tag_array.v:32$66'.
+  created $dff cell `$procdff$1072' with positive edge clock.
+Creating register for signal `$paramod$eaa5b734c125d073bf4ad71bf18816b7d6471fe9\tag_array.\dirty_out1' using process `$paramod$eaa5b734c125d073bf4ad71bf18816b7d6471fe9\tag_array.$proc$./src/tag_array.v:32$66'.
+  created $dff cell `$procdff$1073' with positive edge clock.
+Creating register for signal `$paramod$eaa5b734c125d073bf4ad71bf18816b7d6471fe9\tag_array.$memwr$\tag0$./src/tag_array.v:43$60_ADDR' using process `$paramod$eaa5b734c125d073bf4ad71bf18816b7d6471fe9\tag_array.$proc$./src/tag_array.v:32$66'.
+  created $dff cell `$procdff$1074' with positive edge clock.
+Creating register for signal `$paramod$eaa5b734c125d073bf4ad71bf18816b7d6471fe9\tag_array.$memwr$\tag0$./src/tag_array.v:43$60_DATA' using process `$paramod$eaa5b734c125d073bf4ad71bf18816b7d6471fe9\tag_array.$proc$./src/tag_array.v:32$66'.
+  created $dff cell `$procdff$1075' with positive edge clock.
+Creating register for signal `$paramod$eaa5b734c125d073bf4ad71bf18816b7d6471fe9\tag_array.$memwr$\tag0$./src/tag_array.v:43$60_EN' using process `$paramod$eaa5b734c125d073bf4ad71bf18816b7d6471fe9\tag_array.$proc$./src/tag_array.v:32$66'.
+  created $dff cell `$procdff$1076' with positive edge clock.
+Creating register for signal `$paramod$eaa5b734c125d073bf4ad71bf18816b7d6471fe9\tag_array.$memwr$\valid0$./src/tag_array.v:44$61_ADDR' using process `$paramod$eaa5b734c125d073bf4ad71bf18816b7d6471fe9\tag_array.$proc$./src/tag_array.v:32$66'.
+  created $dff cell `$procdff$1077' with positive edge clock.
+Creating register for signal `$paramod$eaa5b734c125d073bf4ad71bf18816b7d6471fe9\tag_array.$memwr$\valid0$./src/tag_array.v:44$61_DATA' using process `$paramod$eaa5b734c125d073bf4ad71bf18816b7d6471fe9\tag_array.$proc$./src/tag_array.v:32$66'.
+  created $dff cell `$procdff$1078' with positive edge clock.
+Creating register for signal `$paramod$eaa5b734c125d073bf4ad71bf18816b7d6471fe9\tag_array.$memwr$\valid0$./src/tag_array.v:44$61_EN' using process `$paramod$eaa5b734c125d073bf4ad71bf18816b7d6471fe9\tag_array.$proc$./src/tag_array.v:32$66'.
+  created $dff cell `$procdff$1079' with positive edge clock.
+Creating register for signal `$paramod$eaa5b734c125d073bf4ad71bf18816b7d6471fe9\tag_array.$memwr$\dirty0$./src/tag_array.v:45$62_ADDR' using process `$paramod$eaa5b734c125d073bf4ad71bf18816b7d6471fe9\tag_array.$proc$./src/tag_array.v:32$66'.
+  created $dff cell `$procdff$1080' with positive edge clock.
+Creating register for signal `$paramod$eaa5b734c125d073bf4ad71bf18816b7d6471fe9\tag_array.$memwr$\dirty0$./src/tag_array.v:45$62_DATA' using process `$paramod$eaa5b734c125d073bf4ad71bf18816b7d6471fe9\tag_array.$proc$./src/tag_array.v:32$66'.
+  created $dff cell `$procdff$1081' with positive edge clock.
+Creating register for signal `$paramod$eaa5b734c125d073bf4ad71bf18816b7d6471fe9\tag_array.$memwr$\dirty0$./src/tag_array.v:45$62_EN' using process `$paramod$eaa5b734c125d073bf4ad71bf18816b7d6471fe9\tag_array.$proc$./src/tag_array.v:32$66'.
+  created $dff cell `$procdff$1082' with positive edge clock.
+Creating register for signal `$paramod$eaa5b734c125d073bf4ad71bf18816b7d6471fe9\tag_array.$memwr$\tag1$./src/tag_array.v:47$63_ADDR' using process `$paramod$eaa5b734c125d073bf4ad71bf18816b7d6471fe9\tag_array.$proc$./src/tag_array.v:32$66'.
+  created $dff cell `$procdff$1083' with positive edge clock.
+Creating register for signal `$paramod$eaa5b734c125d073bf4ad71bf18816b7d6471fe9\tag_array.$memwr$\tag1$./src/tag_array.v:47$63_DATA' using process `$paramod$eaa5b734c125d073bf4ad71bf18816b7d6471fe9\tag_array.$proc$./src/tag_array.v:32$66'.
+  created $dff cell `$procdff$1084' with positive edge clock.
+Creating register for signal `$paramod$eaa5b734c125d073bf4ad71bf18816b7d6471fe9\tag_array.$memwr$\tag1$./src/tag_array.v:47$63_EN' using process `$paramod$eaa5b734c125d073bf4ad71bf18816b7d6471fe9\tag_array.$proc$./src/tag_array.v:32$66'.
+  created $dff cell `$procdff$1085' with positive edge clock.
+Creating register for signal `$paramod$eaa5b734c125d073bf4ad71bf18816b7d6471fe9\tag_array.$memwr$\valid1$./src/tag_array.v:48$64_ADDR' using process `$paramod$eaa5b734c125d073bf4ad71bf18816b7d6471fe9\tag_array.$proc$./src/tag_array.v:32$66'.
+  created $dff cell `$procdff$1086' with positive edge clock.
+Creating register for signal `$paramod$eaa5b734c125d073bf4ad71bf18816b7d6471fe9\tag_array.$memwr$\valid1$./src/tag_array.v:48$64_DATA' using process `$paramod$eaa5b734c125d073bf4ad71bf18816b7d6471fe9\tag_array.$proc$./src/tag_array.v:32$66'.
+  created $dff cell `$procdff$1087' with positive edge clock.
+Creating register for signal `$paramod$eaa5b734c125d073bf4ad71bf18816b7d6471fe9\tag_array.$memwr$\valid1$./src/tag_array.v:48$64_EN' using process `$paramod$eaa5b734c125d073bf4ad71bf18816b7d6471fe9\tag_array.$proc$./src/tag_array.v:32$66'.
+  created $dff cell `$procdff$1088' with positive edge clock.
+Creating register for signal `$paramod$eaa5b734c125d073bf4ad71bf18816b7d6471fe9\tag_array.$memwr$\dirty1$./src/tag_array.v:49$65_ADDR' using process `$paramod$eaa5b734c125d073bf4ad71bf18816b7d6471fe9\tag_array.$proc$./src/tag_array.v:32$66'.
+  created $dff cell `$procdff$1089' with positive edge clock.
+Creating register for signal `$paramod$eaa5b734c125d073bf4ad71bf18816b7d6471fe9\tag_array.$memwr$\dirty1$./src/tag_array.v:49$65_DATA' using process `$paramod$eaa5b734c125d073bf4ad71bf18816b7d6471fe9\tag_array.$proc$./src/tag_array.v:32$66'.
+  created $dff cell `$procdff$1090' with positive edge clock.
+Creating register for signal `$paramod$eaa5b734c125d073bf4ad71bf18816b7d6471fe9\tag_array.$memwr$\dirty1$./src/tag_array.v:49$65_EN' using process `$paramod$eaa5b734c125d073bf4ad71bf18816b7d6471fe9\tag_array.$proc$./src/tag_array.v:32$66'.
+  created $dff cell `$procdff$1091' with positive edge clock.
+
+21. Executing PROC_MEMWR pass (convert process memory writes to cells).
+
+22. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Found and cleaned up 2 empty switches in `$paramod$3b9006f2b30b7cd8747225d117af12cd51d29e53\data_array.$proc$./src/data_array.v:21$45'.
+Removing empty process `$paramod$3b9006f2b30b7cd8747225d117af12cd51d29e53\data_array.$proc$./src/data_array.v:21$45'.
+Found and cleaned up 1 empty switch in `$paramod\lru_array\index_width=s32'00000000000000000000000000000100.$proc$./src/lru_array.v:14$35'.
+Removing empty process `$paramod\lru_array\index_width=s32'00000000000000000000000000000100.$proc$./src/lru_array.v:14$35'.
+Found and cleaned up 13 empty switches in `$paramod$f170207f7a34c7ba14419f1c68895dd64f8561d4\fsm_logic.$proc$./src/fsm_logic.v:111$16'.
+Removing empty process `$paramod$f170207f7a34c7ba14419f1c68895dd64f8561d4\fsm_logic.$proc$./src/fsm_logic.v:111$16'.
+Removing empty process `$paramod$f170207f7a34c7ba14419f1c68895dd64f8561d4\fsm_logic.$proc$./src/fsm_logic.v:103$15'.
+Found and cleaned up 6 empty switches in `$paramod$f170207f7a34c7ba14419f1c68895dd64f8561d4\fsm_logic.$proc$./src/fsm_logic.v:65$1'.
+Removing empty process `$paramod$f170207f7a34c7ba14419f1c68895dd64f8561d4\fsm_logic.$proc$./src/fsm_logic.v:65$1'.
+Found and cleaned up 2 empty switches in `$paramod$eaa5b734c125d073bf4ad71bf18816b7d6471fe9\tag_array.$proc$./src/tag_array.v:32$66'.
+Removing empty process `$paramod$eaa5b734c125d073bf4ad71bf18816b7d6471fe9\tag_array.$proc$./src/tag_array.v:32$66'.
+Cleaned up 24 empty switches.
+
+23. Executing CHECK pass (checking for obvious problems).
+Checking module cache_controller...
+Checking module $paramod$3b9006f2b30b7cd8747225d117af12cd51d29e53\data_array...
+Checking module $paramod\lru_array\index_width=s32'00000000000000000000000000000100...
+Checking module $paramod$f170207f7a34c7ba14419f1c68895dd64f8561d4\fsm_logic...
+Checking module $paramod$eaa5b734c125d073bf4ad71bf18816b7d6471fe9\tag_array...
+Found and reported 0 problems.
+
+24. Executing OPT_EXPR pass (perform const folding).
+Optimizing module cache_controller.
+Optimizing module $paramod$3b9006f2b30b7cd8747225d117af12cd51d29e53\data_array.
+Optimizing module $paramod\lru_array\index_width=s32'00000000000000000000000000000100.
+Optimizing module $paramod$f170207f7a34c7ba14419f1c68895dd64f8561d4\fsm_logic.
+<suppressed ~19 debug messages>
+Optimizing module $paramod$eaa5b734c125d073bf4ad71bf18816b7d6471fe9\tag_array.
+<suppressed ~19 debug messages>
+
+25. Executing FLATTEN pass (flatten design).
+Deleting now unused module $paramod$3b9006f2b30b7cd8747225d117af12cd51d29e53\data_array.
+Deleting now unused module $paramod\lru_array\index_width=s32'00000000000000000000000000000100.
+Deleting now unused module $paramod$f170207f7a34c7ba14419f1c68895dd64f8561d4\fsm_logic.
+Deleting now unused module $paramod$eaa5b734c125d073bf4ad71bf18816b7d6471fe9\tag_array.
+<suppressed ~4 debug messages>
+
+26. Executing OPT_EXPR pass (perform const folding).
+Optimizing module cache_controller.
+
+27. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \cache_controller..
+Removed 32 unused cells and 407 unused wires.
+<suppressed ~33 debug messages>
+
+28. Executing OPT_EXPR pass (perform const folding).
+Optimizing module cache_controller.
+
+29. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\cache_controller'.
+<suppressed ~321 debug messages>
+Removed a total of 107 cells.
+
+30. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \cache_controller..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+    dead port 2/2 on $mux $flatten\fsm.$procmux$328.
+    dead port 2/2 on $mux $flatten\fsm.$procmux$338.
+    dead port 1/2 on $mux $flatten\fsm.$procmux$341.
+    dead port 2/2 on $mux $flatten\fsm.$procmux$343.
+    dead port 2/2 on $mux $flatten\fsm.$procmux$353.
+    dead port 1/2 on $mux $flatten\fsm.$procmux$356.
+    dead port 2/2 on $mux $flatten\fsm.$procmux$358.
+    dead port 2/2 on $mux $flatten\fsm.$procmux$368.
+    dead port 1/2 on $mux $flatten\fsm.$procmux$371.
+    dead port 2/2 on $mux $flatten\fsm.$procmux$373.
+    dead port 2/2 on $mux $flatten\fsm.$procmux$383.
+    dead port 1/2 on $mux $flatten\fsm.$procmux$386.
+    dead port 2/2 on $mux $flatten\fsm.$procmux$388.
+    dead port 2/2 on $mux $flatten\fsm.$procmux$398.
+    dead port 1/2 on $mux $flatten\fsm.$procmux$401.
+    dead port 2/2 on $mux $flatten\fsm.$procmux$403.
+    dead port 2/2 on $mux $flatten\fsm.$procmux$413.
+    dead port 1/2 on $mux $flatten\fsm.$procmux$416.
+    dead port 2/2 on $mux $flatten\fsm.$procmux$418.
+    dead port 2/2 on $mux $flatten\fsm.$procmux$428.
+    dead port 1/2 on $mux $flatten\fsm.$procmux$431.
+    dead port 2/2 on $mux $flatten\fsm.$procmux$433.
+    dead port 2/2 on $mux $flatten\fsm.$procmux$160.
+    dead port 2/2 on $mux $flatten\fsm.$procmux$443.
+    dead port 1/2 on $mux $flatten\fsm.$procmux$446.
+    dead port 2/2 on $mux $flatten\fsm.$procmux$448.
+    dead port 2/2 on $mux $flatten\fsm.$procmux$162.
+    dead port 1/2 on $mux $flatten\fsm.$procmux$457.
+    dead port 2/2 on $mux $flatten\fsm.$procmux$459.
+    dead port 1/2 on $mux $flatten\fsm.$procmux$469.
+    dead port 2/2 on $mux $flatten\fsm.$procmux$471.
+    dead port 1/2 on $mux $flatten\fsm.$procmux$481.
+    dead port 2/2 on $mux $flatten\fsm.$procmux$483.
+    dead port 2/2 on $mux $flatten\fsm.$procmux$169.
+    dead port 1/2 on $mux $flatten\fsm.$procmux$493.
+    dead port 2/2 on $mux $flatten\fsm.$procmux$495.
+    dead port 2/2 on $mux $flatten\fsm.$procmux$171.
+    dead port 1/2 on $mux $flatten\fsm.$procmux$505.
+    dead port 2/2 on $mux $flatten\fsm.$procmux$507.
+    dead port 1/2 on $mux $flatten\fsm.$procmux$517.
+    dead port 2/2 on $mux $flatten\fsm.$procmux$519.
+    dead port 1/2 on $mux $flatten\fsm.$procmux$529.
+    dead port 2/2 on $mux $flatten\fsm.$procmux$531.
+    dead port 2/2 on $mux $flatten\fsm.$procmux$178.
+    dead port 1/2 on $mux $flatten\fsm.$procmux$541.
+    dead port 2/2 on $mux $flatten\fsm.$procmux$543.
+    dead port 2/2 on $mux $flatten\fsm.$procmux$180.
+    dead port 1/2 on $mux $flatten\fsm.$procmux$553.
+    dead port 2/2 on $mux $flatten\fsm.$procmux$555.
+    dead port 1/2 on $mux $flatten\fsm.$procmux$565.
+    dead port 2/2 on $mux $flatten\fsm.$procmux$567.
+    dead port 2/2 on $mux $flatten\fsm.$procmux$577.
+    dead port 2/2 on $mux $flatten\fsm.$procmux$579.
+    dead port 2/2 on $mux $flatten\fsm.$procmux$187.
+    dead port 2/2 on $mux $flatten\fsm.$procmux$589.
+    dead port 2/2 on $mux $flatten\fsm.$procmux$591.
+    dead port 2/2 on $mux $flatten\fsm.$procmux$189.
+    dead port 2/2 on $mux $flatten\fsm.$procmux$601.
+    dead port 2/2 on $mux $flatten\fsm.$procmux$603.
+    dead port 2/2 on $mux $flatten\fsm.$procmux$612.
+    dead port 2/2 on $mux $flatten\fsm.$procmux$614.
+    dead port 2/2 on $mux $flatten\fsm.$procmux$624.
+    dead port 2/2 on $mux $flatten\fsm.$procmux$626.
+    dead port 2/2 on $mux $flatten\fsm.$procmux$196.
+    dead port 2/2 on $mux $flatten\fsm.$procmux$636.
+    dead port 2/2 on $mux $flatten\fsm.$procmux$638.
+    dead port 2/2 on $mux $flatten\fsm.$procmux$198.
+    dead port 2/2 on $mux $flatten\fsm.$procmux$648.
+    dead port 2/2 on $mux $flatten\fsm.$procmux$650.
+    dead port 2/2 on $mux $flatten\fsm.$procmux$660.
+    dead port 2/2 on $mux $flatten\fsm.$procmux$662.
+    dead port 2/2 on $mux $flatten\fsm.$procmux$671.
+    dead port 2/2 on $mux $flatten\fsm.$procmux$204.
+    dead port 2/2 on $mux $flatten\fsm.$procmux$680.
+    dead port 2/2 on $mux $flatten\fsm.$procmux$689.
+    dead port 2/2 on $mux $flatten\fsm.$procmux$698.
+    dead port 2/2 on $mux $flatten\fsm.$procmux$210.
+    dead port 2/2 on $mux $flatten\fsm.$procmux$707.
+    dead port 2/2 on $mux $flatten\fsm.$procmux$716.
+    dead port 2/2 on $mux $flatten\fsm.$procmux$725.
+    dead port 2/2 on $mux $flatten\fsm.$procmux$216.
+    dead port 2/2 on $mux $flatten\fsm.$procmux$734.
+    dead port 2/2 on $mux $flatten\fsm.$procmux$743.
+    dead port 2/2 on $mux $flatten\fsm.$procmux$752.
+    dead port 2/2 on $mux $flatten\fsm.$procmux$222.
+    dead port 2/2 on $mux $flatten\fsm.$procmux$761.
+    dead port 2/2 on $mux $flatten\fsm.$procmux$770.
+    dead port 2/2 on $mux $flatten\fsm.$procmux$228.
+    dead port 2/2 on $mux $flatten\fsm.$procmux$234.
+    dead port 2/2 on $mux $flatten\fsm.$procmux$240.
+    dead port 2/2 on $mux $flatten\fsm.$procmux$246.
+    dead port 2/2 on $mux $flatten\fsm.$procmux$252.
+    dead port 2/2 on $mux $flatten\fsm.$procmux$258.
+    dead port 2/2 on $mux $flatten\fsm.$procmux$264.
+    dead port 2/2 on $mux $flatten\fsm.$procmux$270.
+    dead port 2/2 on $mux $flatten\fsm.$procmux$276.
+    dead port 2/2 on $mux $flatten\fsm.$procmux$283.
+    dead port 2/2 on $mux $flatten\fsm.$procmux$290.
+    dead port 2/2 on $mux $flatten\fsm.$procmux$845.
+    dead port 1/2 on $mux $flatten\fsm.$procmux$299.
+    dead port 2/2 on $mux $flatten\fsm.$procmux$852.
+    dead port 2/2 on $mux $flatten\fsm.$procmux$301.
+    dead port 2/2 on $mux $flatten\fsm.$procmux$860.
+    dead port 2/2 on $mux $flatten\fsm.$procmux$870.
+    dead port 2/2 on $mux $flatten\fsm.$procmux$881.
+    dead port 1/2 on $mux $flatten\fsm.$procmux$310.
+    dead port 2/2 on $mux $flatten\fsm.$procmux$312.
+    dead port 2/2 on $mux $flatten\fsm.$procmux$320.
+    dead port 2/2 on $mux $flatten\tag_array.$procmux$895.
+    dead port 2/2 on $mux $flatten\tag_array.$procmux$901.
+    dead port 2/2 on $mux $flatten\tag_array.$procmux$907.
+    dead port 2/2 on $mux $flatten\tag_array.$procmux$913.
+    dead port 2/2 on $mux $flatten\tag_array.$procmux$919.
+    dead port 2/2 on $mux $flatten\tag_array.$procmux$925.
+    dead port 2/2 on $mux $flatten\tag_array.$procmux$931.
+    dead port 2/2 on $mux $flatten\tag_array.$procmux$937.
+    dead port 2/2 on $mux $flatten\tag_array.$procmux$943.
+    dead port 2/2 on $mux $flatten\tag_array.$procmux$949.
+    dead port 2/2 on $mux $flatten\tag_array.$procmux$955.
+    dead port 2/2 on $mux $flatten\tag_array.$procmux$961.
+    dead port 2/2 on $mux $flatten\tag_array.$procmux$967.
+    dead port 2/2 on $mux $flatten\tag_array.$procmux$973.
+    dead port 2/2 on $mux $flatten\tag_array.$procmux$979.
+    dead port 2/2 on $mux $flatten\tag_array.$procmux$985.
+    dead port 2/2 on $mux $flatten\tag_array.$procmux$991.
+    dead port 2/2 on $mux $flatten\tag_array.$procmux$997.
+Removed 126 multiplexer ports.
+<suppressed ~42 debug messages>
+
+31. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \cache_controller.
+    Consolidated identical input bits for $mux cell $flatten\data_array.$procmux$138:
+      Old ports: A=64'0000000000000000000000000000000000000000000000000000000000000000, B=64'1111111111111111111111111111111111111111111111111111111111111111, Y=$flatten\data_array.$0$memwr$\data0$./src/data_array.v:26$43_EN[63:0]$48
+      New ports: A=1'0, B=1'1, Y=$flatten\data_array.$0$memwr$\data0$./src/data_array.v:26$43_EN[63:0]$48 [0]
+      New connections: $flatten\data_array.$0$memwr$\data0$./src/data_array.v:26$43_EN[63:0]$48 [63:1] = { $flatten\data_array.$0$memwr$\data0$./src/data_array.v:26$43_EN[63:0]$48 [0] $flatten\data_array.$0$memwr$\data0$./src/data_array.v:26$43_EN[63:0]$48 [0] $flatten\data_array.$0$memwr$\data0$./src/data_array.v:26$43_EN[63:0]$48 [0] $flatten\data_array.$0$memwr$\data0$./src/data_array.v:26$43_EN[63:0]$48 [0] $flatten\data_array.$0$memwr$\data0$./src/data_array.v:26$43_EN[63:0]$48 [0] $flatten\data_array.$0$memwr$\data0$./src/data_array.v:26$43_EN[63:0]$48 [0] $flatten\data_array.$0$memwr$\data0$./src/data_array.v:26$43_EN[63:0]$48 [0] $flatten\data_array.$0$memwr$\data0$./src/data_array.v:26$43_EN[63:0]$48 [0] $flatten\data_array.$0$memwr$\data0$./src/data_array.v:26$43_EN[63:0]$48 [0] $flatten\data_array.$0$memwr$\data0$./src/data_array.v:26$43_EN[63:0]$48 [0] $flatten\data_array.$0$memwr$\data0$./src/data_array.v:26$43_EN[63:0]$48 [0] $flatten\data_array.$0$memwr$\data0$./src/data_array.v:26$43_EN[63:0]$48 [0] $flatten\data_array.$0$memwr$\data0$./src/data_array.v:26$43_EN[63:0]$48 [0] $flatten\data_array.$0$memwr$\data0$./src/data_array.v:26$43_EN[63:0]$48 [0] $flatten\data_array.$0$memwr$\data0$./src/data_array.v:26$43_EN[63:0]$48 [0] $flatten\data_array.$0$memwr$\data0$./src/data_array.v:26$43_EN[63:0]$48 [0] $flatten\data_array.$0$memwr$\data0$./src/data_array.v:26$43_EN[63:0]$48 [0] $flatten\data_array.$0$memwr$\data0$./src/data_array.v:26$43_EN[63:0]$48 [0] $flatten\data_array.$0$memwr$\data0$./src/data_array.v:26$43_EN[63:0]$48 [0] $flatten\data_array.$0$memwr$\data0$./src/data_array.v:26$43_EN[63:0]$48 [0] $flatten\data_array.$0$memwr$\data0$./src/data_array.v:26$43_EN[63:0]$48 [0] $flatten\data_array.$0$memwr$\data0$./src/data_array.v:26$43_EN[63:0]$48 [0] $flatten\data_array.$0$memwr$\data0$./src/data_array.v:26$43_EN[63:0]$48 [0] $flatten\data_array.$0$memwr$\data0$./src/data_array.v:26$43_EN[63:0]$48 [0] $flatten\data_array.$0$memwr$\data0$./src/data_array.v:26$43_EN[63:0]$48 [0] $flatten\data_array.$0$memwr$\data0$./src/data_array.v:26$43_EN[63:0]$48 [0] $flatten\data_array.$0$memwr$\data0$./src/data_array.v:26$43_EN[63:0]$48 [0] $flatten\data_array.$0$memwr$\data0$./src/data_array.v:26$43_EN[63:0]$48 [0] $flatten\data_array.$0$memwr$\data0$./src/data_array.v:26$43_EN[63:0]$48 [0] $flatten\data_array.$0$memwr$\data0$./src/data_array.v:26$43_EN[63:0]$48 [0] $flatten\data_array.$0$memwr$\data0$./src/data_array.v:26$43_EN[63:0]$48 [0] $flatten\data_array.$0$memwr$\data0$./src/data_array.v:26$43_EN[63:0]$48 [0] $flatten\data_array.$0$memwr$\data0$./src/data_array.v:26$43_EN[63:0]$48 [0] $flatten\data_array.$0$memwr$\data0$./src/data_array.v:26$43_EN[63:0]$48 [0] $flatten\data_array.$0$memwr$\data0$./src/data_array.v:26$43_EN[63:0]$48 [0] $flatten\data_array.$0$memwr$\data0$./src/data_array.v:26$43_EN[63:0]$48 [0] $flatten\data_array.$0$memwr$\data0$./src/data_array.v:26$43_EN[63:0]$48 [0] $flatten\data_array.$0$memwr$\data0$./src/data_array.v:26$43_EN[63:0]$48 [0] $flatten\data_array.$0$memwr$\data0$./src/data_array.v:26$43_EN[63:0]$48 [0] $flatten\data_array.$0$memwr$\data0$./src/data_array.v:26$43_EN[63:0]$48 [0] $flatten\data_array.$0$memwr$\data0$./src/data_array.v:26$43_EN[63:0]$48 [0] $flatten\data_array.$0$memwr$\data0$./src/data_array.v:26$43_EN[63:0]$48 [0] $flatten\data_array.$0$memwr$\data0$./src/data_array.v:26$43_EN[63:0]$48 [0] $flatten\data_array.$0$memwr$\data0$./src/data_array.v:26$43_EN[63:0]$48 [0] $flatten\data_array.$0$memwr$\data0$./src/data_array.v:26$43_EN[63:0]$48 [0] $flatten\data_array.$0$memwr$\data0$./src/data_array.v:26$43_EN[63:0]$48 [0] $flatten\data_array.$0$memwr$\data0$./src/data_array.v:26$43_EN[63:0]$48 [0] $flatten\data_array.$0$memwr$\data0$./src/data_array.v:26$43_EN[63:0]$48 [0] $flatten\data_array.$0$memwr$\data0$./src/data_array.v:26$43_EN[63:0]$48 [0] $flatten\data_array.$0$memwr$\data0$./src/data_array.v:26$43_EN[63:0]$48 [0] $flatten\data_array.$0$memwr$\data0$./src/data_array.v:26$43_EN[63:0]$48 [0] $flatten\data_array.$0$memwr$\data0$./src/data_array.v:26$43_EN[63:0]$48 [0] $flatten\data_array.$0$memwr$\data0$./src/data_array.v:26$43_EN[63:0]$48 [0] $flatten\data_array.$0$memwr$\data0$./src/data_array.v:26$43_EN[63:0]$48 [0] $flatten\data_array.$0$memwr$\data0$./src/data_array.v:26$43_EN[63:0]$48 [0] $flatten\data_array.$0$memwr$\data0$./src/data_array.v:26$43_EN[63:0]$48 [0] $flatten\data_array.$0$memwr$\data0$./src/data_array.v:26$43_EN[63:0]$48 [0] $flatten\data_array.$0$memwr$\data0$./src/data_array.v:26$43_EN[63:0]$48 [0] $flatten\data_array.$0$memwr$\data0$./src/data_array.v:26$43_EN[63:0]$48 [0] $flatten\data_array.$0$memwr$\data0$./src/data_array.v:26$43_EN[63:0]$48 [0] $flatten\data_array.$0$memwr$\data0$./src/data_array.v:26$43_EN[63:0]$48 [0] $flatten\data_array.$0$memwr$\data0$./src/data_array.v:26$43_EN[63:0]$48 [0] $flatten\data_array.$0$memwr$\data0$./src/data_array.v:26$43_EN[63:0]$48 [0] }
+    Consolidated identical input bits for $mux cell $flatten\tag_array.$procmux$929:
+      Old ports: A=25'1111111111111111111111111, B=25'0000000000000000000000000, Y=$flatten\tag_array.$procmux$929_Y
+      New ports: A=1'1, B=1'0, Y=$flatten\tag_array.$procmux$929_Y [0]
+      New connections: $flatten\tag_array.$procmux$929_Y [24:1] = { $flatten\tag_array.$procmux$929_Y [0] $flatten\tag_array.$procmux$929_Y [0] $flatten\tag_array.$procmux$929_Y [0] $flatten\tag_array.$procmux$929_Y [0] $flatten\tag_array.$procmux$929_Y [0] $flatten\tag_array.$procmux$929_Y [0] $flatten\tag_array.$procmux$929_Y [0] $flatten\tag_array.$procmux$929_Y [0] $flatten\tag_array.$procmux$929_Y [0] $flatten\tag_array.$procmux$929_Y [0] $flatten\tag_array.$procmux$929_Y [0] $flatten\tag_array.$procmux$929_Y [0] $flatten\tag_array.$procmux$929_Y [0] $flatten\tag_array.$procmux$929_Y [0] $flatten\tag_array.$procmux$929_Y [0] $flatten\tag_array.$procmux$929_Y [0] $flatten\tag_array.$procmux$929_Y [0] $flatten\tag_array.$procmux$929_Y [0] $flatten\tag_array.$procmux$929_Y [0] $flatten\tag_array.$procmux$929_Y [0] $flatten\tag_array.$procmux$929_Y [0] $flatten\tag_array.$procmux$929_Y [0] $flatten\tag_array.$procmux$929_Y [0] $flatten\tag_array.$procmux$929_Y [0] }
+    Consolidated identical input bits for $mux cell $flatten\data_array.$procmux$129:
+      Old ports: A=64'0000000000000000000000000000000000000000000000000000000000000000, B=64'1111111111111111111111111111111111111111111111111111111111111111, Y=$flatten\data_array.$0$memwr$\data1$./src/data_array.v:29$44_EN[63:0]$51
+      New ports: A=1'0, B=1'1, Y=$flatten\data_array.$0$memwr$\data1$./src/data_array.v:29$44_EN[63:0]$51 [0]
+      New connections: $flatten\data_array.$0$memwr$\data1$./src/data_array.v:29$44_EN[63:0]$51 [63:1] = { $flatten\data_array.$0$memwr$\data1$./src/data_array.v:29$44_EN[63:0]$51 [0] $flatten\data_array.$0$memwr$\data1$./src/data_array.v:29$44_EN[63:0]$51 [0] $flatten\data_array.$0$memwr$\data1$./src/data_array.v:29$44_EN[63:0]$51 [0] $flatten\data_array.$0$memwr$\data1$./src/data_array.v:29$44_EN[63:0]$51 [0] $flatten\data_array.$0$memwr$\data1$./src/data_array.v:29$44_EN[63:0]$51 [0] $flatten\data_array.$0$memwr$\data1$./src/data_array.v:29$44_EN[63:0]$51 [0] $flatten\data_array.$0$memwr$\data1$./src/data_array.v:29$44_EN[63:0]$51 [0] $flatten\data_array.$0$memwr$\data1$./src/data_array.v:29$44_EN[63:0]$51 [0] $flatten\data_array.$0$memwr$\data1$./src/data_array.v:29$44_EN[63:0]$51 [0] $flatten\data_array.$0$memwr$\data1$./src/data_array.v:29$44_EN[63:0]$51 [0] $flatten\data_array.$0$memwr$\data1$./src/data_array.v:29$44_EN[63:0]$51 [0] $flatten\data_array.$0$memwr$\data1$./src/data_array.v:29$44_EN[63:0]$51 [0] $flatten\data_array.$0$memwr$\data1$./src/data_array.v:29$44_EN[63:0]$51 [0] $flatten\data_array.$0$memwr$\data1$./src/data_array.v:29$44_EN[63:0]$51 [0] $flatten\data_array.$0$memwr$\data1$./src/data_array.v:29$44_EN[63:0]$51 [0] $flatten\data_array.$0$memwr$\data1$./src/data_array.v:29$44_EN[63:0]$51 [0] $flatten\data_array.$0$memwr$\data1$./src/data_array.v:29$44_EN[63:0]$51 [0] $flatten\data_array.$0$memwr$\data1$./src/data_array.v:29$44_EN[63:0]$51 [0] $flatten\data_array.$0$memwr$\data1$./src/data_array.v:29$44_EN[63:0]$51 [0] $flatten\data_array.$0$memwr$\data1$./src/data_array.v:29$44_EN[63:0]$51 [0] $flatten\data_array.$0$memwr$\data1$./src/data_array.v:29$44_EN[63:0]$51 [0] $flatten\data_array.$0$memwr$\data1$./src/data_array.v:29$44_EN[63:0]$51 [0] $flatten\data_array.$0$memwr$\data1$./src/data_array.v:29$44_EN[63:0]$51 [0] $flatten\data_array.$0$memwr$\data1$./src/data_array.v:29$44_EN[63:0]$51 [0] $flatten\data_array.$0$memwr$\data1$./src/data_array.v:29$44_EN[63:0]$51 [0] $flatten\data_array.$0$memwr$\data1$./src/data_array.v:29$44_EN[63:0]$51 [0] $flatten\data_array.$0$memwr$\data1$./src/data_array.v:29$44_EN[63:0]$51 [0] $flatten\data_array.$0$memwr$\data1$./src/data_array.v:29$44_EN[63:0]$51 [0] $flatten\data_array.$0$memwr$\data1$./src/data_array.v:29$44_EN[63:0]$51 [0] $flatten\data_array.$0$memwr$\data1$./src/data_array.v:29$44_EN[63:0]$51 [0] $flatten\data_array.$0$memwr$\data1$./src/data_array.v:29$44_EN[63:0]$51 [0] $flatten\data_array.$0$memwr$\data1$./src/data_array.v:29$44_EN[63:0]$51 [0] $flatten\data_array.$0$memwr$\data1$./src/data_array.v:29$44_EN[63:0]$51 [0] $flatten\data_array.$0$memwr$\data1$./src/data_array.v:29$44_EN[63:0]$51 [0] $flatten\data_array.$0$memwr$\data1$./src/data_array.v:29$44_EN[63:0]$51 [0] $flatten\data_array.$0$memwr$\data1$./src/data_array.v:29$44_EN[63:0]$51 [0] $flatten\data_array.$0$memwr$\data1$./src/data_array.v:29$44_EN[63:0]$51 [0] $flatten\data_array.$0$memwr$\data1$./src/data_array.v:29$44_EN[63:0]$51 [0] $flatten\data_array.$0$memwr$\data1$./src/data_array.v:29$44_EN[63:0]$51 [0] $flatten\data_array.$0$memwr$\data1$./src/data_array.v:29$44_EN[63:0]$51 [0] $flatten\data_array.$0$memwr$\data1$./src/data_array.v:29$44_EN[63:0]$51 [0] $flatten\data_array.$0$memwr$\data1$./src/data_array.v:29$44_EN[63:0]$51 [0] $flatten\data_array.$0$memwr$\data1$./src/data_array.v:29$44_EN[63:0]$51 [0] $flatten\data_array.$0$memwr$\data1$./src/data_array.v:29$44_EN[63:0]$51 [0] $flatten\data_array.$0$memwr$\data1$./src/data_array.v:29$44_EN[63:0]$51 [0] $flatten\data_array.$0$memwr$\data1$./src/data_array.v:29$44_EN[63:0]$51 [0] $flatten\data_array.$0$memwr$\data1$./src/data_array.v:29$44_EN[63:0]$51 [0] $flatten\data_array.$0$memwr$\data1$./src/data_array.v:29$44_EN[63:0]$51 [0] $flatten\data_array.$0$memwr$\data1$./src/data_array.v:29$44_EN[63:0]$51 [0] $flatten\data_array.$0$memwr$\data1$./src/data_array.v:29$44_EN[63:0]$51 [0] $flatten\data_array.$0$memwr$\data1$./src/data_array.v:29$44_EN[63:0]$51 [0] $flatten\data_array.$0$memwr$\data1$./src/data_array.v:29$44_EN[63:0]$51 [0] $flatten\data_array.$0$memwr$\data1$./src/data_array.v:29$44_EN[63:0]$51 [0] $flatten\data_array.$0$memwr$\data1$./src/data_array.v:29$44_EN[63:0]$51 [0] $flatten\data_array.$0$memwr$\data1$./src/data_array.v:29$44_EN[63:0]$51 [0] $flatten\data_array.$0$memwr$\data1$./src/data_array.v:29$44_EN[63:0]$51 [0] $flatten\data_array.$0$memwr$\data1$./src/data_array.v:29$44_EN[63:0]$51 [0] $flatten\data_array.$0$memwr$\data1$./src/data_array.v:29$44_EN[63:0]$51 [0] $flatten\data_array.$0$memwr$\data1$./src/data_array.v:29$44_EN[63:0]$51 [0] $flatten\data_array.$0$memwr$\data1$./src/data_array.v:29$44_EN[63:0]$51 [0] $flatten\data_array.$0$memwr$\data1$./src/data_array.v:29$44_EN[63:0]$51 [0] $flatten\data_array.$0$memwr$\data1$./src/data_array.v:29$44_EN[63:0]$51 [0] $flatten\data_array.$0$memwr$\data1$./src/data_array.v:29$44_EN[63:0]$51 [0] }
+    Consolidated identical input bits for $mux cell $flatten\tag_array.$procmux$983:
+      Old ports: A=25'0000000000000000000000000, B=25'1111111111111111111111111, Y=$flatten\tag_array.$procmux$983_Y
+      New ports: A=1'0, B=1'1, Y=$flatten\tag_array.$procmux$983_Y [0]
+      New connections: $flatten\tag_array.$procmux$983_Y [24:1] = { $flatten\tag_array.$procmux$983_Y [0] $flatten\tag_array.$procmux$983_Y [0] $flatten\tag_array.$procmux$983_Y [0] $flatten\tag_array.$procmux$983_Y [0] $flatten\tag_array.$procmux$983_Y [0] $flatten\tag_array.$procmux$983_Y [0] $flatten\tag_array.$procmux$983_Y [0] $flatten\tag_array.$procmux$983_Y [0] $flatten\tag_array.$procmux$983_Y [0] $flatten\tag_array.$procmux$983_Y [0] $flatten\tag_array.$procmux$983_Y [0] $flatten\tag_array.$procmux$983_Y [0] $flatten\tag_array.$procmux$983_Y [0] $flatten\tag_array.$procmux$983_Y [0] $flatten\tag_array.$procmux$983_Y [0] $flatten\tag_array.$procmux$983_Y [0] $flatten\tag_array.$procmux$983_Y [0] $flatten\tag_array.$procmux$983_Y [0] $flatten\tag_array.$procmux$983_Y [0] $flatten\tag_array.$procmux$983_Y [0] $flatten\tag_array.$procmux$983_Y [0] $flatten\tag_array.$procmux$983_Y [0] $flatten\tag_array.$procmux$983_Y [0] $flatten\tag_array.$procmux$983_Y [0] }
+  Optimizing cells in module \cache_controller.
+    Consolidated identical input bits for $mux cell $flatten\tag_array.$procmux$1018:
+      Old ports: A=25'0000000000000000000000000, B=$flatten\tag_array.$2$memwr$\tag1$./src/tag_array.v:47$63_EN[24:0]$121, Y=$flatten\tag_array.$0$memwr$\tag1$./src/tag_array.v:47$63_EN[24:0]$78
+      New ports: A=1'0, B=$flatten\tag_array.$procmux$983_Y [0], Y=$flatten\tag_array.$0$memwr$\tag1$./src/tag_array.v:47$63_EN[24:0]$78 [0]
+      New connections: $flatten\tag_array.$0$memwr$\tag1$./src/tag_array.v:47$63_EN[24:0]$78 [24:1] = { $flatten\tag_array.$0$memwr$\tag1$./src/tag_array.v:47$63_EN[24:0]$78 [0] $flatten\tag_array.$0$memwr$\tag1$./src/tag_array.v:47$63_EN[24:0]$78 [0] $flatten\tag_array.$0$memwr$\tag1$./src/tag_array.v:47$63_EN[24:0]$78 [0] $flatten\tag_array.$0$memwr$\tag1$./src/tag_array.v:47$63_EN[24:0]$78 [0] $flatten\tag_array.$0$memwr$\tag1$./src/tag_array.v:47$63_EN[24:0]$78 [0] $flatten\tag_array.$0$memwr$\tag1$./src/tag_array.v:47$63_EN[24:0]$78 [0] $flatten\tag_array.$0$memwr$\tag1$./src/tag_array.v:47$63_EN[24:0]$78 [0] $flatten\tag_array.$0$memwr$\tag1$./src/tag_array.v:47$63_EN[24:0]$78 [0] $flatten\tag_array.$0$memwr$\tag1$./src/tag_array.v:47$63_EN[24:0]$78 [0] $flatten\tag_array.$0$memwr$\tag1$./src/tag_array.v:47$63_EN[24:0]$78 [0] $flatten\tag_array.$0$memwr$\tag1$./src/tag_array.v:47$63_EN[24:0]$78 [0] $flatten\tag_array.$0$memwr$\tag1$./src/tag_array.v:47$63_EN[24:0]$78 [0] $flatten\tag_array.$0$memwr$\tag1$./src/tag_array.v:47$63_EN[24:0]$78 [0] $flatten\tag_array.$0$memwr$\tag1$./src/tag_array.v:47$63_EN[24:0]$78 [0] $flatten\tag_array.$0$memwr$\tag1$./src/tag_array.v:47$63_EN[24:0]$78 [0] $flatten\tag_array.$0$memwr$\tag1$./src/tag_array.v:47$63_EN[24:0]$78 [0] $flatten\tag_array.$0$memwr$\tag1$./src/tag_array.v:47$63_EN[24:0]$78 [0] $flatten\tag_array.$0$memwr$\tag1$./src/tag_array.v:47$63_EN[24:0]$78 [0] $flatten\tag_array.$0$memwr$\tag1$./src/tag_array.v:47$63_EN[24:0]$78 [0] $flatten\tag_array.$0$memwr$\tag1$./src/tag_array.v:47$63_EN[24:0]$78 [0] $flatten\tag_array.$0$memwr$\tag1$./src/tag_array.v:47$63_EN[24:0]$78 [0] $flatten\tag_array.$0$memwr$\tag1$./src/tag_array.v:47$63_EN[24:0]$78 [0] $flatten\tag_array.$0$memwr$\tag1$./src/tag_array.v:47$63_EN[24:0]$78 [0] $flatten\tag_array.$0$memwr$\tag1$./src/tag_array.v:47$63_EN[24:0]$78 [0] }
+    Consolidated identical input bits for $mux cell $flatten\tag_array.$procmux$1045:
+      Old ports: A=25'0000000000000000000000000, B=$flatten\tag_array.$2$memwr$\tag0$./src/tag_array.v:43$60_EN[24:0]$112, Y=$flatten\tag_array.$0$memwr$\tag0$./src/tag_array.v:43$60_EN[24:0]$69
+      New ports: A=1'0, B=$flatten\tag_array.$procmux$929_Y [0], Y=$flatten\tag_array.$0$memwr$\tag0$./src/tag_array.v:43$60_EN[24:0]$69 [0]
+      New connections: $flatten\tag_array.$0$memwr$\tag0$./src/tag_array.v:43$60_EN[24:0]$69 [24:1] = { $flatten\tag_array.$0$memwr$\tag0$./src/tag_array.v:43$60_EN[24:0]$69 [0] $flatten\tag_array.$0$memwr$\tag0$./src/tag_array.v:43$60_EN[24:0]$69 [0] $flatten\tag_array.$0$memwr$\tag0$./src/tag_array.v:43$60_EN[24:0]$69 [0] $flatten\tag_array.$0$memwr$\tag0$./src/tag_array.v:43$60_EN[24:0]$69 [0] $flatten\tag_array.$0$memwr$\tag0$./src/tag_array.v:43$60_EN[24:0]$69 [0] $flatten\tag_array.$0$memwr$\tag0$./src/tag_array.v:43$60_EN[24:0]$69 [0] $flatten\tag_array.$0$memwr$\tag0$./src/tag_array.v:43$60_EN[24:0]$69 [0] $flatten\tag_array.$0$memwr$\tag0$./src/tag_array.v:43$60_EN[24:0]$69 [0] $flatten\tag_array.$0$memwr$\tag0$./src/tag_array.v:43$60_EN[24:0]$69 [0] $flatten\tag_array.$0$memwr$\tag0$./src/tag_array.v:43$60_EN[24:0]$69 [0] $flatten\tag_array.$0$memwr$\tag0$./src/tag_array.v:43$60_EN[24:0]$69 [0] $flatten\tag_array.$0$memwr$\tag0$./src/tag_array.v:43$60_EN[24:0]$69 [0] $flatten\tag_array.$0$memwr$\tag0$./src/tag_array.v:43$60_EN[24:0]$69 [0] $flatten\tag_array.$0$memwr$\tag0$./src/tag_array.v:43$60_EN[24:0]$69 [0] $flatten\tag_array.$0$memwr$\tag0$./src/tag_array.v:43$60_EN[24:0]$69 [0] $flatten\tag_array.$0$memwr$\tag0$./src/tag_array.v:43$60_EN[24:0]$69 [0] $flatten\tag_array.$0$memwr$\tag0$./src/tag_array.v:43$60_EN[24:0]$69 [0] $flatten\tag_array.$0$memwr$\tag0$./src/tag_array.v:43$60_EN[24:0]$69 [0] $flatten\tag_array.$0$memwr$\tag0$./src/tag_array.v:43$60_EN[24:0]$69 [0] $flatten\tag_array.$0$memwr$\tag0$./src/tag_array.v:43$60_EN[24:0]$69 [0] $flatten\tag_array.$0$memwr$\tag0$./src/tag_array.v:43$60_EN[24:0]$69 [0] $flatten\tag_array.$0$memwr$\tag0$./src/tag_array.v:43$60_EN[24:0]$69 [0] $flatten\tag_array.$0$memwr$\tag0$./src/tag_array.v:43$60_EN[24:0]$69 [0] $flatten\tag_array.$0$memwr$\tag0$./src/tag_array.v:43$60_EN[24:0]$69 [0] }
+  Optimizing cells in module \cache_controller.
+Performed a total of 6 changes.
+
+32. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\cache_controller'.
+<suppressed ~120 debug messages>
+Removed a total of 40 cells.
+
+33. Executing OPT_DFF pass (perform DFF optimizations).
+
+34. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \cache_controller..
+Removed 0 unused cells and 272 unused wires.
+<suppressed ~1 debug messages>
+
+35. Executing OPT_EXPR pass (perform const folding).
+Optimizing module cache_controller.
+
+36. Rerunning OPT passes. (Maybe there is more to do…)
+
+37. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \cache_controller..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~42 debug messages>
+
+38. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \cache_controller.
+Performed a total of 0 changes.
+
+39. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\cache_controller'.
+Removed a total of 0 cells.
+
+40. Executing OPT_DFF pass (perform DFF optimizations).
+
+41. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \cache_controller..
+
+42. Executing OPT_EXPR pass (perform const folding).
+Optimizing module cache_controller.
+
+43. Executing FSM pass (extract and optimize FSM).
+
+43.1. Executing FSM_DETECT pass (finding FSMs in design).
+Found FSM state register cache_controller.fsm.state.
+
+43.2. Executing FSM_EXTRACT pass (extracting FSM from design).
+Extracting FSM `\fsm.state' from module `\cache_controller'.
+  found $adff cell for state register: $flatten\fsm.$procdff$1067
+  root of input selection tree: \fsm.next_state
+  found reset state: 3'000 (from async reset)
+  found ctrl input: $flatten\fsm.$procmux$163_CMP
+  found ctrl input: $flatten\fsm.$procmux$284_CMP
+  found ctrl input: $flatten\fsm.$procmux$302_CMP
+  found ctrl input: $flatten\fsm.$procmux$344_CMP
+  found ctrl input: $flatten\fsm.$procmux$871_CMP
+  found ctrl input: $flatten\fsm.$procmux$882_CMP
+  found ctrl input: \mem_ready
+  found state code: 3'101
+  found state code: 3'100
+  found ctrl input: $flatten\fsm.$logic_or$./src/fsm_logic.v:83$14_Y
+  found ctrl input: $flatten\fsm.$logic_or$./src/fsm_logic.v:73$7_Y
+  found state code: 3'011
+  found state code: 3'010
+  found ctrl input: $flatten\fsm.$logic_or$./src/fsm_logic.v:69$2_Y
+  found state code: 3'001
+  found ctrl output: $flatten\fsm.$procmux$882_CMP
+  found ctrl output: $flatten\fsm.$procmux$871_CMP
+  found ctrl output: $flatten\fsm.$procmux$344_CMP
+  found ctrl output: $flatten\fsm.$procmux$302_CMP
+  found ctrl output: $flatten\fsm.$procmux$284_CMP
+  found ctrl output: $flatten\fsm.$procmux$163_CMP
+  ctrl inputs: { $flatten\fsm.$logic_or$./src/fsm_logic.v:69$2_Y $flatten\fsm.$logic_or$./src/fsm_logic.v:73$7_Y $flatten\fsm.$logic_or$./src/fsm_logic.v:83$14_Y \mem_ready }
+  ctrl outputs: { \fsm.next_state $flatten\fsm.$procmux$163_CMP $flatten\fsm.$procmux$284_CMP $flatten\fsm.$procmux$302_CMP $flatten\fsm.$procmux$344_CMP $flatten\fsm.$procmux$871_CMP $flatten\fsm.$procmux$882_CMP }
+  transition:      3'000 4'0--- ->      3'000 9'000000001
+  transition:      3'000 4'1--- ->      3'001 9'001000001
+  transition:      3'100 4'---0 ->      3'100 9'100010000
+  transition:      3'100 4'---1 ->      3'101 9'101010000
+  transition:      3'010 4'---- ->      3'000 9'000000100
+  transition:      3'001 4'-0-- ->      3'011 9'011000010
+  transition:      3'001 4'-1-- ->      3'010 9'010000010
+  transition:      3'101 4'---0 ->      3'101 9'101100000
+  transition:      3'101 4'---1 ->      3'000 9'000100000
+  transition:      3'011 4'--0- ->      3'101 9'101001000
+  transition:      3'011 4'--1- ->      3'100 9'100001000
+
+43.3. Executing FSM_OPT pass (simple optimizations of FSMs).
+Optimizing FSM `$fsm$\fsm.state$1105' from module `\cache_controller'.
+
+43.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \cache_controller..
+Removed 13 unused cells and 13 unused wires.
+<suppressed ~14 debug messages>
+
+43.5. Executing FSM_OPT pass (simple optimizations of FSMs).
+Optimizing FSM `$fsm$\fsm.state$1105' from module `\cache_controller'.
+  Removing unused output signal $flatten\fsm.$procmux$882_CMP.
+  Removing unused output signal $flatten\fsm.$procmux$871_CMP.
+  Removing unused output signal \fsm.next_state [0].
+  Removing unused output signal \fsm.next_state [1].
+  Removing unused output signal \fsm.next_state [2].
+
+43.6. Executing FSM_RECODE pass (re-assigning FSM state encoding).
+Recoding FSM `$fsm$\fsm.state$1105' from module `\cache_controller' using `auto' encoding:
+  mapping auto encoding to `one-hot` for this FSM.
+  000 -> -----1
+  100 -> ----1-
+  010 -> ---1--
+  001 -> --1---
+  101 -> -1----
+  011 -> 1-----
+
+43.7. Executing FSM_INFO pass (dumping all available information on FSM cells).
+
+FSM `$fsm$\fsm.state$1105' from module `cache_controller':
+-------------------------------------
+
+  Information on FSM $fsm$\fsm.state$1105 (\fsm.state):
+
+  Number of input signals:    4
+  Number of output signals:   4
+  Number of state bits:       6
+
+  Input signals:
+    0: \mem_ready
+    1: $flatten\fsm.$logic_or$./src/fsm_logic.v:83$14_Y
+    2: $flatten\fsm.$logic_or$./src/fsm_logic.v:73$7_Y
+    3: $flatten\fsm.$logic_or$./src/fsm_logic.v:69$2_Y
+
+  Output signals:
+    0: $flatten\fsm.$procmux$344_CMP
+    1: $flatten\fsm.$procmux$302_CMP
+    2: $flatten\fsm.$procmux$284_CMP
+    3: $flatten\fsm.$procmux$163_CMP
+
+  State encoding:
+    0:   6'-----1  <RESET STATE>
+    1:   6'----1-
+    2:   6'---1--
+    3:   6'--1---
+    4:   6'-1----
+    5:   6'1-----
+
+  Transition Table (state_in, ctrl_in, state_out, ctrl_out):
+      0:     0 4'0---   ->     0 4'0000
+      1:     0 4'1---   ->     3 4'0000
+      2:     1 4'---0   ->     1 4'0100
+      3:     1 4'---1   ->     4 4'0100
+      4:     2 4'----   ->     0 4'0001
+      5:     3 4'-1--   ->     2 4'0000
+      6:     3 4'-0--   ->     5 4'0000
+      7:     4 4'---1   ->     0 4'1000
+      8:     4 4'---0   ->     4 4'1000
+      9:     5 4'--1-   ->     1 4'0010
+     10:     5 4'--0-   ->     4 4'0010
+
+-------------------------------------
+
+43.8. Executing FSM_MAP pass (mapping FSMs to basic logic).
+Mapping FSM `$fsm$\fsm.state$1105' from module `\cache_controller'.
+
+44. Executing OPT_EXPR pass (perform const folding).
+Optimizing module cache_controller.
+<suppressed ~10 debug messages>
+
+45. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\cache_controller'.
+<suppressed ~3 debug messages>
+Removed a total of 1 cells.
+
+46. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \cache_controller..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~41 debug messages>
+
+47. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \cache_controller.
+Performed a total of 0 changes.
+
+48. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\cache_controller'.
+Removed a total of 0 cells.
+
+49. Executing OPT_DFF pass (perform DFF optimizations).
+
+50. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \cache_controller..
+Removed 0 unused cells and 15 unused wires.
+<suppressed ~2 debug messages>
+
+51. Executing OPT_EXPR pass (perform const folding).
+Optimizing module cache_controller.
+
+52. Rerunning OPT passes. (Maybe there is more to do…)
+
+53. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \cache_controller..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~41 debug messages>
+
+54. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \cache_controller.
+Performed a total of 0 changes.
+
+55. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\cache_controller'.
+Removed a total of 0 cells.
+
+56. Executing OPT_DFF pass (perform DFF optimizations).
+
+57. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \cache_controller..
+
+58. Executing OPT_EXPR pass (perform const folding).
+Optimizing module cache_controller.
+
+59. Executing WREDUCE pass (reducing word size of cells).
+
+60. Executing PEEPOPT pass (run peephole optimizers).
+
+61. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \cache_controller..
+
+62. Executing ALUMACC pass (create $alu and $macc cells).
+Extracting $alu and $macc cells in module cache_controller:
+  created 0 $alu and 0 $macc cells.
+
+63. Executing SHARE pass (SAT-based resource sharing).
+
+64. Executing OPT_EXPR pass (perform const folding).
+Optimizing module cache_controller.
+
+65. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\cache_controller'.
+Removed a total of 0 cells.
+
+66. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \cache_controller..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~41 debug messages>
+
+67. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \cache_controller.
+Performed a total of 0 changes.
+
+68. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\cache_controller'.
+Removed a total of 0 cells.
+
+69. Executing OPT_DFF pass (perform DFF optimizations).
+
+70. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \cache_controller..
+
+71. Executing OPT_EXPR pass (perform const folding).
+Optimizing module cache_controller.
+
+72. Executing MEMORY pass.
+
+72.1. Executing OPT_MEM pass (optimize memories).
+Performed a total of 0 transformations.
+
+72.2. Executing OPT_MEM_PRIORITY pass (removing unnecessary memory write priority relations).
+Performed a total of 0 transformations.
+
+72.3. Executing OPT_MEM_FEEDBACK pass (finding memory read-to-write feedback paths).
+  Analyzing cache_controller.data_array.data0 write port 0.
+  Analyzing cache_controller.data_array.data1 write port 0.
+  Analyzing cache_controller.lru_array.lru_mem write port 0.
+  Analyzing cache_controller.tag_array.dirty0 write port 0.
+  Analyzing cache_controller.tag_array.dirty1 write port 0.
+  Analyzing cache_controller.tag_array.tag0 write port 0.
+  Analyzing cache_controller.tag_array.tag1 write port 0.
+  Analyzing cache_controller.tag_array.valid0 write port 0.
+  Analyzing cache_controller.tag_array.valid1 write port 0.
+
+72.4. Executing MEMORY_BMUX2ROM pass (converting muxes to ROMs).
+
+72.5. Executing MEMORY_DFF pass (merging $dff cells to $memrd).
+Checking read port `\data_array.data0'[0] in module `\cache_controller': merging output FF to cell.
+    Write port 0: non-transparent.
+Checking read port `\data_array.data1'[0] in module `\cache_controller': merging output FF to cell.
+    Write port 0: non-transparent.
+Checking read port `\lru_array.lru_mem'[0] in module `\cache_controller': merging output FF to cell.
+    Write port 0: non-transparent.
+Checking read port `\tag_array.dirty0'[0] in module `\cache_controller': merging output FF to cell.
+    Write port 0: non-transparent.
+Checking read port `\tag_array.dirty1'[0] in module `\cache_controller': merging output FF to cell.
+    Write port 0: non-transparent.
+Checking read port `\tag_array.tag0'[0] in module `\cache_controller': merging output FF to cell.
+    Write port 0: non-transparent.
+Checking read port `\tag_array.tag1'[0] in module `\cache_controller': merging output FF to cell.
+    Write port 0: non-transparent.
+Checking read port `\tag_array.valid0'[0] in module `\cache_controller': merging output FF to cell.
+    Write port 0: non-transparent.
+Checking read port `\tag_array.valid1'[0] in module `\cache_controller': merging output FF to cell.
+    Write port 0: non-transparent.
+
+72.6. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \cache_controller..
+Removed 9 unused cells and 192 unused wires.
+<suppressed ~10 debug messages>
+
+72.7. Executing MEMORY_SHARE pass (consolidating $memrd/$memwr cells).
+
+72.8. Executing OPT_MEM_WIDEN pass (optimize memories where all ports are wide).
+Performed a total of 0 transformations.
+
+72.9. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \cache_controller..
+
+72.10. Executing MEMORY_COLLECT pass (generating $mem cells).
+
+73. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \cache_controller..
+
+74. Executing OPT_EXPR pass (perform const folding).
+Optimizing module cache_controller.
+<suppressed ~44 debug messages>
+
+75. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\cache_controller'.
+<suppressed ~3 debug messages>
+Removed a total of 1 cells.
+
+76. Executing OPT_DFF pass (perform DFF optimizations).
+
+77. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \cache_controller..
+Removed 0 unused cells and 30 unused wires.
+<suppressed ~1 debug messages>
+
+78. Executing MEMORY_MAP pass (converting memories to logic and flip-flops).
+Mapping memory \data_array.data0 in module \cache_controller:
+  created 16 $dff cells and 0 static cells of width 64.
+Extracted data FF from read port 0 of cache_controller.data_array.data0: $\data_array.data0$rdreg[0]
+  read interface: 1 $dff and 15 $mux cells.
+  write interface: 16 write mux blocks.
+Mapping memory \data_array.data1 in module \cache_controller:
+  created 16 $dff cells and 0 static cells of width 64.
+Extracted data FF from read port 0 of cache_controller.data_array.data1: $\data_array.data1$rdreg[0]
+  read interface: 1 $dff and 15 $mux cells.
+  write interface: 16 write mux blocks.
+Mapping memory \lru_array.lru_mem in module \cache_controller:
+  created 16 $dff cells and 0 static cells of width 1.
+Extracted data FF from read port 0 of cache_controller.lru_array.lru_mem: $\lru_array.lru_mem$rdreg[0]
+  read interface: 1 $dff and 15 $mux cells.
+  write interface: 16 write mux blocks.
+Mapping memory \tag_array.dirty0 in module \cache_controller:
+  created 16 $dff cells and 0 static cells of width 1.
+Extracted data FF from read port 0 of cache_controller.tag_array.dirty0: $\tag_array.dirty0$rdreg[0]
+  read interface: 1 $dff and 15 $mux cells.
+  write interface: 16 write mux blocks.
+Mapping memory \tag_array.dirty1 in module \cache_controller:
+  created 16 $dff cells and 0 static cells of width 1.
+Extracted data FF from read port 0 of cache_controller.tag_array.dirty1: $\tag_array.dirty1$rdreg[0]
+  read interface: 1 $dff and 15 $mux cells.
+  write interface: 16 write mux blocks.
+Mapping memory \tag_array.tag0 in module \cache_controller:
+  created 16 $dff cells and 0 static cells of width 25.
+Extracted data FF from read port 0 of cache_controller.tag_array.tag0: $\tag_array.tag0$rdreg[0]
+  read interface: 1 $dff and 15 $mux cells.
+  write interface: 16 write mux blocks.
+Mapping memory \tag_array.tag1 in module \cache_controller:
+  created 16 $dff cells and 0 static cells of width 25.
+Extracted data FF from read port 0 of cache_controller.tag_array.tag1: $\tag_array.tag1$rdreg[0]
+  read interface: 1 $dff and 15 $mux cells.
+  write interface: 16 write mux blocks.
+Mapping memory \tag_array.valid0 in module \cache_controller:
+  created 16 $dff cells and 0 static cells of width 1.
+Extracted data FF from read port 0 of cache_controller.tag_array.valid0: $\tag_array.valid0$rdreg[0]
+  read interface: 1 $dff and 15 $mux cells.
+  write interface: 16 write mux blocks.
+Mapping memory \tag_array.valid1 in module \cache_controller:
+  created 16 $dff cells and 0 static cells of width 1.
+Extracted data FF from read port 0 of cache_controller.tag_array.valid1: $\tag_array.valid1$rdreg[0]
+  read interface: 1 $dff and 15 $mux cells.
+  write interface: 16 write mux blocks.
+
+79. Executing OPT_EXPR pass (perform const folding).
+Optimizing module cache_controller.
+<suppressed ~8 debug messages>
+
+80. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\cache_controller'.
+<suppressed ~192 debug messages>
+Removed a total of 64 cells.
+
+81. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \cache_controller..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~170 debug messages>
+
+82. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \cache_controller.
+    Consolidated identical input bits for $mux cell $flatten\fsm.$procmux$288:
+      Old ports: A={ \tag_array.tag_out0 \cpu_addr [6:3] 3'000 }, B=0, Y=$flatten\fsm.$4\mem_addr[31:0]
+      New ports: A={ \tag_array.tag_out0 \cpu_addr [6:3] }, B=29'00000000000000000000000000000, Y=$flatten\fsm.$4\mem_addr[31:0] [31:3]
+      New connections: $flatten\fsm.$4\mem_addr[31:0] [2:0] = 3'000
+    Consolidated identical input bits for $mux cell $flatten\fsm.$procmux$307:
+      Old ports: A=0, B={ \tag_array.tag_out1 \cpu_addr [6:3] 3'000 }, Y=$flatten\fsm.$3\mem_addr[31:0]
+      New ports: A=29'00000000000000000000000000000, B={ \tag_array.tag_out1 \cpu_addr [6:3] }, Y=$flatten\fsm.$3\mem_addr[31:0] [31:3]
+      New connections: $flatten\fsm.$3\mem_addr[31:0] [2:0] = 3'000
+  Optimizing cells in module \cache_controller.
+    Consolidated identical input bits for $mux cell $flatten\fsm.$procmux$326:
+      Old ports: A=$flatten\fsm.$3\mem_addr[31:0], B={ \tag_array.tag_out0 \cpu_addr [6:3] 3'000 }, Y=$flatten\fsm.$2\mem_addr[31:0]
+      New ports: A=$flatten\fsm.$3\mem_addr[31:0] [31:3], B={ \tag_array.tag_out0 \cpu_addr [6:3] }, Y=$flatten\fsm.$2\mem_addr[31:0] [31:3]
+      New connections: $flatten\fsm.$2\mem_addr[31:0] [2:0] = 3'000
+  Optimizing cells in module \cache_controller.
+Performed a total of 3 changes.
+
+83. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\cache_controller'.
+Removed a total of 0 cells.
+
+84. Executing OPT_SHARE pass.
+
+85. Executing OPT_DFF pass (perform DFF optimizations).
+
+86. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \cache_controller..
+Removed 0 unused cells and 356 unused wires.
+<suppressed ~1 debug messages>
+
+87. Executing OPT_EXPR pass (perform const folding).
+Optimizing module cache_controller.
+
+88. Rerunning OPT passes. (Maybe there is more to do…)
+
+89. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \cache_controller..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~170 debug messages>
+
+90. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \cache_controller.
+Performed a total of 0 changes.
+
+91. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\cache_controller'.
+Removed a total of 0 cells.
+
+92. Executing OPT_SHARE pass.
+
+93. Executing OPT_DFF pass (perform DFF optimizations).
+Adding EN signal on $memory\tag_array.valid1[9]$2562 ($dff) from module cache_controller (D = \tag_array.valid_in, Q = \tag_array.valid1[9]).
+Adding EN signal on $memory\tag_array.valid1[8]$2560 ($dff) from module cache_controller (D = \tag_array.valid_in, Q = \tag_array.valid1[8]).
+Adding EN signal on $memory\tag_array.valid1[7]$2558 ($dff) from module cache_controller (D = \tag_array.valid_in, Q = \tag_array.valid1[7]).
+Adding EN signal on $memory\tag_array.valid1[6]$2556 ($dff) from module cache_controller (D = \tag_array.valid_in, Q = \tag_array.valid1[6]).
+Adding EN signal on $memory\tag_array.valid1[5]$2554 ($dff) from module cache_controller (D = \tag_array.valid_in, Q = \tag_array.valid1[5]).
+Adding EN signal on $memory\tag_array.valid1[4]$2552 ($dff) from module cache_controller (D = \tag_array.valid_in, Q = \tag_array.valid1[4]).
+Adding EN signal on $memory\tag_array.valid1[3]$2550 ($dff) from module cache_controller (D = \tag_array.valid_in, Q = \tag_array.valid1[3]).
+Adding EN signal on $memory\tag_array.valid1[2]$2548 ($dff) from module cache_controller (D = \tag_array.valid_in, Q = \tag_array.valid1[2]).
+Adding EN signal on $memory\tag_array.valid1[1]$2546 ($dff) from module cache_controller (D = \tag_array.valid_in, Q = \tag_array.valid1[1]).
+Adding EN signal on $memory\tag_array.valid1[15]$2574 ($dff) from module cache_controller (D = \tag_array.valid_in, Q = \tag_array.valid1[15]).
+Adding EN signal on $memory\tag_array.valid1[14]$2572 ($dff) from module cache_controller (D = \tag_array.valid_in, Q = \tag_array.valid1[14]).
+Adding EN signal on $memory\tag_array.valid1[13]$2570 ($dff) from module cache_controller (D = \tag_array.valid_in, Q = \tag_array.valid1[13]).
+Adding EN signal on $memory\tag_array.valid1[12]$2568 ($dff) from module cache_controller (D = \tag_array.valid_in, Q = \tag_array.valid1[12]).
+Adding EN signal on $memory\tag_array.valid1[11]$2566 ($dff) from module cache_controller (D = \tag_array.valid_in, Q = \tag_array.valid1[11]).
+Adding EN signal on $memory\tag_array.valid1[10]$2564 ($dff) from module cache_controller (D = \tag_array.valid_in, Q = \tag_array.valid1[10]).
+Adding EN signal on $memory\tag_array.valid1[0]$2544 ($dff) from module cache_controller (D = \tag_array.valid_in, Q = \tag_array.valid1[0]).
+Adding EN signal on $memory\tag_array.valid0[9]$2421 ($dff) from module cache_controller (D = \tag_array.valid_in, Q = \tag_array.valid0[9]).
+Adding EN signal on $memory\tag_array.valid0[8]$2419 ($dff) from module cache_controller (D = \tag_array.valid_in, Q = \tag_array.valid0[8]).
+Adding EN signal on $memory\tag_array.valid0[7]$2417 ($dff) from module cache_controller (D = \tag_array.valid_in, Q = \tag_array.valid0[7]).
+Adding EN signal on $memory\tag_array.valid0[6]$2415 ($dff) from module cache_controller (D = \tag_array.valid_in, Q = \tag_array.valid0[6]).
+Adding EN signal on $memory\tag_array.valid0[5]$2413 ($dff) from module cache_controller (D = \tag_array.valid_in, Q = \tag_array.valid0[5]).
+Adding EN signal on $memory\tag_array.valid0[4]$2411 ($dff) from module cache_controller (D = \tag_array.valid_in, Q = \tag_array.valid0[4]).
+Adding EN signal on $memory\tag_array.valid0[3]$2409 ($dff) from module cache_controller (D = \tag_array.valid_in, Q = \tag_array.valid0[3]).
+Adding EN signal on $memory\tag_array.valid0[2]$2407 ($dff) from module cache_controller (D = \tag_array.valid_in, Q = \tag_array.valid0[2]).
+Adding EN signal on $memory\tag_array.valid0[1]$2405 ($dff) from module cache_controller (D = \tag_array.valid_in, Q = \tag_array.valid0[1]).
+Adding EN signal on $memory\tag_array.valid0[15]$2433 ($dff) from module cache_controller (D = \tag_array.valid_in, Q = \tag_array.valid0[15]).
+Adding EN signal on $memory\tag_array.valid0[14]$2431 ($dff) from module cache_controller (D = \tag_array.valid_in, Q = \tag_array.valid0[14]).
+Adding EN signal on $memory\tag_array.valid0[13]$2429 ($dff) from module cache_controller (D = \tag_array.valid_in, Q = \tag_array.valid0[13]).
+Adding EN signal on $memory\tag_array.valid0[12]$2427 ($dff) from module cache_controller (D = \tag_array.valid_in, Q = \tag_array.valid0[12]).
+Adding EN signal on $memory\tag_array.valid0[11]$2425 ($dff) from module cache_controller (D = \tag_array.valid_in, Q = \tag_array.valid0[11]).
+Adding EN signal on $memory\tag_array.valid0[10]$2423 ($dff) from module cache_controller (D = \tag_array.valid_in, Q = \tag_array.valid0[10]).
+Adding EN signal on $memory\tag_array.valid0[0]$2403 ($dff) from module cache_controller (D = \tag_array.valid_in, Q = \tag_array.valid0[0]).
+Adding EN signal on $memory\tag_array.tag1[9]$2280 ($dff) from module cache_controller (D = \tag_array.tag_in, Q = \tag_array.tag1[9]).
+Adding EN signal on $memory\tag_array.tag1[8]$2278 ($dff) from module cache_controller (D = \tag_array.tag_in, Q = \tag_array.tag1[8]).
+Adding EN signal on $memory\tag_array.tag1[7]$2276 ($dff) from module cache_controller (D = \tag_array.tag_in, Q = \tag_array.tag1[7]).
+Adding EN signal on $memory\tag_array.tag1[6]$2274 ($dff) from module cache_controller (D = \tag_array.tag_in, Q = \tag_array.tag1[6]).
+Adding EN signal on $memory\tag_array.tag1[5]$2272 ($dff) from module cache_controller (D = \tag_array.tag_in, Q = \tag_array.tag1[5]).
+Adding EN signal on $memory\tag_array.tag1[4]$2270 ($dff) from module cache_controller (D = \tag_array.tag_in, Q = \tag_array.tag1[4]).
+Adding EN signal on $memory\tag_array.tag1[3]$2268 ($dff) from module cache_controller (D = \tag_array.tag_in, Q = \tag_array.tag1[3]).
+Adding EN signal on $memory\tag_array.tag1[2]$2266 ($dff) from module cache_controller (D = \tag_array.tag_in, Q = \tag_array.tag1[2]).
+Adding EN signal on $memory\tag_array.tag1[1]$2264 ($dff) from module cache_controller (D = \tag_array.tag_in, Q = \tag_array.tag1[1]).
+Adding EN signal on $memory\tag_array.tag1[15]$2292 ($dff) from module cache_controller (D = \tag_array.tag_in, Q = \tag_array.tag1[15]).
+Adding EN signal on $memory\tag_array.tag1[14]$2290 ($dff) from module cache_controller (D = \tag_array.tag_in, Q = \tag_array.tag1[14]).
+Adding EN signal on $memory\tag_array.tag1[13]$2288 ($dff) from module cache_controller (D = \tag_array.tag_in, Q = \tag_array.tag1[13]).
+Adding EN signal on $memory\tag_array.tag1[12]$2286 ($dff) from module cache_controller (D = \tag_array.tag_in, Q = \tag_array.tag1[12]).
+Adding EN signal on $memory\tag_array.tag1[11]$2284 ($dff) from module cache_controller (D = \tag_array.tag_in, Q = \tag_array.tag1[11]).
+Adding EN signal on $memory\tag_array.tag1[10]$2282 ($dff) from module cache_controller (D = \tag_array.tag_in, Q = \tag_array.tag1[10]).
+Adding EN signal on $memory\tag_array.tag1[0]$2262 ($dff) from module cache_controller (D = \tag_array.tag_in, Q = \tag_array.tag1[0]).
+Adding EN signal on $memory\tag_array.tag0[9]$2139 ($dff) from module cache_controller (D = \tag_array.tag_in, Q = \tag_array.tag0[9]).
+Adding EN signal on $memory\tag_array.tag0[8]$2137 ($dff) from module cache_controller (D = \tag_array.tag_in, Q = \tag_array.tag0[8]).
+Adding EN signal on $memory\tag_array.tag0[7]$2135 ($dff) from module cache_controller (D = \tag_array.tag_in, Q = \tag_array.tag0[7]).
+Adding EN signal on $memory\tag_array.tag0[6]$2133 ($dff) from module cache_controller (D = \tag_array.tag_in, Q = \tag_array.tag0[6]).
+Adding EN signal on $memory\tag_array.tag0[5]$2131 ($dff) from module cache_controller (D = \tag_array.tag_in, Q = \tag_array.tag0[5]).
+Adding EN signal on $memory\tag_array.tag0[4]$2129 ($dff) from module cache_controller (D = \tag_array.tag_in, Q = \tag_array.tag0[4]).
+Adding EN signal on $memory\tag_array.tag0[3]$2127 ($dff) from module cache_controller (D = \tag_array.tag_in, Q = \tag_array.tag0[3]).
+Adding EN signal on $memory\tag_array.tag0[2]$2125 ($dff) from module cache_controller (D = \tag_array.tag_in, Q = \tag_array.tag0[2]).
+Adding EN signal on $memory\tag_array.tag0[1]$2123 ($dff) from module cache_controller (D = \tag_array.tag_in, Q = \tag_array.tag0[1]).
+Adding EN signal on $memory\tag_array.tag0[15]$2151 ($dff) from module cache_controller (D = \tag_array.tag_in, Q = \tag_array.tag0[15]).
+Adding EN signal on $memory\tag_array.tag0[14]$2149 ($dff) from module cache_controller (D = \tag_array.tag_in, Q = \tag_array.tag0[14]).
+Adding EN signal on $memory\tag_array.tag0[13]$2147 ($dff) from module cache_controller (D = \tag_array.tag_in, Q = \tag_array.tag0[13]).
+Adding EN signal on $memory\tag_array.tag0[12]$2145 ($dff) from module cache_controller (D = \tag_array.tag_in, Q = \tag_array.tag0[12]).
+Adding EN signal on $memory\tag_array.tag0[11]$2143 ($dff) from module cache_controller (D = \tag_array.tag_in, Q = \tag_array.tag0[11]).
+Adding EN signal on $memory\tag_array.tag0[10]$2141 ($dff) from module cache_controller (D = \tag_array.tag_in, Q = \tag_array.tag0[10]).
+Adding EN signal on $memory\tag_array.tag0[0]$2121 ($dff) from module cache_controller (D = \tag_array.tag_in, Q = \tag_array.tag0[0]).
+Adding EN signal on $memory\tag_array.dirty1[9]$1998 ($dff) from module cache_controller (D = \tag_array.dirty_in, Q = \tag_array.dirty1[9]).
+Adding EN signal on $memory\tag_array.dirty1[8]$1996 ($dff) from module cache_controller (D = \tag_array.dirty_in, Q = \tag_array.dirty1[8]).
+Adding EN signal on $memory\tag_array.dirty1[7]$1994 ($dff) from module cache_controller (D = \tag_array.dirty_in, Q = \tag_array.dirty1[7]).
+Adding EN signal on $memory\tag_array.dirty1[6]$1992 ($dff) from module cache_controller (D = \tag_array.dirty_in, Q = \tag_array.dirty1[6]).
+Adding EN signal on $memory\tag_array.dirty1[5]$1990 ($dff) from module cache_controller (D = \tag_array.dirty_in, Q = \tag_array.dirty1[5]).
+Adding EN signal on $memory\tag_array.dirty1[4]$1988 ($dff) from module cache_controller (D = \tag_array.dirty_in, Q = \tag_array.dirty1[4]).
+Adding EN signal on $memory\tag_array.dirty1[3]$1986 ($dff) from module cache_controller (D = \tag_array.dirty_in, Q = \tag_array.dirty1[3]).
+Adding EN signal on $memory\tag_array.dirty1[2]$1984 ($dff) from module cache_controller (D = \tag_array.dirty_in, Q = \tag_array.dirty1[2]).
+Adding EN signal on $memory\tag_array.dirty1[1]$1982 ($dff) from module cache_controller (D = \tag_array.dirty_in, Q = \tag_array.dirty1[1]).
+Adding EN signal on $memory\tag_array.dirty1[15]$2010 ($dff) from module cache_controller (D = \tag_array.dirty_in, Q = \tag_array.dirty1[15]).
+Adding EN signal on $memory\tag_array.dirty1[14]$2008 ($dff) from module cache_controller (D = \tag_array.dirty_in, Q = \tag_array.dirty1[14]).
+Adding EN signal on $memory\tag_array.dirty1[13]$2006 ($dff) from module cache_controller (D = \tag_array.dirty_in, Q = \tag_array.dirty1[13]).
+Adding EN signal on $memory\tag_array.dirty1[12]$2004 ($dff) from module cache_controller (D = \tag_array.dirty_in, Q = \tag_array.dirty1[12]).
+Adding EN signal on $memory\tag_array.dirty1[11]$2002 ($dff) from module cache_controller (D = \tag_array.dirty_in, Q = \tag_array.dirty1[11]).
+Adding EN signal on $memory\tag_array.dirty1[10]$2000 ($dff) from module cache_controller (D = \tag_array.dirty_in, Q = \tag_array.dirty1[10]).
+Adding EN signal on $memory\tag_array.dirty1[0]$1980 ($dff) from module cache_controller (D = \tag_array.dirty_in, Q = \tag_array.dirty1[0]).
+Adding EN signal on $memory\tag_array.dirty0[9]$1857 ($dff) from module cache_controller (D = \tag_array.dirty_in, Q = \tag_array.dirty0[9]).
+Adding EN signal on $memory\tag_array.dirty0[8]$1855 ($dff) from module cache_controller (D = \tag_array.dirty_in, Q = \tag_array.dirty0[8]).
+Adding EN signal on $memory\tag_array.dirty0[7]$1853 ($dff) from module cache_controller (D = \tag_array.dirty_in, Q = \tag_array.dirty0[7]).
+Adding EN signal on $memory\tag_array.dirty0[6]$1851 ($dff) from module cache_controller (D = \tag_array.dirty_in, Q = \tag_array.dirty0[6]).
+Adding EN signal on $memory\tag_array.dirty0[5]$1849 ($dff) from module cache_controller (D = \tag_array.dirty_in, Q = \tag_array.dirty0[5]).
+Adding EN signal on $memory\tag_array.dirty0[4]$1847 ($dff) from module cache_controller (D = \tag_array.dirty_in, Q = \tag_array.dirty0[4]).
+Adding EN signal on $memory\tag_array.dirty0[3]$1845 ($dff) from module cache_controller (D = \tag_array.dirty_in, Q = \tag_array.dirty0[3]).
+Adding EN signal on $memory\tag_array.dirty0[2]$1843 ($dff) from module cache_controller (D = \tag_array.dirty_in, Q = \tag_array.dirty0[2]).
+Adding EN signal on $memory\tag_array.dirty0[1]$1841 ($dff) from module cache_controller (D = \tag_array.dirty_in, Q = \tag_array.dirty0[1]).
+Adding EN signal on $memory\tag_array.dirty0[15]$1869 ($dff) from module cache_controller (D = \tag_array.dirty_in, Q = \tag_array.dirty0[15]).
+Adding EN signal on $memory\tag_array.dirty0[14]$1867 ($dff) from module cache_controller (D = \tag_array.dirty_in, Q = \tag_array.dirty0[14]).
+Adding EN signal on $memory\tag_array.dirty0[13]$1865 ($dff) from module cache_controller (D = \tag_array.dirty_in, Q = \tag_array.dirty0[13]).
+Adding EN signal on $memory\tag_array.dirty0[12]$1863 ($dff) from module cache_controller (D = \tag_array.dirty_in, Q = \tag_array.dirty0[12]).
+Adding EN signal on $memory\tag_array.dirty0[11]$1861 ($dff) from module cache_controller (D = \tag_array.dirty_in, Q = \tag_array.dirty0[11]).
+Adding EN signal on $memory\tag_array.dirty0[10]$1859 ($dff) from module cache_controller (D = \tag_array.dirty_in, Q = \tag_array.dirty0[10]).
+Adding EN signal on $memory\tag_array.dirty0[0]$1839 ($dff) from module cache_controller (D = \tag_array.dirty_in, Q = \tag_array.dirty0[0]).
+Adding EN signal on $memory\lru_array.lru_mem[9]$1716 ($dff) from module cache_controller (D = \lru_array.data_in, Q = \lru_array.lru_mem[9]).
+Adding EN signal on $memory\lru_array.lru_mem[8]$1714 ($dff) from module cache_controller (D = \lru_array.data_in, Q = \lru_array.lru_mem[8]).
+Adding EN signal on $memory\lru_array.lru_mem[7]$1712 ($dff) from module cache_controller (D = \lru_array.data_in, Q = \lru_array.lru_mem[7]).
+Adding EN signal on $memory\lru_array.lru_mem[6]$1710 ($dff) from module cache_controller (D = \lru_array.data_in, Q = \lru_array.lru_mem[6]).
+Adding EN signal on $memory\lru_array.lru_mem[5]$1708 ($dff) from module cache_controller (D = \lru_array.data_in, Q = \lru_array.lru_mem[5]).
+Adding EN signal on $memory\lru_array.lru_mem[4]$1706 ($dff) from module cache_controller (D = \lru_array.data_in, Q = \lru_array.lru_mem[4]).
+Adding EN signal on $memory\lru_array.lru_mem[3]$1704 ($dff) from module cache_controller (D = \lru_array.data_in, Q = \lru_array.lru_mem[3]).
+Adding EN signal on $memory\lru_array.lru_mem[2]$1702 ($dff) from module cache_controller (D = \lru_array.data_in, Q = \lru_array.lru_mem[2]).
+Adding EN signal on $memory\lru_array.lru_mem[1]$1700 ($dff) from module cache_controller (D = \lru_array.data_in, Q = \lru_array.lru_mem[1]).
+Adding EN signal on $memory\lru_array.lru_mem[15]$1728 ($dff) from module cache_controller (D = \lru_array.data_in, Q = \lru_array.lru_mem[15]).
+Adding EN signal on $memory\lru_array.lru_mem[14]$1726 ($dff) from module cache_controller (D = \lru_array.data_in, Q = \lru_array.lru_mem[14]).
+Adding EN signal on $memory\lru_array.lru_mem[13]$1724 ($dff) from module cache_controller (D = \lru_array.data_in, Q = \lru_array.lru_mem[13]).
+Adding EN signal on $memory\lru_array.lru_mem[12]$1722 ($dff) from module cache_controller (D = \lru_array.data_in, Q = \lru_array.lru_mem[12]).
+Adding EN signal on $memory\lru_array.lru_mem[11]$1720 ($dff) from module cache_controller (D = \lru_array.data_in, Q = \lru_array.lru_mem[11]).
+Adding EN signal on $memory\lru_array.lru_mem[10]$1718 ($dff) from module cache_controller (D = \lru_array.data_in, Q = \lru_array.lru_mem[10]).
+Adding EN signal on $memory\lru_array.lru_mem[0]$1698 ($dff) from module cache_controller (D = \lru_array.data_in, Q = \lru_array.lru_mem[0]).
+Adding EN signal on $memory\data_array.data1[9]$1575 ($dff) from module cache_controller (D = \data_array.wdata1, Q = \data_array.data1[9]).
+Adding EN signal on $memory\data_array.data1[8]$1573 ($dff) from module cache_controller (D = \data_array.wdata1, Q = \data_array.data1[8]).
+Adding EN signal on $memory\data_array.data1[7]$1571 ($dff) from module cache_controller (D = \data_array.wdata1, Q = \data_array.data1[7]).
+Adding EN signal on $memory\data_array.data1[6]$1569 ($dff) from module cache_controller (D = \data_array.wdata1, Q = \data_array.data1[6]).
+Adding EN signal on $memory\data_array.data1[5]$1567 ($dff) from module cache_controller (D = \data_array.wdata1, Q = \data_array.data1[5]).
+Adding EN signal on $memory\data_array.data1[4]$1565 ($dff) from module cache_controller (D = \data_array.wdata1, Q = \data_array.data1[4]).
+Adding EN signal on $memory\data_array.data1[3]$1563 ($dff) from module cache_controller (D = \data_array.wdata1, Q = \data_array.data1[3]).
+Adding EN signal on $memory\data_array.data1[2]$1561 ($dff) from module cache_controller (D = \data_array.wdata1, Q = \data_array.data1[2]).
+Adding EN signal on $memory\data_array.data1[1]$1559 ($dff) from module cache_controller (D = \data_array.wdata1, Q = \data_array.data1[1]).
+Adding EN signal on $memory\data_array.data1[15]$1587 ($dff) from module cache_controller (D = \data_array.wdata1, Q = \data_array.data1[15]).
+Adding EN signal on $memory\data_array.data1[14]$1585 ($dff) from module cache_controller (D = \data_array.wdata1, Q = \data_array.data1[14]).
+Adding EN signal on $memory\data_array.data1[13]$1583 ($dff) from module cache_controller (D = \data_array.wdata1, Q = \data_array.data1[13]).
+Adding EN signal on $memory\data_array.data1[12]$1581 ($dff) from module cache_controller (D = \data_array.wdata1, Q = \data_array.data1[12]).
+Adding EN signal on $memory\data_array.data1[11]$1579 ($dff) from module cache_controller (D = \data_array.wdata1, Q = \data_array.data1[11]).
+Adding EN signal on $memory\data_array.data1[10]$1577 ($dff) from module cache_controller (D = \data_array.wdata1, Q = \data_array.data1[10]).
+Adding EN signal on $memory\data_array.data1[0]$1557 ($dff) from module cache_controller (D = \data_array.wdata1, Q = \data_array.data1[0]).
+Adding EN signal on $memory\data_array.data0[9]$1370 ($dff) from module cache_controller (D = \data_array.wdata0, Q = \data_array.data0[9]).
+Adding EN signal on $memory\data_array.data0[8]$1368 ($dff) from module cache_controller (D = \data_array.wdata0, Q = \data_array.data0[8]).
+Adding EN signal on $memory\data_array.data0[7]$1366 ($dff) from module cache_controller (D = \data_array.wdata0, Q = \data_array.data0[7]).
+Adding EN signal on $memory\data_array.data0[6]$1364 ($dff) from module cache_controller (D = \data_array.wdata0, Q = \data_array.data0[6]).
+Adding EN signal on $memory\data_array.data0[5]$1362 ($dff) from module cache_controller (D = \data_array.wdata0, Q = \data_array.data0[5]).
+Adding EN signal on $memory\data_array.data0[4]$1360 ($dff) from module cache_controller (D = \data_array.wdata0, Q = \data_array.data0[4]).
+Adding EN signal on $memory\data_array.data0[3]$1358 ($dff) from module cache_controller (D = \data_array.wdata0, Q = \data_array.data0[3]).
+Adding EN signal on $memory\data_array.data0[2]$1356 ($dff) from module cache_controller (D = \data_array.wdata0, Q = \data_array.data0[2]).
+Adding EN signal on $memory\data_array.data0[1]$1354 ($dff) from module cache_controller (D = \data_array.wdata0, Q = \data_array.data0[1]).
+Adding EN signal on $memory\data_array.data0[15]$1382 ($dff) from module cache_controller (D = \data_array.wdata0, Q = \data_array.data0[15]).
+Adding EN signal on $memory\data_array.data0[14]$1380 ($dff) from module cache_controller (D = \data_array.wdata0, Q = \data_array.data0[14]).
+Adding EN signal on $memory\data_array.data0[13]$1378 ($dff) from module cache_controller (D = \data_array.wdata0, Q = \data_array.data0[13]).
+Adding EN signal on $memory\data_array.data0[12]$1376 ($dff) from module cache_controller (D = \data_array.wdata0, Q = \data_array.data0[12]).
+Adding EN signal on $memory\data_array.data0[11]$1374 ($dff) from module cache_controller (D = \data_array.wdata0, Q = \data_array.data0[11]).
+Adding EN signal on $memory\data_array.data0[10]$1372 ($dff) from module cache_controller (D = \data_array.wdata0, Q = \data_array.data0[10]).
+Adding EN signal on $memory\data_array.data0[0]$1352 ($dff) from module cache_controller (D = \data_array.wdata0, Q = \data_array.data0[0]).
+
+94. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \cache_controller..
+Removed 144 unused cells and 144 unused wires.
+<suppressed ~145 debug messages>
+
+95. Executing OPT_EXPR pass (perform const folding).
+Optimizing module cache_controller.
+
+96. Rerunning OPT passes. (Maybe there is more to do…)
+
+97. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \cache_controller..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~26 debug messages>
+
+98. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \cache_controller.
+Performed a total of 0 changes.
+
+99. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\cache_controller'.
+Removed a total of 0 cells.
+
+100. Executing OPT_SHARE pass.
+
+101. Executing OPT_DFF pass (perform DFF optimizations).
+
+102. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \cache_controller..
+
+103. Executing OPT_EXPR pass (perform const folding).
+Optimizing module cache_controller.
+
+104. Executing TECHMAP pass (map to technology primitives).
+
+104.1. Executing Verilog-2005 frontend: /nix/store/9r0bh7sp051dpm8km8bqlb028anpd3v3-yosys/bin/../share/yosys/techmap.v
+Parsing Verilog input from `/nix/store/9r0bh7sp051dpm8km8bqlb028anpd3v3-yosys/bin/../share/yosys/techmap.v' to AST representation.
+Generating RTLIL representation for module `\_90_simplemap_bool_ops'.
+Generating RTLIL representation for module `\_90_simplemap_reduce_ops'.
+Generating RTLIL representation for module `\_90_simplemap_logic_ops'.
+Generating RTLIL representation for module `\_90_simplemap_compare_ops'.
+Generating RTLIL representation for module `\_90_simplemap_various'.
+Generating RTLIL representation for module `\_90_simplemap_registers'.
+Generating RTLIL representation for module `\_90_shift_ops_shr_shl_sshl_sshr'.
+Generating RTLIL representation for module `\_90_shift_shiftx'.
+Generating RTLIL representation for module `\_90_fa'.
+Generating RTLIL representation for module `\_90_lcu_brent_kung'.
+Generating RTLIL representation for module `\_90_alu'.
+Generating RTLIL representation for module `\_90_macc'.
+Generating RTLIL representation for module `\_90_alumacc'.
+Generating RTLIL representation for module `\$__div_mod_u'.
+Generating RTLIL representation for module `\$__div_mod_trunc'.
+Generating RTLIL representation for module `\_90_div'.
+Generating RTLIL representation for module `\_90_mod'.
+Generating RTLIL representation for module `\$__div_mod_floor'.
+Generating RTLIL representation for module `\_90_divfloor'.
+Generating RTLIL representation for module `\_90_modfloor'.
+Generating RTLIL representation for module `\_90_pow'.
+Generating RTLIL representation for module `\_90_pmux'.
+Generating RTLIL representation for module `\_90_demux'.
+Generating RTLIL representation for module `\_90_lut'.
+Successfully finished Verilog frontend.
+
+104.2. Continuing TECHMAP pass.
+Using extmapper simplemap for cells of type $and.
+Using extmapper simplemap for cells of type $mux.
+Using extmapper simplemap for cells of type $dffe.
+Using extmapper simplemap for cells of type $dff.
+Using extmapper simplemap for cells of type $not.
+Using extmapper simplemap for cells of type $adff.
+Using extmapper simplemap for cells of type $reduce_or.
+Using template $paramod$54a4503cc57b9df40b70c1899504d6aac2650719\_90_pmux for cells of type $pmux.
+Using template $paramod$c5c783b17ab1d780abfad8cfe6563a0a7b47a3b0\_90_pmux for cells of type $pmux.
+Using template $paramod$54d740639e1393b22262823179ff783ea9f17a35\_90_pmux for cells of type $pmux.
+Using template $paramod$51d09f51f8e4e709467c94f1487f4e47b5087bf0\_90_pmux for cells of type $pmux.
+Using extmapper simplemap for cells of type $or.
+Using extmapper simplemap for cells of type $logic_and.
+Using extmapper simplemap for cells of type $eq.
+Using extmapper simplemap for cells of type $logic_or.
+No more expansions possible.
+<suppressed ~984 debug messages>
+
+105. Executing OPT_EXPR pass (perform const folding).
+Optimizing module cache_controller.
+<suppressed ~13 debug messages>
+
+106. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\cache_controller'.
+<suppressed ~57 debug messages>
+Removed a total of 19 cells.
+
+107. Executing OPT_DFF pass (perform DFF optimizations).
+
+108. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \cache_controller..
+Removed 0 unused cells and 1109 unused wires.
+<suppressed ~1 debug messages>
+
+109. Executing OPT_EXPR pass (perform const folding).
+Optimizing module cache_controller.
+
+110. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\cache_controller'.
+Removed a total of 0 cells.
+
+111. Executing OPT_DFF pass (perform DFF optimizations).
+
+112. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \cache_controller..
+
+113. Executing ABC pass (technology mapping using ABC).
+
+113.1. Extracting gate netlist of module `\cache_controller' to `<abc-temp-dir>/input.blif'..
+Extracted 5692 gates and 8973 wires to a netlist network with 3280 inputs and 586 outputs.
+
+113.1.1. Executing ABC.
+Running ABC command: "/nix/store/6l3aj1gi4lja8z5s4lan2k2cfz9mqkrz-yosys-abc/bin/abc" -s -f <abc-temp-dir>/abc.script 2>&1
+ABC: ABC command line: "source <abc-temp-dir>/abc.script".
+ABC: 
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library <abc-temp-dir>/stdcells.genlib 
+ABC: Entered genlib library with 13 gates from file "<abc-temp-dir>/stdcells.genlib".
+ABC: + strash 
+ABC: + dretime 
+ABC: + map 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+
+113.1.2. Re-integrating ABC results.
+ABC RESULTS:               XOR cells:       50
+ABC RESULTS:               MUX cells:     2993
+ABC RESULTS:              NAND cells:      500
+ABC RESULTS:             ORNOT cells:      162
+ABC RESULTS:               NOT cells:       19
+ABC RESULTS:                OR cells:      759
+ABC RESULTS:               NOR cells:       18
+ABC RESULTS:               AND cells:      116
+ABC RESULTS:            ANDNOT cells:     1083
+ABC RESULTS:        internal signals:     5107
+ABC RESULTS:           input signals:     3280
+ABC RESULTS:          output signals:      586
+Removing temp directory.
+
+114. Executing OPT pass (performing simple optimizations).
+
+114.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module cache_controller.
+<suppressed ~1281 debug messages>
+
+114.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\cache_controller'.
+Removed a total of 0 cells.
+
+114.3. Executing OPT_DFF pass (perform DFF optimizations).
+
+114.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \cache_controller..
+Removed 0 unused cells and 4158 unused wires.
+<suppressed ~16 debug messages>
+
+114.5. Finished fast OPT passes.
+
+115. Executing HIERARCHY pass (managing design hierarchy).
+
+115.1. Analyzing design hierarchy..
+Top module:  \cache_controller
+
+115.2. Analyzing design hierarchy..
+Top module:  \cache_controller
+Removed 0 unused modules.
+
+116. Executing CHECK pass (checking for obvious problems).
+Checking module cache_controller...
+Found and reported 0 problems.
+
+117. Printing statistics.
+
+=== cache_controller ===
+
+   Number of wires:               5442
+   Number of wire bits:          10200
+   Number of public wires:         233
+   Number of public wire bits:    4817
+   Number of ports:                 14
+   Number of port bits:            328
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:               8821
+     $_ANDNOT_                    1083
+     $_AND_                        116
+     $_DFFE_PP_                   2928
+     $_DFF_PP0_                      5
+     $_DFF_PP1_                      1
+     $_DFF_P_                      183
+     $_MUX_                       2993
+     $_NAND_                       500
+     $_NOR_                         18
+     $_NOT_                         19
+     $_ORNOT_                      162
+     $_OR_                         759
+     $_XOR_                         50
+     $scopeinfo                      4
+
+118. Generating Graphviz representation of design.
+Writing dot description to `/mnt/c/Users/User/Desktop/Cache_Controller/runs/RUN_2025-11-08_22-02-17/06-yosys-synthesis/primitive_techmap.dot'.
+Dumping module cache_controller to page 1.
+
+119. Executing OPT pass (performing simple optimizations).
+
+119.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module cache_controller.
+
+119.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\cache_controller'.
+Removed a total of 0 cells.
+
+119.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \cache_controller..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+119.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \cache_controller.
+Performed a total of 0 changes.
+
+119.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\cache_controller'.
+Removed a total of 0 cells.
+
+119.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+119.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \cache_controller..
+
+119.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module cache_controller.
+
+119.9. Finished OPT passes. (There is nothing left to do.)
+
+120. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \cache_controller..
+Removed 4 unused cells and 59 unused wires.
+<suppressed ~63 debug messages>
+{
+   "creator": "Yosys 0.46 (git sha1 e97731b9dda91fa5fa53ed87df7c34163ba59a41, clang++ 17.0.6 -fPIC -O3)",
+   "invocation": "stat -json -liberty /mnt/c/Users/User/Desktop/Cache_Controller/runs/RUN_2025-11-08_22-02-17/tmp/2542bbc4130d4000b12152cf725547c9.lib ",
+   "modules": {
+      "\\cache_controller": {
+         "num_wires":         5383,
+         "num_wire_bits":     8984,
+         "num_pub_wires":     174,
+         "num_pub_wire_bits": 3601,
+         "num_ports":         14,
+         "num_port_bits":     328,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         8817,
+         "num_cells_by_type": {
+            "$_ANDNOT_": 1083,
+            "$_AND_": 116,
+            "$_DFFE_PP_": 2928,
+            "$_DFF_PP0_": 5,
+            "$_DFF_PP1_": 1,
+            "$_DFF_P_": 183,
+            "$_MUX_": 2993,
+            "$_NAND_": 500,
+            "$_NOR_": 18,
+            "$_NOT_": 19,
+            "$_ORNOT_": 162,
+            "$_OR_": 759,
+            "$_XOR_": 50
+         }
+      }
+   },
+      "design": {
+         "num_wires":         5383,
+         "num_wire_bits":     8984,
+         "num_pub_wires":     174,
+         "num_pub_wire_bits": 3601,
+         "num_ports":         14,
+         "num_port_bits":     328,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         8817,
+         "num_cells_by_type": {
+            "$_ANDNOT_": 1083,
+            "$_AND_": 116,
+            "$_DFFE_PP_": 2928,
+            "$_DFF_PP0_": 5,
+            "$_DFF_PP1_": 1,
+            "$_DFF_P_": 183,
+            "$_MUX_": 2993,
+            "$_NAND_": 500,
+            "$_NOR_": 18,
+            "$_NOT_": 19,
+            "$_ORNOT_": 162,
+            "$_OR_": 759,
+            "$_XOR_": 50
+         }
+      }
+}
+
+121. Printing statistics.
+
+=== cache_controller ===
+
+   Number of wires:               5383
+   Number of wire bits:           8984
+   Number of public wires:         174
+   Number of public wire bits:    3601
+   Number of ports:                 14
+   Number of port bits:            328
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:               8817
+     $_ANDNOT_                    1083
+     $_AND_                        116
+     $_DFFE_PP_                   2928
+     $_DFF_PP0_                      5
+     $_DFF_PP1_                      1
+     $_DFF_P_                      183
+     $_MUX_                       2993
+     $_NAND_                       500
+     $_NOR_                         18
+     $_NOT_                         19
+     $_ORNOT_                      162
+     $_OR_                         759
+     $_XOR_                         50
+
+   Area for cell type $_NOT_ is unknown!
+   Area for cell type $_AND_ is unknown!
+   Area for cell type $_NAND_ is unknown!
+   Area for cell type $_OR_ is unknown!
+   Area for cell type $_NOR_ is unknown!
+   Area for cell type $_XOR_ is unknown!
+   Area for cell type $_ANDNOT_ is unknown!
+   Area for cell type $_ORNOT_ is unknown!
+   Area for cell type $_MUX_ is unknown!
+   Area for cell type $_DFF_P_ is unknown!
+   Area for cell type $_DFFE_PP_ is unknown!
+   Area for cell type $_DFF_PP0_ is unknown!
+   Area for cell type $_DFF_PP1_ is unknown!
+
+[INFO] Applying tri-state buffer mapping from '/home/rg/.volare/volare/sky130/versions/0fe599b2afb6708d281543108caf8310912f54af/sky130A/libs.tech/openlane/sky130_fd_sc_hd/tribuff_map.v'…
+
+122. Executing TECHMAP pass (map to technology primitives).
+
+122.1. Executing Verilog-2005 frontend: /home/rg/.volare/volare/sky130/versions/0fe599b2afb6708d281543108caf8310912f54af/sky130A/libs.tech/openlane/sky130_fd_sc_hd/tribuff_map.v
+Parsing Verilog input from `/home/rg/.volare/volare/sky130/versions/0fe599b2afb6708d281543108caf8310912f54af/sky130A/libs.tech/openlane/sky130_fd_sc_hd/tribuff_map.v' to AST representation.
+Generating RTLIL representation for module `\$_TBUF_'.
+Successfully finished Verilog frontend.
+
+122.2. Continuing TECHMAP pass.
+No more expansions possible.
+<suppressed ~3 debug messages>
+
+123. Executing SIMPLEMAP pass (map simple cells to gate primitives).
+[INFO] Applying latch mapping from '/home/rg/.volare/volare/sky130/versions/0fe599b2afb6708d281543108caf8310912f54af/sky130A/libs.tech/openlane/sky130_fd_sc_hd/latch_map.v'…
+
+124. Executing TECHMAP pass (map to technology primitives).
+
+124.1. Executing Verilog-2005 frontend: /home/rg/.volare/volare/sky130/versions/0fe599b2afb6708d281543108caf8310912f54af/sky130A/libs.tech/openlane/sky130_fd_sc_hd/latch_map.v
+Parsing Verilog input from `/home/rg/.volare/volare/sky130/versions/0fe599b2afb6708d281543108caf8310912f54af/sky130A/libs.tech/openlane/sky130_fd_sc_hd/latch_map.v' to AST representation.
+Generating RTLIL representation for module `\$_DLATCH_P_'.
+Generating RTLIL representation for module `\$_DLATCH_N_'.
+Successfully finished Verilog frontend.
+
+124.2. Continuing TECHMAP pass.
+No more expansions possible.
+<suppressed ~4 debug messages>
+
+125. Executing SIMPLEMAP pass (map simple cells to gate primitives).
+
+126. Executing DFFLIBMAP pass (mapping DFF cells to sequential cells from liberty file).
+  cell sky130_fd_sc_hd__dfxtp_2 (noninv, pins=3, area=21.27) is a direct match for cell type $_DFF_P_.
+  cell sky130_fd_sc_hd__dfrtp_2 (noninv, pins=4, area=26.28) is a direct match for cell type $_DFF_PN0_.
+  cell sky130_fd_sc_hd__dfstp_2 (noninv, pins=4, area=26.28) is a direct match for cell type $_DFF_PN1_.
+  cell sky130_fd_sc_hd__dfbbn_2 (noninv, pins=6, area=35.03) is a direct match for cell type $_DFFSR_NNN_.
+  final dff cell mappings:
+    unmapped dff cell: $_DFF_N_
+    \sky130_fd_sc_hd__dfxtp_2 _DFF_P_ (.CLK( C), .D( D), .Q( Q));
+    unmapped dff cell: $_DFF_NN0_
+    unmapped dff cell: $_DFF_NN1_
+    unmapped dff cell: $_DFF_NP0_
+    unmapped dff cell: $_DFF_NP1_
+    \sky130_fd_sc_hd__dfrtp_2 _DFF_PN0_ (.CLK( C), .D( D), .Q( Q), .RESET_B( R));
+    \sky130_fd_sc_hd__dfstp_2 _DFF_PN1_ (.CLK( C), .D( D), .Q( Q), .SET_B( R));
+    unmapped dff cell: $_DFF_PP0_
+    unmapped dff cell: $_DFF_PP1_
+    \sky130_fd_sc_hd__dfbbn_2 _DFFSR_NNN_ (.CLK_N( C), .D( D), .Q( Q), .Q_N(~Q), .RESET_B( R), .SET_B( S));
+    unmapped dff cell: $_DFFSR_NNP_
+    unmapped dff cell: $_DFFSR_NPN_
+    unmapped dff cell: $_DFFSR_NPP_
+    unmapped dff cell: $_DFFSR_PNN_
+    unmapped dff cell: $_DFFSR_PNP_
+    unmapped dff cell: $_DFFSR_PPN_
+    unmapped dff cell: $_DFFSR_PPP_
+
+126.1. Executing DFFLEGALIZE pass (convert FFs to types supported by the target).
+Mapping DFF cells in module `\cache_controller':
+  mapped 5 $_DFF_PN0_ cells to \sky130_fd_sc_hd__dfrtp_2 cells.
+  mapped 1 $_DFF_PN1_ cells to \sky130_fd_sc_hd__dfstp_2 cells.
+  mapped 3111 $_DFF_P_ cells to \sky130_fd_sc_hd__dfxtp_2 cells.
+{
+   "creator": "Yosys 0.46 (git sha1 e97731b9dda91fa5fa53ed87df7c34163ba59a41, clang++ 17.0.6 -fPIC -O3)",
+   "invocation": "stat -json -liberty /mnt/c/Users/User/Desktop/Cache_Controller/runs/RUN_2025-11-08_22-02-17/tmp/2542bbc4130d4000b12152cf725547c9.lib ",
+   "modules": {
+      "\\cache_controller": {
+         "num_wires":         8317,
+         "num_wire_bits":     11918,
+         "num_pub_wires":     174,
+         "num_pub_wire_bits": 3601,
+         "num_ports":         14,
+         "num_port_bits":     328,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         11751,
+         "area":              66329.865600,
+         "num_cells_by_type": {
+            "$_ANDNOT_": 1083,
+            "$_AND_": 116,
+            "$_MUX_": 5921,
+            "$_NAND_": 500,
+            "$_NOR_": 18,
+            "$_NOT_": 25,
+            "$_ORNOT_": 162,
+            "$_OR_": 759,
+            "$_XOR_": 50,
+            "sky130_fd_sc_hd__dfrtp_2": 5,
+            "sky130_fd_sc_hd__dfstp_2": 1,
+            "sky130_fd_sc_hd__dfxtp_2": 3111
+         }
+      }
+   },
+      "design": {
+         "num_wires":         8317,
+         "num_wire_bits":     11918,
+         "num_pub_wires":     174,
+         "num_pub_wire_bits": 3601,
+         "num_ports":         14,
+         "num_port_bits":     328,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         11751,
+         "area":              66329.865600,
+         "num_cells_by_type": {
+            "$_ANDNOT_": 1083,
+            "$_AND_": 116,
+            "$_MUX_": 5921,
+            "$_NAND_": 500,
+            "$_NOR_": 18,
+            "$_NOT_": 25,
+            "$_ORNOT_": 162,
+            "$_OR_": 759,
+            "$_XOR_": 50,
+            "sky130_fd_sc_hd__dfrtp_2": 5,
+            "sky130_fd_sc_hd__dfstp_2": 1,
+            "sky130_fd_sc_hd__dfxtp_2": 3111
+         }
+      }
+}
+
+127. Printing statistics.
+
+=== cache_controller ===
+
+   Number of wires:               8317
+   Number of wire bits:          11918
+   Number of public wires:         174
+   Number of public wire bits:    3601
+   Number of ports:                 14
+   Number of port bits:            328
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:              11751
+     $_ANDNOT_                    1083
+     $_AND_                        116
+     $_MUX_                       5921
+     $_NAND_                       500
+     $_NOR_                         18
+     $_NOT_                         25
+     $_ORNOT_                      162
+     $_OR_                         759
+     $_XOR_                         50
+     sky130_fd_sc_hd__dfrtp_2        5
+     sky130_fd_sc_hd__dfstp_2        1
+     sky130_fd_sc_hd__dfxtp_2     3111
+
+   Area for cell type $_NOT_ is unknown!
+   Area for cell type $_AND_ is unknown!
+   Area for cell type $_NAND_ is unknown!
+   Area for cell type $_OR_ is unknown!
+   Area for cell type $_NOR_ is unknown!
+   Area for cell type $_XOR_ is unknown!
+   Area for cell type $_ANDNOT_ is unknown!
+   Area for cell type $_ORNOT_ is unknown!
+   Area for cell type $_MUX_ is unknown!
+
+   Chip area for module '\cache_controller': 66329.865600
+     of which used for sequential elements: 66329.865600 (100.00%)
+
+[INFO] Using generated ABC script '/mnt/c/Users/User/Desktop/Cache_Controller/runs/RUN_2025-11-08_22-02-17/06-yosys-synthesis/AREA_0.abc'…
+
+128. Executing ABC pass (technology mapping using ABC).
+
+128.1. Extracting gate netlist of module `\cache_controller' to `/tmp/yosys-abc-qhwF29/input.blif'..
+Extracted 8634 gates and 11915 wires to a netlist network with 3281 inputs and 3284 outputs.
+
+128.1.1. Executing ABC.
+Running ABC command: "/nix/store/6l3aj1gi4lja8z5s4lan2k2cfz9mqkrz-yosys-abc/bin/abc" -s -f /tmp/yosys-abc-qhwF29/abc.script 2>&1
+ABC: ABC command line: "source /tmp/yosys-abc-qhwF29/abc.script".
+ABC: 
+ABC: + read_blif /tmp/yosys-abc-qhwF29/input.blif 
+ABC: + read_lib -w /mnt/c/Users/User/Desktop/Cache_Controller/runs/RUN_2025-11-08_22-02-17/tmp/2542bbc4130d4000b12152cf725547c9.lib 
+ABC: Parsing finished successfully.  Parsing time =     0.04 sec
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfbbn_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfrbp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfrtp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfrtp_4".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfsbp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfstp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfstp_4".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfxbp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfxtp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfxtp_4".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlxtn_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlxtn_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlxtn_4".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlxtp_1".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "sky130_fd_sc_hd__ebufn_2".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "sky130_fd_sc_hd__ebufn_4".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "sky130_fd_sc_hd__ebufn_8".
+ABC: Library "sky130_fd_sc_hd__tt_025C_1v80" from "/mnt/c/Users/User/Desktop/Cache_Controller/runs/RUN_2025-11-08_22-02-17/tmp/2542bbc4130d4000b12152cf725547c9.lib" has 175 cells (17 skipped: 14 seq; 3 tri-state; 0 no func; 0 dont_use).  Time =     0.06 sec
+ABC: Memory =    9.54 MB. Time =     0.06 sec
+ABC: Warning: Detected 2 multi-output gates (for example, "sky130_fd_sc_hd__fa_1").
+ABC: + read_constr -v /mnt/c/Users/User/Desktop/Cache_Controller/runs/RUN_2025-11-08_22-02-17/06-yosys-synthesis/synthesis.abc.sdc 
+ABC: Setting driving cell to be "sky130_fd_sc_hd__inv_2/Y".
+ABC: Setting output load to be 33.442001.
+ABC: + source /mnt/c/Users/User/Desktop/Cache_Controller/runs/RUN_2025-11-08_22-02-17/06-yosys-synthesis/AREA_0.abc 
+ABC: Error: The network is combinational.
+ABC: Cannot find the default PI driving cell (sky130_fd_sc_hd__inv_2/Y) in the library.
+ABC: WireLoad = "none"  Gates =   5773 (  0.3 %)   Cap = 17.1 ff ( 13.1 %)   Area =    60753.27 ( 47.9 %)   Delay = 15538.56 ps  ( 22.2 %)               
+ABC: Path  0 --     285 : 0    9 pi                       A =   0.00  Df =   0.0   -0.0 ps  S =   0.0 ps  Cin =  0.0 ff  Cout =  24.3 ff  Cmax =   0.0 ff  G =    0  
+ABC: Path  1 --    7110 : 2  732 sky130_fd_sc_hd__nor2_2  A =   6.26  Df =13458.0-10855.5 ps  S =18538.1 ps  Cin =  4.4 ff  Cout =1820.5 ff  Cmax = 141.9 ff  G =38826  
+ABC: Path  2 --    7118 : 5    1 sky130_fd_sc_hd__a221o_2 A =  11.26  Df =15113.4-10623.6 ps  S = 315.7 ps  Cin =  2.3 ff  Cout =   2.5 ff  Cmax = 299.4 ff  G =  102  
+ABC: Path  3 --    7128 : 4    1 sky130_fd_sc_hd__a22o_2  A =  10.01  Df =15307.4-10557.4 ps  S = 116.6 ps  Cin =  2.3 ff  Cout =   1.5 ff  Cmax = 301.2 ff  G =   59  
+ABC: Path  4 --    7129 : 2    1 sky130_fd_sc_hd__or2_2   A =   6.26  Df =15538.6-10396.9 ps  S = 178.8 ps  Cin =  1.5 ff  Cout =  33.4 ff  Cmax = 299.4 ff  G = 2305  
+ABC: Start-point = pi284 (\cpu_addr [4]).  End-point = po164 ($\tag_array.valid0$rdreg[0]$d).
+ABC: netlist                       : i/o = 3281/ 3284  lat =    0  nd =  5773  edge =  19698  area =60752.72  delay = 7.00  lev = 7
+ABC: + write_blif /tmp/yosys-abc-qhwF29/output.blif 
+
+128.1.2. Re-integrating ABC results.
+ABC RESULTS:   sky130_fd_sc_hd__xnor2_2 cells:        1
+ABC RESULTS:   sky130_fd_sc_hd__xor2_2 cells:       17
+ABC RESULTS:   sky130_fd_sc_hd__a211o_2 cells:        4
+ABC RESULTS:   sky130_fd_sc_hd__a2111o_2 cells:        8
+ABC RESULTS:   sky130_fd_sc_hd__o21ai_2 cells:        3
+ABC RESULTS:   sky130_fd_sc_hd__or3b_2 cells:        2
+ABC RESULTS:   sky130_fd_sc_hd__nor4_2 cells:        4
+ABC RESULTS:   sky130_fd_sc_hd__and3b_2 cells:        2
+ABC RESULTS:   sky130_fd_sc_hd__o31a_2 cells:        4
+ABC RESULTS:   sky130_fd_sc_hd__a22o_2 cells:     1253
+ABC RESULTS:   sky130_fd_sc_hd__a21boi_2 cells:        1
+ABC RESULTS:   sky130_fd_sc_hd__o21a_2 cells:       64
+ABC RESULTS:   sky130_fd_sc_hd__o31ai_2 cells:        1
+ABC RESULTS:   sky130_fd_sc_hd__o41a_2 cells:        1
+ABC RESULTS:   sky130_fd_sc_hd__and3_2 cells:       26
+ABC RESULTS:   sky130_fd_sc_hd__a221o_2 cells:      757
+ABC RESULTS:   sky130_fd_sc_hd__a31oi_2 cells:        1
+ABC RESULTS:   sky130_fd_sc_hd__nor2_2 cells:       22
+ABC RESULTS:   sky130_fd_sc_hd__or4_2 cells:       55
+ABC RESULTS:   sky130_fd_sc_hd__a21o_2 cells:      100
+ABC RESULTS:   sky130_fd_sc_hd__a31o_2 cells:        8
+ABC RESULTS:   sky130_fd_sc_hd__or3_2 cells:       25
+ABC RESULTS:   sky130_fd_sc_hd__or4b_2 cells:       14
+ABC RESULTS:   sky130_fd_sc_hd__nand2b_2 cells:       26
+ABC RESULTS:   sky130_fd_sc_hd__or2_2 cells:      212
+ABC RESULTS:   sky130_fd_sc_hd__and2b_2 cells:       75
+ABC RESULTS:   sky130_fd_sc_hd__nand2_2 cells:       24
+ABC RESULTS:   sky130_fd_sc_hd__and2_2 cells:       82
+ABC RESULTS:   sky130_fd_sc_hd__mux2_1 cells:     2962
+ABC RESULTS:   sky130_fd_sc_hd__inv_2 cells:       19
+ABC RESULTS:        internal signals:     5350
+ABC RESULTS:           input signals:     3281
+ABC RESULTS:          output signals:     3284
+Removing temp directory.
+
+129. Executing SETUNDEF pass (replace undef values with defined constants).
+
+130. Executing HILOMAP pass (mapping to constant drivers).
+
+131. Executing SPLITNETS pass (splitting up multi-bit signals).
+
+132. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \cache_controller..
+Removed 0 unused cells and 11917 unused wires.
+<suppressed ~159 debug messages>
+
+133. Executing INSBUF pass (insert buffer cells for connected wires).
+
+134. Executing CHECK pass (checking for obvious problems).
+Checking module cache_controller...
+Found and reported 0 problems.
+{
+   "creator": "Yosys 0.46 (git sha1 e97731b9dda91fa5fa53ed87df7c34163ba59a41, clang++ 17.0.6 -fPIC -O3)",
+   "invocation": "stat -json -liberty /mnt/c/Users/User/Desktop/Cache_Controller/runs/RUN_2025-11-08_22-02-17/tmp/2542bbc4130d4000b12152cf725547c9.lib ",
+   "modules": {
+      "\\cache_controller": {
+         "num_wires":         8741,
+         "num_wire_bits":     9055,
+         "num_pub_wires":     3129,
+         "num_pub_wire_bits": 3443,
+         "num_ports":         14,
+         "num_port_bits":     328,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         8890,
+         "area":              127083.132800,
+         "num_cells_by_type": {
+            "sky130_fd_sc_hd__a2111o_2": 8,
+            "sky130_fd_sc_hd__a211o_2": 4,
+            "sky130_fd_sc_hd__a21boi_2": 1,
+            "sky130_fd_sc_hd__a21o_2": 100,
+            "sky130_fd_sc_hd__a221o_2": 757,
+            "sky130_fd_sc_hd__a22o_2": 1253,
+            "sky130_fd_sc_hd__a31o_2": 8,
+            "sky130_fd_sc_hd__a31oi_2": 1,
+            "sky130_fd_sc_hd__and2_2": 82,
+            "sky130_fd_sc_hd__and2b_2": 75,
+            "sky130_fd_sc_hd__and3_2": 26,
+            "sky130_fd_sc_hd__and3b_2": 2,
+            "sky130_fd_sc_hd__dfrtp_2": 5,
+            "sky130_fd_sc_hd__dfstp_2": 1,
+            "sky130_fd_sc_hd__dfxtp_2": 3111,
+            "sky130_fd_sc_hd__inv_2": 19,
+            "sky130_fd_sc_hd__mux2_1": 2962,
+            "sky130_fd_sc_hd__nand2_2": 24,
+            "sky130_fd_sc_hd__nand2b_2": 26,
+            "sky130_fd_sc_hd__nor2_2": 22,
+            "sky130_fd_sc_hd__nor4_2": 4,
+            "sky130_fd_sc_hd__o21a_2": 64,
+            "sky130_fd_sc_hd__o21ai_2": 3,
+            "sky130_fd_sc_hd__o31a_2": 4,
+            "sky130_fd_sc_hd__o31ai_2": 1,
+            "sky130_fd_sc_hd__o41a_2": 1,
+            "sky130_fd_sc_hd__or2_2": 212,
+            "sky130_fd_sc_hd__or3_2": 25,
+            "sky130_fd_sc_hd__or3b_2": 2,
+            "sky130_fd_sc_hd__or4_2": 55,
+            "sky130_fd_sc_hd__or4b_2": 14,
+            "sky130_fd_sc_hd__xnor2_2": 1,
+            "sky130_fd_sc_hd__xor2_2": 17
+         }
+      }
+   },
+      "design": {
+         "num_wires":         8741,
+         "num_wire_bits":     9055,
+         "num_pub_wires":     3129,
+         "num_pub_wire_bits": 3443,
+         "num_ports":         14,
+         "num_port_bits":     328,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         8890,
+         "area":              127083.132800,
+         "num_cells_by_type": {
+            "sky130_fd_sc_hd__a2111o_2": 8,
+            "sky130_fd_sc_hd__a211o_2": 4,
+            "sky130_fd_sc_hd__a21boi_2": 1,
+            "sky130_fd_sc_hd__a21o_2": 100,
+            "sky130_fd_sc_hd__a221o_2": 757,
+            "sky130_fd_sc_hd__a22o_2": 1253,
+            "sky130_fd_sc_hd__a31o_2": 8,
+            "sky130_fd_sc_hd__a31oi_2": 1,
+            "sky130_fd_sc_hd__and2_2": 82,
+            "sky130_fd_sc_hd__and2b_2": 75,
+            "sky130_fd_sc_hd__and3_2": 26,
+            "sky130_fd_sc_hd__and3b_2": 2,
+            "sky130_fd_sc_hd__dfrtp_2": 5,
+            "sky130_fd_sc_hd__dfstp_2": 1,
+            "sky130_fd_sc_hd__dfxtp_2": 3111,
+            "sky130_fd_sc_hd__inv_2": 19,
+            "sky130_fd_sc_hd__mux2_1": 2962,
+            "sky130_fd_sc_hd__nand2_2": 24,
+            "sky130_fd_sc_hd__nand2b_2": 26,
+            "sky130_fd_sc_hd__nor2_2": 22,
+            "sky130_fd_sc_hd__nor4_2": 4,
+            "sky130_fd_sc_hd__o21a_2": 64,
+            "sky130_fd_sc_hd__o21ai_2": 3,
+            "sky130_fd_sc_hd__o31a_2": 4,
+            "sky130_fd_sc_hd__o31ai_2": 1,
+            "sky130_fd_sc_hd__o41a_2": 1,
+            "sky130_fd_sc_hd__or2_2": 212,
+            "sky130_fd_sc_hd__or3_2": 25,
+            "sky130_fd_sc_hd__or3b_2": 2,
+            "sky130_fd_sc_hd__or4_2": 55,
+            "sky130_fd_sc_hd__or4b_2": 14,
+            "sky130_fd_sc_hd__xnor2_2": 1,
+            "sky130_fd_sc_hd__xor2_2": 17
+         }
+      }
+}
+
+135. Printing statistics.
+
+=== cache_controller ===
+
+   Number of wires:               8741
+   Number of wire bits:           9055
+   Number of public wires:        3129
+   Number of public wire bits:    3443
+   Number of ports:                 14
+   Number of port bits:            328
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:               8890
+     sky130_fd_sc_hd__a2111o_2       8
+     sky130_fd_sc_hd__a211o_2        4
+     sky130_fd_sc_hd__a21boi_2       1
+     sky130_fd_sc_hd__a21o_2       100
+     sky130_fd_sc_hd__a221o_2      757
+     sky130_fd_sc_hd__a22o_2      1253
+     sky130_fd_sc_hd__a31o_2         8
+     sky130_fd_sc_hd__a31oi_2        1
+     sky130_fd_sc_hd__and2_2        82
+     sky130_fd_sc_hd__and2b_2       75
+     sky130_fd_sc_hd__and3_2        26
+     sky130_fd_sc_hd__and3b_2        2
+     sky130_fd_sc_hd__dfrtp_2        5
+     sky130_fd_sc_hd__dfstp_2        1
+     sky130_fd_sc_hd__dfxtp_2     3111
+     sky130_fd_sc_hd__inv_2         19
+     sky130_fd_sc_hd__mux2_1      2962
+     sky130_fd_sc_hd__nand2_2       24
+     sky130_fd_sc_hd__nand2b_2      26
+     sky130_fd_sc_hd__nor2_2        22
+     sky130_fd_sc_hd__nor4_2         4
+     sky130_fd_sc_hd__o21a_2        64
+     sky130_fd_sc_hd__o21ai_2        3
+     sky130_fd_sc_hd__o31a_2         4
+     sky130_fd_sc_hd__o31ai_2        1
+     sky130_fd_sc_hd__o41a_2         1
+     sky130_fd_sc_hd__or2_2        212
+     sky130_fd_sc_hd__or3_2         25
+     sky130_fd_sc_hd__or3b_2         2
+     sky130_fd_sc_hd__or4_2         55
+     sky130_fd_sc_hd__or4b_2        14
+     sky130_fd_sc_hd__xnor2_2        1
+     sky130_fd_sc_hd__xor2_2        17
+
+   Chip area for module '\cache_controller': 127083.132800
+     of which used for sequential elements: 66329.865600 (52.19%)
+
+136. Executing Verilog backend.
+Dumping module `\cache_controller'.
+
+137. Executing JSON backend.

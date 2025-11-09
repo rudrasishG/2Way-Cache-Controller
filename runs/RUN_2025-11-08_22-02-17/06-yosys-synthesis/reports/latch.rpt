@@ -1,0 +1,20 @@
+
+19. Executing PROC_DLATCH pass (convert process syncs to latches).
+No latch inferred for signal `$paramod$f170207f7a34c7ba14419f1c68895dd64f8561d4\fsm_logic.\cpu_rdata' from process `$paramod$f170207f7a34c7ba14419f1c68895dd64f8561d4\fsm_logic.$proc$./src/fsm_logic.v:111$16'.
+No latch inferred for signal `$paramod$f170207f7a34c7ba14419f1c68895dd64f8561d4\fsm_logic.\cpu_ready' from process `$paramod$f170207f7a34c7ba14419f1c68895dd64f8561d4\fsm_logic.$proc$./src/fsm_logic.v:111$16'.
+No latch inferred for signal `$paramod$f170207f7a34c7ba14419f1c68895dd64f8561d4\fsm_logic.\mem_read' from process `$paramod$f170207f7a34c7ba14419f1c68895dd64f8561d4\fsm_logic.$proc$./src/fsm_logic.v:111$16'.
+No latch inferred for signal `$paramod$f170207f7a34c7ba14419f1c68895dd64f8561d4\fsm_logic.\mem_write' from process `$paramod$f170207f7a34c7ba14419f1c68895dd64f8561d4\fsm_logic.$proc$./src/fsm_logic.v:111$16'.
+No latch inferred for signal `$paramod$f170207f7a34c7ba14419f1c68895dd64f8561d4\fsm_logic.\mem_addr' from process `$paramod$f170207f7a34c7ba14419f1c68895dd64f8561d4\fsm_logic.$proc$./src/fsm_logic.v:111$16'.
+No latch inferred for signal `$paramod$f170207f7a34c7ba14419f1c68895dd64f8561d4\fsm_logic.\mem_wdata' from process `$paramod$f170207f7a34c7ba14419f1c68895dd64f8561d4\fsm_logic.$proc$./src/fsm_logic.v:111$16'.
+No latch inferred for signal `$paramod$f170207f7a34c7ba14419f1c68895dd64f8561d4\fsm_logic.\tag_we' from process `$paramod$f170207f7a34c7ba14419f1c68895dd64f8561d4\fsm_logic.$proc$./src/fsm_logic.v:111$16'.
+No latch inferred for signal `$paramod$f170207f7a34c7ba14419f1c68895dd64f8561d4\fsm_logic.\tag_way' from process `$paramod$f170207f7a34c7ba14419f1c68895dd64f8561d4\fsm_logic.$proc$./src/fsm_logic.v:111$16'.
+No latch inferred for signal `$paramod$f170207f7a34c7ba14419f1c68895dd64f8561d4\fsm_logic.\tag_in' from process `$paramod$f170207f7a34c7ba14419f1c68895dd64f8561d4\fsm_logic.$proc$./src/fsm_logic.v:111$16'.
+No latch inferred for signal `$paramod$f170207f7a34c7ba14419f1c68895dd64f8561d4\fsm_logic.\valid_in' from process `$paramod$f170207f7a34c7ba14419f1c68895dd64f8561d4\fsm_logic.$proc$./src/fsm_logic.v:111$16'.
+No latch inferred for signal `$paramod$f170207f7a34c7ba14419f1c68895dd64f8561d4\fsm_logic.\dirty_in' from process `$paramod$f170207f7a34c7ba14419f1c68895dd64f8561d4\fsm_logic.$proc$./src/fsm_logic.v:111$16'.
+No latch inferred for signal `$paramod$f170207f7a34c7ba14419f1c68895dd64f8561d4\fsm_logic.\data_we0' from process `$paramod$f170207f7a34c7ba14419f1c68895dd64f8561d4\fsm_logic.$proc$./src/fsm_logic.v:111$16'.
+No latch inferred for signal `$paramod$f170207f7a34c7ba14419f1c68895dd64f8561d4\fsm_logic.\data_we1' from process `$paramod$f170207f7a34c7ba14419f1c68895dd64f8561d4\fsm_logic.$proc$./src/fsm_logic.v:111$16'.
+No latch inferred for signal `$paramod$f170207f7a34c7ba14419f1c68895dd64f8561d4\fsm_logic.\data_in0' from process `$paramod$f170207f7a34c7ba14419f1c68895dd64f8561d4\fsm_logic.$proc$./src/fsm_logic.v:111$16'.
+No latch inferred for signal `$paramod$f170207f7a34c7ba14419f1c68895dd64f8561d4\fsm_logic.\data_in1' from process `$paramod$f170207f7a34c7ba14419f1c68895dd64f8561d4\fsm_logic.$proc$./src/fsm_logic.v:111$16'.
+No latch inferred for signal `$paramod$f170207f7a34c7ba14419f1c68895dd64f8561d4\fsm_logic.\lru_we' from process `$paramod$f170207f7a34c7ba14419f1c68895dd64f8561d4\fsm_logic.$proc$./src/fsm_logic.v:111$16'.
+No latch inferred for signal `$paramod$f170207f7a34c7ba14419f1c68895dd64f8561d4\fsm_logic.\lru_in' from process `$paramod$f170207f7a34c7ba14419f1c68895dd64f8561d4\fsm_logic.$proc$./src/fsm_logic.v:111$16'.
+No latch inferred for signal `$paramod$f170207f7a34c7ba14419f1c68895dd64f8561d4\fsm_logic.\next_state' from process `$paramod$f170207f7a34c7ba14419f1c68895dd64f8561d4\fsm_logic.$proc$./src/fsm_logic.v:65$1'.

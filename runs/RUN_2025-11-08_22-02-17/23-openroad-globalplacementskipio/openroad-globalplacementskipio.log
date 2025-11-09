@@ -1,0 +1,99 @@
+Reading OpenROAD database at '/mnt/c/Users/User/Desktop/Cache_Controller/runs/RUN_2025-11-08_22-02-17/20-openroad-generatepdn/cache_controller.odb'…
+Reading library file at '/home/rg/.volare/volare/sky130/versions/0fe599b2afb6708d281543108caf8310912f54af/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib'…
+Reading design constraints file at '/nix/store/ss2cw3sxbrwwx9jl0rrppbw4kgcmgi2n-python3-3.11.9-env/lib/python3.11/site-packages/openlane/scripts/base.sdc'…
+[INFO] Using clock clk…
+[INFO] Setting output delay to: 2.0
+[INFO] Setting input delay to: 2.0
+[INFO] Setting load to: 0.033442
+[INFO] Setting clock uncertainty to: 0.25
+[INFO] Setting clock transition to: 0.1499999999999999944488848768742172978818416595458984375
+[INFO] Setting timing derate to: 5%
++ global_placement -density 0.55 -skip_io -pad_right 0 -pad_left 0 -init_wirelength_coef 0.25
+[INFO GPL-0002] DBU: 1000
+[INFO GPL-0003] SiteSize: (  0.460  2.720 ) um
+[INFO GPL-0004] CoreBBox: (  5.520 10.880 ) ( 509.220 514.080 ) um
+[INFO GPL-0006] NumInstances:             12813
+[INFO GPL-0007] NumPlaceInstances:         8890
+[INFO GPL-0008] NumFixedInstances:         3923
+[INFO GPL-0009] NumDummyInstances:            0
+[INFO GPL-0010] NumNets:                   9055
+[INFO GPL-0011] NumPins:                  34828
+[INFO GPL-0012] DieBBox:  (  0.000  0.000 ) ( 515.190 525.910 ) um
+[INFO GPL-0013] CoreBBox: (  5.520 10.880 ) ( 509.220 514.080 ) um
+[INFO GPL-0016] CoreArea:            253461.840 um^2
+[INFO GPL-0017] NonPlaceInstsArea:     5834.346 um^2
+[INFO GPL-0018] PlaceInstsArea:      127083.133 um^2
+[INFO GPL-0019] Util:                    51.320 %
+[INFO GPL-0020] StdInstsArea:        127083.133 um^2
+[INFO GPL-0021] MacroInstsArea:           0.000 um^2
+[INFO GPL-0031] FillerInit:NumGCells:      9526
+[INFO GPL-0032] FillerInit:NumGNets:       9055
+[INFO GPL-0033] FillerInit:NumGPins:      34828
+[INFO GPL-0023] TargetDensity:            0.550
+[INFO GPL-0024] AvrgPlaceInstArea:       14.295 um^2
+[INFO GPL-0025] IdealBinArea:            25.991 um^2
+[INFO GPL-0026] IdealBinCnt:               9751
+[INFO GPL-0027] TotalBinArea:        253461.840 um^2
+[INFO GPL-0028] BinCnt:        64     64
+[INFO GPL-0029] BinSize: (  7.871  7.863 )
+[INFO GPL-0030] NumBins: 4096
+[NesterovSolve] Iter:    1 overflow: 0.999 HPWL: 26147232
+[NesterovSolve] Iter:   10 overflow: 0.998 HPWL: 17048581
+[NesterovSolve] Iter:   20 overflow: 0.997 HPWL: 15924238
+[NesterovSolve] Iter:   30 overflow: 0.997 HPWL: 15701678
+[NesterovSolve] Iter:   40 overflow: 0.997 HPWL: 15717574
+[NesterovSolve] Iter:   50 overflow: 0.997 HPWL: 15762405
+[NesterovSolve] Iter:   60 overflow: 0.997 HPWL: 15734266
+[NesterovSolve] Iter:   70 overflow: 0.997 HPWL: 15703651
+[NesterovSolve] Iter:   80 overflow: 0.997 HPWL: 15685146
+[NesterovSolve] Iter:   90 overflow: 0.997 HPWL: 15654223
+[NesterovSolve] Iter:  100 overflow: 0.997 HPWL: 15691922
+[NesterovSolve] Iter:  110 overflow: 0.997 HPWL: 16136202
+[NesterovSolve] Iter:  120 overflow: 0.997 HPWL: 17451241
+[NesterovSolve] Iter:  130 overflow: 0.995 HPWL: 19839009
+[NesterovSolve] Iter:  140 overflow: 0.992 HPWL: 22333103
+[NesterovSolve] Iter:  150 overflow: 0.986 HPWL: 27891942
+[NesterovSolve] Iter:  160 overflow: 0.975 HPWL: 36524824
+[NesterovSolve] Iter:  170 overflow: 0.964 HPWL: 43347450
+[NesterovSolve] Iter:  180 overflow: 0.950 HPWL: 47240499
+[NesterovSolve] Iter:  190 overflow: 0.928 HPWL: 51347518
+[NesterovSolve] Iter:  200 overflow: 0.886 HPWL: 56177216
+[NesterovSolve] Iter:  210 overflow: 0.846 HPWL: 59900278
+[NesterovSolve] Iter:  220 overflow: 0.820 HPWL: 62032054
+[NesterovSolve] Iter:  230 overflow: 0.789 HPWL: 66127357
+[NesterovSolve] Iter:  240 overflow: 0.739 HPWL: 72993791
+[NesterovSolve] Iter:  250 overflow: 0.698 HPWL: 78100384
+[NesterovSolve] Iter:  260 overflow: 0.670 HPWL: 83641222
+[NesterovSolve] Iter:  270 overflow: 0.635 HPWL: 89355814
+[NesterovSolve] Iter:  280 overflow: 0.591 HPWL: 91034207
+[NesterovSolve] Iter:  290 overflow: 0.542 HPWL: 91470017
+[NesterovSolve] Iter:  300 overflow: 0.501 HPWL: 92578777
+[NesterovSolve] Iter:  310 overflow: 0.452 HPWL: 94843885
+[NesterovSolve] Iter:  320 overflow: 0.411 HPWL: 95262744
+[NesterovSolve] Iter:  330 overflow: 0.359 HPWL: 96372724
+[NesterovSolve] Iter:  340 overflow: 0.317 HPWL: 97171551
+[NesterovSolve] Iter:  350 overflow: 0.286 HPWL: 97875828
+[NesterovSolve] Iter:  360 overflow: 0.254 HPWL: 98566373
+[NesterovSolve] Iter:  370 overflow: 0.227 HPWL: 99171271
+[NesterovSolve] Iter:  380 overflow: 0.199 HPWL: 99619676
+[NesterovSolve] Iter:  390 overflow: 0.174 HPWL: 100159584
+[NesterovSolve] Iter:  400 overflow: 0.152 HPWL: 100625199
+[NesterovSolve] Iter:  410 overflow: 0.125 HPWL: 101083612
+[NesterovSolve] Iter:  420 overflow: 0.109 HPWL: 101608665
+[NesterovSolve] Finished with Overflow: 0.098932
+[INFO] Setting RC values…
+Setting global connections for newly added cells…
+[INFO] Setting global connections...
+Updating metrics…
+Cell type report:                       Count       Area
+  Fill cell                               370    1388.83
+  Tap cell                               3553    4445.51
+  Inverter                                 19      71.32
+  Sequential cell                        3117   66329.87
+  Multi-Input combinational cell         5754   60681.95
+  Total                                 12813  132917.48
+Writing OpenROAD database to '/mnt/c/Users/User/Desktop/Cache_Controller/runs/RUN_2025-11-08_22-02-17/23-openroad-globalplacementskipio/cache_controller.odb'…
+Writing netlist to '/mnt/c/Users/User/Desktop/Cache_Controller/runs/RUN_2025-11-08_22-02-17/23-openroad-globalplacementskipio/cache_controller.nl.v'…
+Writing powered netlist to '/mnt/c/Users/User/Desktop/Cache_Controller/runs/RUN_2025-11-08_22-02-17/23-openroad-globalplacementskipio/cache_controller.pnl.v'…
+Writing layout to '/mnt/c/Users/User/Desktop/Cache_Controller/runs/RUN_2025-11-08_22-02-17/23-openroad-globalplacementskipio/cache_controller.def'…
+Writing timing constraints to '/mnt/c/Users/User/Desktop/Cache_Controller/runs/RUN_2025-11-08_22-02-17/23-openroad-globalplacementskipio/cache_controller.sdc'…

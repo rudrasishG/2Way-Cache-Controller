@@ -1,0 +1,901 @@
+
+Magic 8.3 revision 489 - Compiled on Sat Nov  8 11:24:28 UTC 2025.
+Starting magic under Tcl interpreter
+Using the terminal as the console.
+Using NULL graphics device.
+Processing system .magicrc file
+Sourcing design .magicrc for technology sky130A ...
+2 Magic internal units = 1 Lambda
+Input style sky130(): scaleFactor=2, multiplier=2
+The following types are not handled by extraction and will be treated as non-electrical types:
+    ubm 
+Scaled tech values by 2 / 1 to match internal grid scaling
+Loading sky130A Device Generator Menu ...
+Loading "/nix/store/ss2cw3sxbrwwx9jl0rrppbw4kgcmgi2n-python3-3.11.9-env/lib/python3.11/site-packages/openlane/scripts/magic/wrapper.tcl" from command line.
+> lef read /home/rg/.volare/volare/sky130/versions/0fe599b2afb6708d281543108caf8310912f54af/sky130A/libs.ref/sky130_fd_sc_hd/techlef/sky130_fd_sc_hd__nom.tlef
+Reading LEF data from file /home/rg/.volare/volare/sky130/versions/0fe599b2afb6708d281543108caf8310912f54af/sky130A/libs.ref/sky130_fd_sc_hd/techlef/sky130_fd_sc_hd__nom.tlef.
+This action cannot be undone.
+LEF read, Line 82 (Message): Unknown keyword "ANTENNAMODEL" in LEF file; ignoring.
+LEF read, Line 83 (Message): Unknown keyword "ANTENNADIFFSIDEAREARATIO" in LEF file; ignoring.
+LEF read, Line 116 (Message): Unknown keyword "MINENCLOSEDAREA" in LEF file; ignoring.
+LEF read, Line 118 (Message): Unknown keyword "ANTENNAMODEL" in LEF file; ignoring.
+LEF read, Line 119 (Message): Unknown keyword "ANTENNADIFFSIDEAREARATIO" in LEF file; ignoring.
+LEF read, Line 125 (Message): Unknown keyword "MAXIMUMDENSITY" in LEF file; ignoring.
+LEF read, Line 126 (Message): Unknown keyword "DENSITYCHECKWINDOW" in LEF file; ignoring.
+LEF read, Line 127 (Message): Unknown keyword "DENSITYCHECKSTEP" in LEF file; ignoring.
+LEF read, Line 160 (Message): Unknown keyword "MINENCLOSEDAREA" in LEF file; ignoring.
+LEF read, Line 168 (Message): Unknown keyword "ANTENNAMODEL" in LEF file; ignoring.
+LEF read, Line 169 (Message): Unknown keyword "ANTENNADIFFSIDEAREARATIO" in LEF file; ignoring.
+LEF read, Line 171 (Message): Unknown keyword "MAXIMUMDENSITY" in LEF file; ignoring.
+LEF read, Line 172 (Message): Unknown keyword "DENSITYCHECKWINDOW" in LEF file; ignoring.
+LEF read, Line 173 (Message): Unknown keyword "DENSITYCHECKSTEP" in LEF file; ignoring.
+LEF read, Line 210 (Message): Unknown keyword "ANTENNAMODEL" in LEF file; ignoring.
+LEF read, Line 211 (Message): Unknown keyword "ANTENNADIFFSIDEAREARATIO" in LEF file; ignoring.
+LEF read, Line 213 (Message): Unknown keyword "MAXIMUMDENSITY" in LEF file; ignoring.
+LEF read, Line 214 (Message): Unknown keyword "DENSITYCHECKWINDOW" in LEF file; ignoring.
+LEF read, Line 215 (Message): Unknown keyword "DENSITYCHECKSTEP" in LEF file; ignoring.
+LEF read, Line 252 (Message): Unknown keyword "ANTENNAMODEL" in LEF file; ignoring.
+LEF read, Line 253 (Message): Unknown keyword "ANTENNADIFFSIDEAREARATIO" in LEF file; ignoring.
+LEF read, Line 255 (Message): Unknown keyword "MAXIMUMDENSITY" in LEF file; ignoring.
+LEF read, Line 256 (Message): Unknown keyword "DENSITYCHECKWINDOW" in LEF file; ignoring.
+LEF read, Line 257 (Message): Unknown keyword "DENSITYCHECKSTEP" in LEF file; ignoring.
+LEF read, Line 294 (Message): Unknown keyword "ANTENNAMODEL" in LEF file; ignoring.
+LEF read, Line 295 (Message): Unknown keyword "ANTENNADIFFSIDEAREARATIO" in LEF file; ignoring.
+LEF read: Processed 801 lines.
+> lef read /home/rg/.volare/volare/sky130/versions/0fe599b2afb6708d281543108caf8310912f54af/sky130A/libs.ref/sky130_fd_sc_hd/lef/sky130_ef_sc_hd.lef
+Reading LEF data from file /home/rg/.volare/volare/sky130/versions/0fe599b2afb6708d281543108caf8310912f54af/sky130A/libs.ref/sky130_fd_sc_hd/lef/sky130_ef_sc_hd.lef.
+This action cannot be undone.
+LEF read: Processed 278 lines.
+> lef read /home/rg/.volare/volare/sky130/versions/0fe599b2afb6708d281543108caf8310912f54af/sky130A/libs.ref/sky130_fd_sc_hd/lef/sky130_fd_sc_hd.lef
+Reading LEF data from file /home/rg/.volare/volare/sky130/versions/0fe599b2afb6708d281543108caf8310912f54af/sky130A/libs.ref/sky130_fd_sc_hd/lef/sky130_fd_sc_hd.lef.
+This action cannot be undone.
+LEF read: Processed 56536 lines.
+> def read /mnt/c/Users/User/Desktop/Cache_Controller/runs/RUN_2025-11-08_22-02-17/52-odb-cellfrequencytables/cache_controller.def -noblockage -labels
+Reading DEF data from file /mnt/c/Users/User/Desktop/Cache_Controller/runs/RUN_2025-11-08_22-02-17/52-odb-cellfrequencytables/cache_controller.def.
+This action cannot be undone.
+  Processed 4 vias total.
+  Processed 30859 subcell instances total.
+  Processed 330 pins total.
+  Processed 2 special nets total.
+  Processed 13967 nets total.
+DEF read: Processed 249731 lines.
+Moving label "_00001_" from metal2 to via2 in cell cache_controller.
+Moving label "_00007_" from metal1 to via1 in cell cache_controller.
+Moving label "_00008_" from metal1 to via1 in cell cache_controller.
+Moving label "_00040_" from metal3 to via3 in cell cache_controller.
+Moving label "_00044_" from metal2 to via2 in cell cache_controller.
+Moving label "_00045_" from metal3 to via3 in cell cache_controller.
+Moving label "_00055_" from metal1 to via1 in cell cache_controller.
+Moving label "_00077_" from metal1 to via1 in cell cache_controller.
+Moving label "_00081_" from metal1 to via1 in cell cache_controller.
+Moving label "_00083_" from metal3 to via3 in cell cache_controller.
+Moving label "_00084_" from metal1 to via1 in cell cache_controller.
+Moving label "_00086_" from metal2 to via1 in cell cache_controller.
+Moving label "_00089_" from metal1 to via1 in cell cache_controller.
+Moving label "_00091_" from metal1 to viali in cell cache_controller.
+Moving label "_00092_" from metal1 to via1 in cell cache_controller.
+Moving label "_00103_" from metal2 to via2 in cell cache_controller.
+Moving label "_00113_" from metal1 to viali in cell cache_controller.
+Moving label "_00115_" from metal2 to via2 in cell cache_controller.
+Moving label "_00118_" from metal2 to via2 in cell cache_controller.
+Moving label "_00126_" from metal2 to via2 in cell cache_controller.
+Moving label "_00129_" from metal1 to via1 in cell cache_controller.
+Moving label "_00130_" from metal1 to via1 in cell cache_controller.
+Moving label "_00143_" from metal2 to via2 in cell cache_controller.
+Moving label "_00148_" from metal1 to viali in cell cache_controller.
+Moving label "_00151_" from metal1 to via1 in cell cache_controller.
+Moving label "_00156_" from metal2 to via2 in cell cache_controller.
+Moving label "_00157_" from metal2 to via2 in cell cache_controller.
+Moving label "_00158_" from metal2 to via2 in cell cache_controller.
+Moving label "_00166_" from metal2 to via2 in cell cache_controller.
+Moving label "_00167_" from metal2 to via2 in cell cache_controller.
+Moving label "_00170_" from metal2 to via2 in cell cache_controller.
+Moving label "_00181_" from metal1 to via1 in cell cache_controller.
+Moving label "_00182_" from metal2 to via2 in cell cache_controller.
+Moving label "_00197_" from metal1 to via1 in cell cache_controller.
+Moving label "_00198_" from metal1 to via1 in cell cache_controller.
+Moving label "_00228_" from metal1 to via1 in cell cache_controller.
+Moving label "_00236_" from metal1 to via1 in cell cache_controller.
+Moving label "_00237_" from metal1 to via1 in cell cache_controller.
+Moving label "_00247_" from metal1 to via1 in cell cache_controller.
+Moving label "_00253_" from metal1 to via1 in cell cache_controller.
+Moving label "_00258_" from metal1 to via1 in cell cache_controller.
+Moving label "_00265_" from metal1 to via1 in cell cache_controller.
+Moving label "_00266_" from metal1 to via1 in cell cache_controller.
+Moving label "_00270_" from metal1 to via1 in cell cache_controller.
+Moving label "_00271_" from metal1 to via1 in cell cache_controller.
+Moving label "_00280_" from metal1 to via1 in cell cache_controller.
+Moving label "_00282_" from metal1 to via1 in cell cache_controller.
+Moving label "_00287_" from metal1 to via1 in cell cache_controller.
+Moving label "_00288_" from metal1 to via1 in cell cache_controller.
+Moving label "_00290_" from metal1 to via1 in cell cache_controller.
+Moving label "_00296_" from metal1 to via1 in cell cache_controller.
+Moving label "_00307_" from metal1 to via1 in cell cache_controller.
+Moving label "_00313_" from metal1 to via1 in cell cache_controller.
+Moving label "_00319_" from metal1 to via1 in cell cache_controller.
+Moving label "_00322_" from metal1 to via1 in cell cache_controller.
+Moving label "_00323_" from metal1 to via1 in cell cache_controller.
+Moving label "_00338_" from metal1 to via1 in cell cache_controller.
+Moving label "_00355_" from metal1 to via1 in cell cache_controller.
+Moving label "_00361_" from metal1 to via1 in cell cache_controller.
+Moving label "_00368_" from metal1 to via1 in cell cache_controller.
+Moving label "_00387_" from metal1 to via1 in cell cache_controller.
+Moving label "_00393_" from metal1 to viali in cell cache_controller.
+Moving label "_00400_" from metal1 to via1 in cell cache_controller.
+Moving label "_00403_" from metal1 to via1 in cell cache_controller.
+Moving label "_00416_" from metal1 to viali in cell cache_controller.
+Moving label "_00422_" from metal1 to via1 in cell cache_controller.
+Moving label "_00425_" from metal1 to via1 in cell cache_controller.
+Moving label "_00438_" from metal1 to via1 in cell cache_controller.
+Moving label "_00441_" from metal1 to via1 in cell cache_controller.
+Moving label "_00442_" from metal1 to via1 in cell cache_controller.
+Moving label "_00468_" from metal1 to via1 in cell cache_controller.
+Moving label "_00474_" from metal1 to via1 in cell cache_controller.
+Moving label "_00476_" from metal1 to via1 in cell cache_controller.
+Moving label "_00489_" from metal1 to via1 in cell cache_controller.
+Moving label "_00500_" from metal1 to via1 in cell cache_controller.
+Moving label "_00504_" from metal1 to viali in cell cache_controller.
+Moving label "_00506_" from metal1 to via1 in cell cache_controller.
+Moving label "_00508_" from metal1 to via1 in cell cache_controller.
+Moving label "_00509_" from metal1 to via1 in cell cache_controller.
+Moving label "_00510_" from metal1 to via1 in cell cache_controller.
+Moving label "_00512_" from metal1 to via1 in cell cache_controller.
+Moving label "_00522_" from metal1 to via1 in cell cache_controller.
+Moving label "_00527_" from metal1 to via1 in cell cache_controller.
+Moving label "_00541_" from metal1 to via1 in cell cache_controller.
+Moving label "_00543_" from metal1 to via1 in cell cache_controller.
+Moving label "_00547_" from metal1 to via1 in cell cache_controller.
+Moving label "_00551_" from metal1 to via1 in cell cache_controller.
+Moving label "_00555_" from metal1 to via1 in cell cache_controller.
+Moving label "_00567_" from metal1 to via1 in cell cache_controller.
+Moving label "_00576_" from metal1 to via1 in cell cache_controller.
+Moving label "_00587_" from metal1 to via1 in cell cache_controller.
+Moving label "_00596_" from metal2 to via1 in cell cache_controller.
+Moving label "_00601_" from metal1 to via1 in cell cache_controller.
+Moving label "_00602_" from metal1 to via1 in cell cache_controller.
+Moving label "_00610_" from metal1 to via1 in cell cache_controller.
+Moving label "_00613_" from metal1 to via1 in cell cache_controller.
+Moving label "_00614_" from metal1 to via1 in cell cache_controller.
+Moving label "_00620_" from metal1 to via1 in cell cache_controller.
+Moving label "_00625_" from metal1 to via1 in cell cache_controller.
+Moving label "_00626_" from metal1 to via1 in cell cache_controller.
+Moving label "_00632_" from metal1 to via1 in cell cache_controller.
+Moving label "_00637_" from metal1 to via1 in cell cache_controller.
+Moving label "_00652_" from metal1 to via1 in cell cache_controller.
+Moving label "_00653_" from metal1 to via1 in cell cache_controller.
+Moving label "_00657_" from metal1 to via1 in cell cache_controller.
+Moving label "_00658_" from metal1 to via1 in cell cache_controller.
+Moving label "_00664_" from metal1 to via1 in cell cache_controller.
+Moving label "_00666_" from metal1 to via1 in cell cache_controller.
+Moving label "_00668_" from metal1 to via1 in cell cache_controller.
+Moving label "_00676_" from metal1 to via1 in cell cache_controller.
+Moving label "_00682_" from metal1 to via1 in cell cache_controller.
+Moving label "_00683_" from metal1 to via1 in cell cache_controller.
+Moving label "_00689_" from metal1 to via1 in cell cache_controller.
+Moving label "_00690_" from metal1 to via1 in cell cache_controller.
+Moving label "_00712_" from metal1 to via1 in cell cache_controller.
+Moving label "_00718_" from metal1 to via1 in cell cache_controller.
+Moving label "_00727_" from metal1 to via1 in cell cache_controller.
+Moving label "_00735_" from metal1 to via1 in cell cache_controller.
+Moving label "_00752_" from metal1 to via1 in cell cache_controller.
+Moving label "_00762_" from metal1 to via1 in cell cache_controller.
+Moving label "_00765_" from metal1 to via1 in cell cache_controller.
+Moving label "_00772_" from metal1 to via1 in cell cache_controller.
+Moving label "_00783_" from metal1 to via1 in cell cache_controller.
+Moving label "_00793_" from metal1 to via1 in cell cache_controller.
+Moving label "_00794_" from metal1 to via1 in cell cache_controller.
+Moving label "_00798_" from metal1 to via1 in cell cache_controller.
+Moving label "_00810_" from metal1 to via1 in cell cache_controller.
+Moving label "_00825_" from metal1 to via1 in cell cache_controller.
+Moving label "_00844_" from metal1 to via1 in cell cache_controller.
+Moving label "_00847_" from metal1 to via1 in cell cache_controller.
+Moving label "_00852_" from metal1 to viali in cell cache_controller.
+Moving label "_00863_" from metal1 to via1 in cell cache_controller.
+Moving label "_00874_" from metal1 to via1 in cell cache_controller.
+Moving label "_00877_" from metal1 to via1 in cell cache_controller.
+Moving label "_00881_" from metal1 to via1 in cell cache_controller.
+Moving label "_00903_" from metal1 to via1 in cell cache_controller.
+Moving label "_00904_" from metal1 to via1 in cell cache_controller.
+Moving label "_00912_" from metal1 to via1 in cell cache_controller.
+Moving label "_00921_" from metal1 to via1 in cell cache_controller.
+Moving label "_00939_" from metal1 to via1 in cell cache_controller.
+Moving label "_00940_" from metal1 to via1 in cell cache_controller.
+Moving label "_00942_" from metal1 to via1 in cell cache_controller.
+Moving label "_00957_" from metal1 to via1 in cell cache_controller.
+Moving label "_00966_" from metal1 to via1 in cell cache_controller.
+Moving label "_00980_" from metal1 to via1 in cell cache_controller.
+Moving label "_00985_" from metal1 to via1 in cell cache_controller.
+Moving label "_00986_" from metal1 to via1 in cell cache_controller.
+Moving label "_00989_" from metal1 to via1 in cell cache_controller.
+Moving label "_00993_" from metal1 to via1 in cell cache_controller.
+Moving label "_01001_" from metal1 to via1 in cell cache_controller.
+Moving label "_01019_" from metal1 to via1 in cell cache_controller.
+Moving label "_01020_" from metal1 to via1 in cell cache_controller.
+Moving label "_01025_" from metal1 to via1 in cell cache_controller.
+Moving label "_01033_" from metal1 to via1 in cell cache_controller.
+Moving label "_01041_" from metal1 to via1 in cell cache_controller.
+Moving label "_01051_" from metal1 to via1 in cell cache_controller.
+Moving label "_01062_" from metal1 to via1 in cell cache_controller.
+Moving label "_01093_" from metal1 to via1 in cell cache_controller.
+Moving label "_01097_" from metal1 to via1 in cell cache_controller.
+Moving label "_01098_" from metal1 to via1 in cell cache_controller.
+Moving label "_01103_" from metal1 to via1 in cell cache_controller.
+Moving label "_01120_" from metal1 to via1 in cell cache_controller.
+Moving label "_01121_" from metal1 to via1 in cell cache_controller.
+Moving label "_01123_" from metal1 to via1 in cell cache_controller.
+Moving label "_01130_" from metal1 to via1 in cell cache_controller.
+Moving label "_01135_" from metal1 to viali in cell cache_controller.
+Moving label "_01175_" from metal1 to via1 in cell cache_controller.
+Moving label "_01192_" from metal1 to via1 in cell cache_controller.
+Moving label "_01197_" from metal1 to via1 in cell cache_controller.
+Moving label "_01198_" from metal1 to via1 in cell cache_controller.
+Moving label "_01199_" from metal1 to via1 in cell cache_controller.
+Moving label "_01200_" from metal1 to via1 in cell cache_controller.
+Moving label "_01210_" from metal1 to via1 in cell cache_controller.
+Moving label "_01215_" from metal1 to via1 in cell cache_controller.
+Moving label "_01221_" from metal1 to via1 in cell cache_controller.
+Moving label "_01229_" from metal1 to via1 in cell cache_controller.
+Moving label "_01244_" from metal1 to via1 in cell cache_controller.
+Moving label "_01245_" from metal1 to via1 in cell cache_controller.
+Moving label "_01246_" from metal1 to via1 in cell cache_controller.
+Moving label "_01248_" from metal1 to via1 in cell cache_controller.
+Moving label "_01263_" from metal1 to via1 in cell cache_controller.
+Moving label "_01274_" from metal1 to via1 in cell cache_controller.
+Moving label "_01285_" from metal1 to via1 in cell cache_controller.
+Moving label "_01305_" from metal1 to via1 in cell cache_controller.
+Moving label "_01321_" from metal1 to via1 in cell cache_controller.
+Moving label "_01328_" from metal1 to via1 in cell cache_controller.
+Moving label "_01354_" from metal1 to via1 in cell cache_controller.
+Moving label "_01359_" from metal1 to via1 in cell cache_controller.
+Moving label "_01361_" from metal1 to via1 in cell cache_controller.
+Moving label "_01364_" from metal1 to via1 in cell cache_controller.
+Moving label "_01373_" from metal1 to via1 in cell cache_controller.
+Moving label "_01374_" from metal1 to via1 in cell cache_controller.
+Moving label "_01396_" from metal1 to via1 in cell cache_controller.
+Moving label "_01397_" from metal1 to via1 in cell cache_controller.
+Moving label "_01398_" from metal1 to via1 in cell cache_controller.
+Moving label "_01413_" from metal1 to via1 in cell cache_controller.
+Moving label "_01419_" from metal1 to via1 in cell cache_controller.
+Moving label "_01421_" from metal1 to via1 in cell cache_controller.
+Moving label "_01427_" from metal1 to via1 in cell cache_controller.
+Moving label "_01429_" from metal1 to via1 in cell cache_controller.
+Moving label "_01433_" from metal1 to via1 in cell cache_controller.
+Moving label "_01453_" from metal1 to via1 in cell cache_controller.
+Moving label "_01458_" from metal1 to via1 in cell cache_controller.
+Moving label "_01467_" from metal1 to via1 in cell cache_controller.
+Moving label "_01468_" from metal1 to via1 in cell cache_controller.
+Moving label "_01475_" from metal1 to via1 in cell cache_controller.
+Moving label "_01478_" from metal1 to viali in cell cache_controller.
+Moving label "_01480_" from metal1 to via1 in cell cache_controller.
+Moving label "_01482_" from metal1 to via1 in cell cache_controller.
+Moving label "_01485_" from metal1 to via1 in cell cache_controller.
+Moving label "_01492_" from metal1 to via1 in cell cache_controller.
+Moving label "_01493_" from metal1 to via1 in cell cache_controller.
+Moving label "_01504_" from metal1 to via1 in cell cache_controller.
+Moving label "_01515_" from metal1 to via1 in cell cache_controller.
+Moving label "_01519_" from metal1 to via1 in cell cache_controller.
+Moving label "_01520_" from metal1 to via1 in cell cache_controller.
+Moving label "_01531_" from metal1 to via1 in cell cache_controller.
+Moving label "_01533_" from metal1 to viali in cell cache_controller.
+Moving label "_01535_" from metal1 to via1 in cell cache_controller.
+Moving label "_01551_" from metal1 to via1 in cell cache_controller.
+Moving label "_01565_" from metal1 to via1 in cell cache_controller.
+Moving label "_01566_" from metal1 to via1 in cell cache_controller.
+Moving label "_01571_" from metal1 to via1 in cell cache_controller.
+Moving label "_01593_" from metal1 to via1 in cell cache_controller.
+Moving label "_01608_" from metal1 to via1 in cell cache_controller.
+Moving label "_01625_" from metal1 to via1 in cell cache_controller.
+Moving label "_01629_" from metal1 to via1 in cell cache_controller.
+Moving label "_01631_" from metal1 to via1 in cell cache_controller.
+Moving label "_01634_" from metal1 to via1 in cell cache_controller.
+Moving label "_01651_" from metal1 to via1 in cell cache_controller.
+Moving label "_01653_" from metal1 to via1 in cell cache_controller.
+Moving label "_01674_" from metal1 to via1 in cell cache_controller.
+Moving label "_01686_" from metal1 to via1 in cell cache_controller.
+Moving label "_01688_" from metal1 to via1 in cell cache_controller.
+Moving label "_01693_" from metal1 to via1 in cell cache_controller.
+Moving label "_01698_" from metal1 to via1 in cell cache_controller.
+Moving label "_01705_" from metal1 to via1 in cell cache_controller.
+Moving label "_01709_" from metal1 to via1 in cell cache_controller.
+Moving label "_01716_" from metal1 to via1 in cell cache_controller.
+Moving label "_01730_" from metal1 to via1 in cell cache_controller.
+Moving label "_01732_" from metal1 to via1 in cell cache_controller.
+Moving label "_01751_" from metal1 to via1 in cell cache_controller.
+Moving label "_01758_" from metal1 to via1 in cell cache_controller.
+Moving label "_01762_" from metal1 to via1 in cell cache_controller.
+Moving label "_01773_" from metal1 to via1 in cell cache_controller.
+Moving label "_01785_" from metal1 to via1 in cell cache_controller.
+Moving label "_01795_" from metal1 to via1 in cell cache_controller.
+Moving label "_01828_" from metal1 to via1 in cell cache_controller.
+Moving label "_01834_" from metal1 to via1 in cell cache_controller.
+Moving label "_01851_" from metal1 to via1 in cell cache_controller.
+Moving label "_01862_" from metal1 to via1 in cell cache_controller.
+Moving label "_01863_" from metal1 to via1 in cell cache_controller.
+Moving label "_01867_" from metal1 to via1 in cell cache_controller.
+Moving label "_01869_" from metal1 to via1 in cell cache_controller.
+Moving label "_01879_" from metal1 to via1 in cell cache_controller.
+Moving label "_01893_" from metal1 to via1 in cell cache_controller.
+Moving label "_01894_" from metal1 to viali in cell cache_controller.
+Moving label "_01899_" from metal1 to via1 in cell cache_controller.
+Moving label "_01900_" from metal1 to via1 in cell cache_controller.
+Moving label "_01902_" from metal1 to via1 in cell cache_controller.
+Moving label "_01906_" from metal1 to via1 in cell cache_controller.
+Moving label "_01910_" from metal1 to via1 in cell cache_controller.
+Moving label "_01913_" from metal1 to via1 in cell cache_controller.
+Moving label "_01917_" from metal2 to via1 in cell cache_controller.
+Moving label "_01924_" from metal1 to via1 in cell cache_controller.
+Moving label "_01937_" from metal1 to via1 in cell cache_controller.
+Moving label "_01939_" from metal1 to via1 in cell cache_controller.
+Moving label "_01946_" from metal1 to via1 in cell cache_controller.
+Moving label "_01949_" from metal1 to via1 in cell cache_controller.
+Moving label "_01954_" from metal1 to via1 in cell cache_controller.
+Moving label "_01955_" from metal1 to via1 in cell cache_controller.
+Moving label "_01965_" from metal1 to via1 in cell cache_controller.
+Moving label "_01972_" from metal1 to via1 in cell cache_controller.
+Moving label "_01978_" from metal1 to via1 in cell cache_controller.
+Moving label "_01981_" from metal1 to via1 in cell cache_controller.
+Moving label "_01988_" from metal1 to via1 in cell cache_controller.
+Moving label "_01989_" from metal1 to viali in cell cache_controller.
+Moving label "_01996_" from metal1 to via1 in cell cache_controller.
+Moving label "_01998_" from metal1 to via1 in cell cache_controller.
+Moving label "_02005_" from metal1 to via1 in cell cache_controller.
+Moving label "_02024_" from metal1 to via1 in cell cache_controller.
+Moving label "_02025_" from metal1 to via1 in cell cache_controller.
+Moving label "_02026_" from metal1 to via1 in cell cache_controller.
+Moving label "_02039_" from metal1 to via1 in cell cache_controller.
+Moving label "_02041_" from metal1 to via1 in cell cache_controller.
+Moving label "_02042_" from metal1 to via1 in cell cache_controller.
+Moving label "_02051_" from metal1 to via1 in cell cache_controller.
+Moving label "_02052_" from metal1 to via1 in cell cache_controller.
+Moving label "_02056_" from metal1 to via1 in cell cache_controller.
+Moving label "_02065_" from metal1 to via1 in cell cache_controller.
+Moving label "_02066_" from metal1 to via1 in cell cache_controller.
+Moving label "_02087_" from metal1 to via1 in cell cache_controller.
+Moving label "_02106_" from metal1 to via1 in cell cache_controller.
+Moving label "_02121_" from metal1 to via1 in cell cache_controller.
+Moving label "_02126_" from metal1 to via1 in cell cache_controller.
+Moving label "_02131_" from metal1 to via1 in cell cache_controller.
+Moving label "_02143_" from metal1 to via1 in cell cache_controller.
+Moving label "_02148_" from metal1 to via1 in cell cache_controller.
+Moving label "_02149_" from metal1 to via1 in cell cache_controller.
+Moving label "_02160_" from metal1 to via1 in cell cache_controller.
+Moving label "_02173_" from metal1 to via1 in cell cache_controller.
+Moving label "_02175_" from metal1 to via1 in cell cache_controller.
+Moving label "_02179_" from metal1 to via1 in cell cache_controller.
+Moving label "_02209_" from metal1 to via1 in cell cache_controller.
+Moving label "_02213_" from metal1 to via1 in cell cache_controller.
+Moving label "_02217_" from metal1 to via1 in cell cache_controller.
+Moving label "_02231_" from metal1 to via1 in cell cache_controller.
+Moving label "_02242_" from metal1 to viali in cell cache_controller.
+Moving label "_02254_" from metal1 to via1 in cell cache_controller.
+Moving label "_02268_" from metal1 to via1 in cell cache_controller.
+Moving label "_02272_" from metal1 to via1 in cell cache_controller.
+Moving label "_02276_" from metal1 to via1 in cell cache_controller.
+Moving label "_02284_" from metal1 to via1 in cell cache_controller.
+Moving label "_02290_" from metal1 to via1 in cell cache_controller.
+Moving label "_02292_" from metal1 to via1 in cell cache_controller.
+Moving label "_02308_" from metal1 to via1 in cell cache_controller.
+Moving label "_02313_" from metal1 to via1 in cell cache_controller.
+Moving label "_02316_" from metal1 to via1 in cell cache_controller.
+Moving label "_02317_" from metal1 to via1 in cell cache_controller.
+Moving label "_02318_" from metal1 to via1 in cell cache_controller.
+Moving label "_02325_" from metal1 to via1 in cell cache_controller.
+Moving label "_02326_" from metal1 to viali in cell cache_controller.
+Moving label "_02328_" from metal1 to via1 in cell cache_controller.
+Moving label "_02329_" from metal1 to via1 in cell cache_controller.
+Moving label "_02332_" from metal1 to via1 in cell cache_controller.
+Moving label "_02344_" from metal1 to via1 in cell cache_controller.
+Moving label "_02359_" from metal1 to via1 in cell cache_controller.
+Moving label "_02376_" from metal1 to via1 in cell cache_controller.
+Moving label "_02384_" from metal1 to via1 in cell cache_controller.
+Moving label "_02387_" from metal1 to via1 in cell cache_controller.
+Moving label "_02391_" from metal1 to via1 in cell cache_controller.
+Moving label "_02404_" from metal1 to via1 in cell cache_controller.
+Moving label "_02410_" from metal1 to via1 in cell cache_controller.
+Moving label "_02414_" from metal1 to via1 in cell cache_controller.
+Moving label "_02431_" from metal1 to via1 in cell cache_controller.
+Moving label "_02435_" from metal1 to via1 in cell cache_controller.
+Moving label "_02441_" from metal1 to via1 in cell cache_controller.
+Moving label "_02443_" from metal1 to via1 in cell cache_controller.
+Moving label "_02452_" from metal1 to via1 in cell cache_controller.
+Moving label "_02455_" from metal1 to via1 in cell cache_controller.
+Moving label "_02457_" from metal1 to via1 in cell cache_controller.
+Moving label "_02464_" from metal1 to via1 in cell cache_controller.
+Moving label "_02469_" from metal1 to via1 in cell cache_controller.
+Moving label "_02472_" from metal1 to via1 in cell cache_controller.
+Moving label "_02486_" from metal1 to via1 in cell cache_controller.
+Moving label "_02490_" from metal1 to viali in cell cache_controller.
+Moving label "_02497_" from metal1 to via1 in cell cache_controller.
+Moving label "_02516_" from metal1 to via1 in cell cache_controller.
+Moving label "_02517_" from metal1 to via1 in cell cache_controller.
+Moving label "_02520_" from metal1 to via1 in cell cache_controller.
+Moving label "_02521_" from metal1 to via1 in cell cache_controller.
+Moving label "_02523_" from metal1 to via1 in cell cache_controller.
+Moving label "_02528_" from metal1 to via1 in cell cache_controller.
+Moving label "_02534_" from metal1 to via1 in cell cache_controller.
+Moving label "_02542_" from metal1 to via1 in cell cache_controller.
+Moving label "_02555_" from metal1 to via1 in cell cache_controller.
+Moving label "_02561_" from metal1 to via1 in cell cache_controller.
+Moving label "_02577_" from metal1 to via1 in cell cache_controller.
+Moving label "_02583_" from metal1 to via1 in cell cache_controller.
+Moving label "_02591_" from metal1 to via1 in cell cache_controller.
+Moving label "_02631_" from metal1 to via1 in cell cache_controller.
+Moving label "_02633_" from metal1 to via1 in cell cache_controller.
+Moving label "_02657_" from metal1 to via1 in cell cache_controller.
+Moving label "_02676_" from metal1 to via1 in cell cache_controller.
+Moving label "_02692_" from metal1 to via1 in cell cache_controller.
+Moving label "_02694_" from metal1 to via1 in cell cache_controller.
+Moving label "_02695_" from metal1 to via1 in cell cache_controller.
+Moving label "_02702_" from metal1 to via1 in cell cache_controller.
+Moving label "_02713_" from metal1 to via1 in cell cache_controller.
+Moving label "_02715_" from metal1 to via1 in cell cache_controller.
+Moving label "_02716_" from metal1 to via1 in cell cache_controller.
+Moving label "_02729_" from metal1 to via1 in cell cache_controller.
+Moving label "_02734_" from metal1 to via1 in cell cache_controller.
+Moving label "_02735_" from metal1 to via1 in cell cache_controller.
+Moving label "_02741_" from metal1 to via1 in cell cache_controller.
+Moving label "_02752_" from metal1 to via1 in cell cache_controller.
+Moving label "_02757_" from metal1 to via1 in cell cache_controller.
+Moving label "_02758_" from metal1 to via1 in cell cache_controller.
+Moving label "_02766_" from metal1 to via1 in cell cache_controller.
+Moving label "_02773_" from metal1 to via1 in cell cache_controller.
+Moving label "_02776_" from metal1 to via1 in cell cache_controller.
+Moving label "_02779_" from metal1 to via1 in cell cache_controller.
+Moving label "_02791_" from metal1 to via1 in cell cache_controller.
+Moving label "_02795_" from metal1 to via1 in cell cache_controller.
+Moving label "_02811_" from metal1 to via1 in cell cache_controller.
+Moving label "_02812_" from metal1 to via1 in cell cache_controller.
+Moving label "_02818_" from metal1 to via1 in cell cache_controller.
+Moving label "_02820_" from metal1 to via1 in cell cache_controller.
+Moving label "_02841_" from metal1 to via1 in cell cache_controller.
+Moving label "_02844_" from metal1 to via1 in cell cache_controller.
+Moving label "_02848_" from metal1 to via1 in cell cache_controller.
+Moving label "_02851_" from metal1 to via1 in cell cache_controller.
+Moving label "_02853_" from metal1 to via1 in cell cache_controller.
+Moving label "_02856_" from metal1 to via1 in cell cache_controller.
+Moving label "_02859_" from metal1 to via1 in cell cache_controller.
+Moving label "_02864_" from metal1 to via1 in cell cache_controller.
+Moving label "_02877_" from metal1 to via1 in cell cache_controller.
+Moving label "_02879_" from metal1 to via1 in cell cache_controller.
+Moving label "_02886_" from metal1 to via1 in cell cache_controller.
+Moving label "_02896_" from metal1 to via1 in cell cache_controller.
+Moving label "_02901_" from metal1 to via1 in cell cache_controller.
+Moving label "_02907_" from metal1 to via1 in cell cache_controller.
+Moving label "_02914_" from metal1 to via1 in cell cache_controller.
+Moving label "_02920_" from metal1 to via1 in cell cache_controller.
+Moving label "_02936_" from metal1 to via1 in cell cache_controller.
+Moving label "_02940_" from metal1 to via1 in cell cache_controller.
+Moving label "_02948_" from metal1 to via1 in cell cache_controller.
+Moving label "_02958_" from metal1 to via1 in cell cache_controller.
+Moving label "_02960_" from metal1 to via1 in cell cache_controller.
+Moving label "_02962_" from metal1 to via1 in cell cache_controller.
+Moving label "_02967_" from metal1 to via1 in cell cache_controller.
+Moving label "_02968_" from metal1 to via1 in cell cache_controller.
+Moving label "_02969_" from metal1 to via1 in cell cache_controller.
+Moving label "_02984_" from metal1 to via1 in cell cache_controller.
+Moving label "_02985_" from metal1 to via1 in cell cache_controller.
+Moving label "_03003_" from metal1 to via1 in cell cache_controller.
+Moving label "_03014_" from metal1 to via1 in cell cache_controller.
+Moving label "_03018_" from metal1 to via1 in cell cache_controller.
+Moving label "_03022_" from metal1 to via1 in cell cache_controller.
+Moving label "_03023_" from metal1 to via1 in cell cache_controller.
+Moving label "_03032_" from metal1 to via1 in cell cache_controller.
+Moving label "_03038_" from metal1 to via1 in cell cache_controller.
+Moving label "_03043_" from metal1 to via1 in cell cache_controller.
+Moving label "_03044_" from metal1 to via1 in cell cache_controller.
+Moving label "_03051_" from metal1 to via1 in cell cache_controller.
+Moving label "_03055_" from metal1 to via1 in cell cache_controller.
+Moving label "_03063_" from metal1 to via1 in cell cache_controller.
+Moving label "_03069_" from metal1 to via1 in cell cache_controller.
+Moving label "_03074_" from metal1 to via1 in cell cache_controller.
+Moving label "_03076_" from metal1 to via1 in cell cache_controller.
+Moving label "_03092_" from metal1 to via1 in cell cache_controller.
+Moving label "_03096_" from metal1 to via1 in cell cache_controller.
+Moving label "_03102_" from metal1 to via1 in cell cache_controller.
+Moving label "_03105_" from metal1 to via1 in cell cache_controller.
+Moving label "_03118_" from metal1 to via1 in cell cache_controller.
+Moving label "_03130_" from metal2 to via2 in cell cache_controller.
+Moving label "_03195_" from metal2 to via2 in cell cache_controller.
+Moving label "_03199_" from metal2 to via2 in cell cache_controller.
+Moving label "_03210_" from metal2 to via2 in cell cache_controller.
+Moving label "_03247_" from metal2 to via2 in cell cache_controller.
+Moving label "_03271_" from metal2 to via2 in cell cache_controller.
+Moving label "_03282_" from metal2 to via2 in cell cache_controller.
+Moving label "_03295_" from metal1 to via1 in cell cache_controller.
+Moving label "_03356_" from metal2 to via1 in cell cache_controller.
+Moving label "_03487_" from metal1 to viali in cell cache_controller.
+Moving label "_03506_" from metal3 to via3 in cell cache_controller.
+Moving label "_04145_" from metal2 to via1 in cell cache_controller.
+Moving label "_04405_" from metal1 to viali in cell cache_controller.
+Moving label "_04497_" from metal2 to via1 in cell cache_controller.
+Moving label "_04542_" from metal1 to via1 in cell cache_controller.
+Moving label "_04726_" from metal2 to via2 in cell cache_controller.
+Moving label "_04757_" from metal2 to via2 in cell cache_controller.
+Moving label "_04774_" from metal2 to via2 in cell cache_controller.
+Moving label "_05299_" from metal2 to via2 in cell cache_controller.
+Moving label "_05359_" from metal1 to via1 in cell cache_controller.
+Moving label "_05409_" from metal3 to via3 in cell cache_controller.
+Moving label "_05438_" from metal2 to via2 in cell cache_controller.
+Moving label "_05461_" from metal2 to via2 in cell cache_controller.
+Moving label "_05480_" from metal2 to via1 in cell cache_controller.
+Moving label "_05481_" from metal2 to via2 in cell cache_controller.
+Moving label "_05497_" from metal2 to via2 in cell cache_controller.
+Moving label "_05509_" from metal2 to via2 in cell cache_controller.
+Moving label "_05579_" from metal2 to via2 in cell cache_controller.
+Moving label "_05599_" from metal2 to via2 in cell cache_controller.
+Moving label "_05604_" from metal2 to via2 in cell cache_controller.
+Moving label "clknet_leaf_28_clk" from metal1 to via1 in cell cache_controller.
+Moving label "clknet_leaf_46_clk" from metal1 to via1 in cell cache_controller.
+Moving label "cpu_addr[15]" from metal2 to via2 in cell cache_controller.
+Moving label "cpu_addr[17]" from metal2 to via2 in cell cache_controller.
+Moving label "cpu_addr[3]" from metal2 to via2 in cell cache_controller.
+Moving label "cpu_ready" from metal2 to via2 in cell cache_controller.
+Moving label "data_array.data0\[0\]\[40\]" from metal2 to via1 in cell cache_controller.
+Moving label "data_array.data0\[0\]\[59\]" from metal1 to via1 in cell cache_controller.
+Moving label "data_array.data0\[10\]\[37\]" from metal1 to viali in cell cache_controller.
+Moving label "data_array.data0\[10\]\[54\]" from metal2 to via2 in cell cache_controller.
+Moving label "data_array.data0\[11\]\[0\]" from metal1 to via1 in cell cache_controller.
+Moving label "data_array.data0\[11\]\[13\]" from metal1 to via1 in cell cache_controller.
+Moving label "data_array.data0\[11\]\[18\]" from metal1 to via1 in cell cache_controller.
+Moving label "data_array.data0\[11\]\[1\]" from metal1 to via1 in cell cache_controller.
+Moving label "data_array.data0\[11\]\[23\]" from metal1 to via1 in cell cache_controller.
+Moving label "data_array.data0\[11\]\[27\]" from metal1 to via1 in cell cache_controller.
+Moving label "data_array.data0\[11\]\[28\]" from metal1 to via1 in cell cache_controller.
+Moving label "data_array.data0\[11\]\[48\]" from metal1 to via1 in cell cache_controller.
+Moving label "data_array.data0\[11\]\[61\]" from metal1 to via1 in cell cache_controller.
+Moving label "data_array.data0\[11\]\[63\]" from metal2 to via1 in cell cache_controller.
+Moving label "data_array.data0\[12\]\[23\]" from metal2 to via1 in cell cache_controller.
+Moving label "data_array.data0\[12\]\[33\]" from metal2 to via1 in cell cache_controller.
+Moving label "data_array.data0\[13\]\[63\]" from metal2 to via2 in cell cache_controller.
+Moving label "data_array.data0\[14\]\[11\]" from metal1 to via1 in cell cache_controller.
+Moving label "data_array.data0\[15\]\[2\]" from metal1 to via1 in cell cache_controller.
+Moving label "data_array.data0\[15\]\[36\]" from metal1 to via1 in cell cache_controller.
+Moving label "data_array.data0\[15\]\[40\]" from metal1 to viali in cell cache_controller.
+Moving label "data_array.data0\[15\]\[41\]" from metal1 to via1 in cell cache_controller.
+Moving label "data_array.data0\[15\]\[45\]" from metal1 to via1 in cell cache_controller.
+Moving label "data_array.data0\[15\]\[51\]" from metal1 to via1 in cell cache_controller.
+Moving label "data_array.data0\[15\]\[52\]" from metal1 to via1 in cell cache_controller.
+Moving label "data_array.data0\[15\]\[55\]" from metal1 to via1 in cell cache_controller.
+Moving label "data_array.data0\[15\]\[57\]" from metal1 to viali in cell cache_controller.
+Moving label "data_array.data0\[15\]\[61\]" from metal1 to via1 in cell cache_controller.
+Moving label "data_array.data0\[1\]\[27\]" from metal1 to via1 in cell cache_controller.
+Moving label "data_array.data0\[3\]\[15\]" from metal1 to via1 in cell cache_controller.
+Moving label "data_array.data0\[3\]\[26\]" from metal1 to viali in cell cache_controller.
+Moving label "data_array.data0\[3\]\[29\]" from metal1 to viali in cell cache_controller.
+Moving label "data_array.data0\[3\]\[34\]" from metal1 to via1 in cell cache_controller.
+Moving label "data_array.data0\[3\]\[35\]" from metal1 to via1 in cell cache_controller.
+Moving label "data_array.data0\[3\]\[38\]" from metal1 to via1 in cell cache_controller.
+Moving label "data_array.data0\[3\]\[41\]" from metal1 to via1 in cell cache_controller.
+Moving label "data_array.data0\[3\]\[43\]" from metal1 to via1 in cell cache_controller.
+Moving label "data_array.data0\[3\]\[47\]" from metal1 to via1 in cell cache_controller.
+Moving label "data_array.data0\[3\]\[48\]" from metal1 to via1 in cell cache_controller.
+Moving label "data_array.data0\[3\]\[56\]" from metal1 to via1 in cell cache_controller.
+Moving label "data_array.data0\[3\]\[7\]" from metal1 to via1 in cell cache_controller.
+Moving label "data_array.data0\[3\]\[8\]" from metal1 to via1 in cell cache_controller.
+Moving label "data_array.data0\[7\]\[12\]" from metal1 to via1 in cell cache_controller.
+Moving label "data_array.data0\[7\]\[15\]" from metal1 to via1 in cell cache_controller.
+Moving label "data_array.data0\[7\]\[20\]" from metal1 to via1 in cell cache_controller.
+Moving label "data_array.data0\[7\]\[24\]" from metal1 to via1 in cell cache_controller.
+Moving label "data_array.data0\[7\]\[26\]" from metal1 to via1 in cell cache_controller.
+Moving label "data_array.data0\[7\]\[30\]" from metal1 to via1 in cell cache_controller.
+Moving label "data_array.data0\[7\]\[31\]" from metal1 to via1 in cell cache_controller.
+Moving label "data_array.data0\[7\]\[32\]" from metal1 to via1 in cell cache_controller.
+Moving label "data_array.data0\[7\]\[37\]" from metal1 to via1 in cell cache_controller.
+Moving label "data_array.data0\[7\]\[3\]" from metal1 to viali in cell cache_controller.
+Moving label "data_array.data0\[7\]\[4\]" from metal1 to via1 in cell cache_controller.
+Moving label "data_array.data0\[7\]\[51\]" from metal1 to viali in cell cache_controller.
+Moving label "data_array.data0\[7\]\[56\]" from metal1 to viali in cell cache_controller.
+Moving label "data_array.data0\[7\]\[60\]" from metal1 to viali in cell cache_controller.
+Moving label "data_array.data0\[7\]\[6\]" from metal1 to via1 in cell cache_controller.
+Moving label "data_array.data0\[8\]\[18\]" from metal1 to via1 in cell cache_controller.
+Moving label "data_array.data0\[8\]\[36\]" from metal2 to via1 in cell cache_controller.
+Moving label "data_array.data0\[9\]\[34\]" from metal1 to via1 in cell cache_controller.
+Moving label "data_array.data1\[10\]\[27\]" from metal1 to via1 in cell cache_controller.
+Moving label "data_array.data1\[10\]\[36\]" from metal2 to via1 in cell cache_controller.
+Moving label "data_array.data1\[10\]\[47\]" from metal1 to via1 in cell cache_controller.
+Moving label "data_array.data1\[10\]\[52\]" from metal1 to via1 in cell cache_controller.
+Moving label "data_array.data1\[11\]\[15\]" from metal1 to via1 in cell cache_controller.
+Moving label "data_array.data1\[11\]\[16\]" from metal1 to via1 in cell cache_controller.
+Moving label "data_array.data1\[11\]\[19\]" from metal1 to via1 in cell cache_controller.
+Moving label "data_array.data1\[11\]\[26\]" from metal1 to via1 in cell cache_controller.
+Moving label "data_array.data1\[11\]\[32\]" from metal1 to via1 in cell cache_controller.
+Moving label "data_array.data1\[11\]\[35\]" from metal1 to via1 in cell cache_controller.
+Moving label "data_array.data1\[11\]\[36\]" from metal1 to via1 in cell cache_controller.
+Moving label "data_array.data1\[11\]\[39\]" from metal1 to via1 in cell cache_controller.
+Moving label "data_array.data1\[11\]\[40\]" from metal1 to via1 in cell cache_controller.
+Moving label "data_array.data1\[11\]\[41\]" from metal1 to via1 in cell cache_controller.
+Moving label "data_array.data1\[11\]\[48\]" from metal1 to via1 in cell cache_controller.
+Moving label "data_array.data1\[11\]\[4\]" from metal1 to viali in cell cache_controller.
+Moving label "data_array.data1\[11\]\[52\]" from metal1 to viali in cell cache_controller.
+Moving label "data_array.data1\[11\]\[53\]" from metal1 to via1 in cell cache_controller.
+Moving label "data_array.data1\[11\]\[55\]" from metal1 to viali in cell cache_controller.
+Moving label "data_array.data1\[11\]\[5\]" from metal1 to via1 in cell cache_controller.
+Moving label "data_array.data1\[11\]\[62\]" from metal1 to via1 in cell cache_controller.
+Moving label "data_array.data1\[11\]\[8\]" from metal1 to via1 in cell cache_controller.
+Moving label "data_array.data1\[12\]\[19\]" from metal1 to via1 in cell cache_controller.
+Moving label "data_array.data1\[13\]\[4\]" from metal2 to via1 in cell cache_controller.
+Moving label "data_array.data1\[14\]\[45\]" from metal1 to via1 in cell cache_controller.
+Moving label "data_array.data1\[15\]\[0\]" from metal1 to via1 in cell cache_controller.
+Moving label "data_array.data1\[15\]\[14\]" from metal1 to via1 in cell cache_controller.
+Moving label "data_array.data1\[15\]\[15\]" from metal1 to via1 in cell cache_controller.
+Moving label "data_array.data1\[15\]\[25\]" from metal1 to via1 in cell cache_controller.
+Moving label "data_array.data1\[15\]\[29\]" from metal1 to via1 in cell cache_controller.
+Moving label "data_array.data1\[15\]\[31\]" from metal1 to via1 in cell cache_controller.
+Moving label "data_array.data1\[15\]\[33\]" from metal1 to viali in cell cache_controller.
+Moving label "data_array.data1\[15\]\[34\]" from metal1 to via1 in cell cache_controller.
+Moving label "data_array.data1\[15\]\[38\]" from metal1 to via1 in cell cache_controller.
+Moving label "data_array.data1\[15\]\[44\]" from metal1 to via1 in cell cache_controller.
+Moving label "data_array.data1\[15\]\[46\]" from metal1 to via1 in cell cache_controller.
+Moving label "data_array.data1\[15\]\[48\]" from metal1 to via1 in cell cache_controller.
+Moving label "data_array.data1\[15\]\[4\]" from metal1 to via1 in cell cache_controller.
+Moving label "data_array.data1\[15\]\[51\]" from metal1 to viali in cell cache_controller.
+Moving label "data_array.data1\[15\]\[5\]" from metal1 to viali in cell cache_controller.
+Moving label "data_array.data1\[15\]\[60\]" from metal1 to via1 in cell cache_controller.
+Moving label "data_array.data1\[15\]\[63\]" from metal1 to viali in cell cache_controller.
+Moving label "data_array.data1\[15\]\[7\]" from metal1 to via1 in cell cache_controller.
+Moving label "data_array.data1\[1\]\[48\]" from metal1 to via1 in cell cache_controller.
+Moving label "data_array.data1\[3\]\[1\]" from metal1 to via1 in cell cache_controller.
+Moving label "data_array.data1\[3\]\[21\]" from metal1 to via1 in cell cache_controller.
+Moving label "data_array.data1\[3\]\[2\]" from metal1 to via1 in cell cache_controller.
+Moving label "data_array.data1\[3\]\[30\]" from metal1 to via1 in cell cache_controller.
+Moving label "data_array.data1\[3\]\[31\]" from metal1 to via1 in cell cache_controller.
+Moving label "data_array.data1\[3\]\[38\]" from metal1 to via1 in cell cache_controller.
+Moving label "data_array.data1\[3\]\[39\]" from metal1 to via1 in cell cache_controller.
+Moving label "data_array.data1\[3\]\[42\]" from metal1 to viali in cell cache_controller.
+Moving label "data_array.data1\[3\]\[43\]" from metal1 to via1 in cell cache_controller.
+Moving label "data_array.data1\[3\]\[44\]" from metal1 to viali in cell cache_controller.
+Moving label "data_array.data1\[3\]\[4\]" from metal1 to via1 in cell cache_controller.
+Moving label "data_array.data1\[3\]\[63\]" from metal1 to viali in cell cache_controller.
+Moving label "data_array.data1\[3\]\[7\]" from metal1 to via1 in cell cache_controller.
+Moving label "data_array.data1\[3\]\[8\]" from metal1 to via1 in cell cache_controller.
+Moving label "data_array.data1\[3\]\[9\]" from metal1 to via1 in cell cache_controller.
+Moving label "data_array.data1\[5\]\[40\]" from metal1 to via1 in cell cache_controller.
+Moving label "data_array.data1\[6\]\[45\]" from metal2 to via2 in cell cache_controller.
+Moving label "data_array.data1\[7\]\[0\]" from metal1 to viali in cell cache_controller.
+Moving label "data_array.data1\[7\]\[11\]" from metal1 to viali in cell cache_controller.
+Moving label "data_array.data1\[7\]\[20\]" from metal1 to via1 in cell cache_controller.
+Moving label "data_array.data1\[7\]\[24\]" from metal1 to via1 in cell cache_controller.
+Moving label "data_array.data1\[7\]\[26\]" from metal1 to via1 in cell cache_controller.
+Moving label "data_array.data1\[7\]\[27\]" from metal1 to via1 in cell cache_controller.
+Moving label "data_array.data1\[7\]\[28\]" from metal1 to viali in cell cache_controller.
+Moving label "data_array.data1\[7\]\[2\]" from metal1 to via1 in cell cache_controller.
+Moving label "data_array.data1\[7\]\[32\]" from metal1 to via1 in cell cache_controller.
+Moving label "data_array.data1\[7\]\[34\]" from metal1 to viali in cell cache_controller.
+Moving label "data_array.data1\[7\]\[35\]" from metal1 to viali in cell cache_controller.
+Moving label "data_array.data1\[7\]\[36\]" from metal1 to via1 in cell cache_controller.
+Moving label "data_array.data1\[7\]\[37\]" from metal1 to via1 in cell cache_controller.
+Moving label "data_array.data1\[7\]\[50\]" from metal1 to viali in cell cache_controller.
+Moving label "data_array.data1\[7\]\[51\]" from metal1 to via1 in cell cache_controller.
+Moving label "data_array.data1\[7\]\[59\]" from metal1 to via1 in cell cache_controller.
+Moving label "data_array.data1\[7\]\[61\]" from metal1 to via1 in cell cache_controller.
+Moving label "data_array.data1\[9\]\[23\]" from metal1 to via1 in cell cache_controller.
+Moving label "data_array.data1\[9\]\[59\]" from metal2 to via2 in cell cache_controller.
+Moving label "data_array.rdata1\[46\]" from metal2 to via2 in cell cache_controller.
+Moving label "fsm.tag_out0\[12\]" from metal1 to via1 in cell cache_controller.
+Moving label "fsm.tag_out0\[13\]" from metal1 to via1 in cell cache_controller.
+Moving label "fsm.tag_out0\[15\]" from metal1 to via1 in cell cache_controller.
+Moving label "fsm.tag_out0\[16\]" from metal1 to via1 in cell cache_controller.
+Moving label "fsm.tag_out0\[17\]" from metal1 to viali in cell cache_controller.
+Moving label "fsm.tag_out0\[21\]" from metal1 to via1 in cell cache_controller.
+Moving label "fsm.tag_out0\[23\]" from metal1 to via1 in cell cache_controller.
+Moving label "fsm.tag_out0\[24\]" from metal1 to via1 in cell cache_controller.
+Moving label "mem_addr[12]" from metal2 to via2 in cell cache_controller.
+Moving label "mem_addr[14]" from metal2 to via2 in cell cache_controller.
+Moving label "mem_addr[15]" from metal2 to via2 in cell cache_controller.
+Moving label "mem_addr[19]" from metal2 to via2 in cell cache_controller.
+Moving label "mem_addr[26]" from metal2 to via2 in cell cache_controller.
+Moving label "mem_addr[2]" from metal2 to via2 in cell cache_controller.
+Moving label "mem_addr[3]" from metal2 to via2 in cell cache_controller.
+Moving label "mem_addr[8]" from metal2 to via2 in cell cache_controller.
+Moving label "mem_addr[9]" from metal2 to via2 in cell cache_controller.
+Moving label "mem_read" from metal2 to via2 in cell cache_controller.
+Moving label "net1044" from metal1 to viali in cell cache_controller.
+Moving label "net1112" from metal2 to via2 in cell cache_controller.
+Moving label "net1152" from metal1 to via1 in cell cache_controller.
+Moving label "net1153" from metal2 to via2 in cell cache_controller.
+Moving label "net1157" from metal3 to via3 in cell cache_controller.
+Moving label "net1188" from metal2 to via2 in cell cache_controller.
+Moving label "net1227" from metal2 to via2 in cell cache_controller.
+Moving label "net1234" from metal2 to via2 in cell cache_controller.
+Moving label "net1330" from metal1 to viali in cell cache_controller.
+Moving label "net1333" from metal1 to via1 in cell cache_controller.
+Moving label "net1334" from metal1 to via1 in cell cache_controller.
+Moving label "net1338" from metal1 to viali in cell cache_controller.
+Moving label "net1340" from metal1 to via1 in cell cache_controller.
+Moving label "net1344" from metal1 to via1 in cell cache_controller.
+Moving label "net1347" from metal1 to via1 in cell cache_controller.
+Moving label "net1348" from metal1 to viali in cell cache_controller.
+Moving label "net1349" from metal1 to via1 in cell cache_controller.
+Moving label "net1357" from metal1 to via1 in cell cache_controller.
+Moving label "net1358" from metal1 to via1 in cell cache_controller.
+Moving label "net1359" from metal1 to via1 in cell cache_controller.
+Moving label "net1363" from metal1 to viali in cell cache_controller.
+Moving label "net1365" from metal1 to via1 in cell cache_controller.
+Moving label "net1366" from metal1 to viali in cell cache_controller.
+Moving label "net1367" from metal1 to viali in cell cache_controller.
+Moving label "net1368" from metal1 to via1 in cell cache_controller.
+Moving label "net1373" from metal1 to via1 in cell cache_controller.
+Moving label "net1375" from metal1 to viali in cell cache_controller.
+Moving label "net1379" from metal1 to via1 in cell cache_controller.
+Moving label "net1380" from metal1 to via1 in cell cache_controller.
+Moving label "net1381" from metal1 to via1 in cell cache_controller.
+Moving label "net1385" from metal1 to via1 in cell cache_controller.
+Moving label "net1390" from metal1 to via1 in cell cache_controller.
+Moving label "net1391" from metal1 to via1 in cell cache_controller.
+Moving label "net1393" from metal1 to via1 in cell cache_controller.
+Moving label "net1394" from metal1 to via1 in cell cache_controller.
+Moving label "net1397" from metal1 to viali in cell cache_controller.
+Moving label "net1398" from metal1 to via1 in cell cache_controller.
+Moving label "net1405" from metal1 to via1 in cell cache_controller.
+Moving label "net1410" from metal1 to viali in cell cache_controller.
+Moving label "net1411" from metal1 to via1 in cell cache_controller.
+Moving label "net1412" from metal1 to viali in cell cache_controller.
+Moving label "net1414" from metal1 to via1 in cell cache_controller.
+Moving label "net1415" from metal1 to via1 in cell cache_controller.
+Moving label "net1416" from metal1 to via1 in cell cache_controller.
+Moving label "net1418" from metal1 to viali in cell cache_controller.
+Moving label "net1422" from metal2 to via2 in cell cache_controller.
+Moving label "net1518" from metal2 to via2 in cell cache_controller.
+Moving label "net1561" from metal2 to via2 in cell cache_controller.
+Moving label "net1623" from metal2 to via2 in cell cache_controller.
+Moving label "net163" from metal3 to via3 in cell cache_controller.
+Moving label "net1790" from metal2 to via2 in cell cache_controller.
+Moving label "net1837" from metal2 to via2 in cell cache_controller.
+Moving label "net239" from metal2 to via2 in cell cache_controller.
+Moving label "net260" from metal2 to via2 in cell cache_controller.
+Moving label "net2683" from metal2 to via2 in cell cache_controller.
+Moving label "net337" from metal2 to via2 in cell cache_controller.
+Moving label "net3384" from metal2 to via2 in cell cache_controller.
+Moving label "net3606" from metal1 to via1 in cell cache_controller.
+Moving label "net406" from metal2 to via2 in cell cache_controller.
+Moving label "net526" from metal2 to via2 in cell cache_controller.
+Moving label "net590" from metal2 to via2 in cell cache_controller.
+Moving label "net608" from metal2 to via2 in cell cache_controller.
+Moving label "net638" from metal2 to via2 in cell cache_controller.
+Moving label "net661" from metal2 to via2 in cell cache_controller.
+Moving label "net663" from metal2 to via2 in cell cache_controller.
+Moving label "net684" from metal2 to via1 in cell cache_controller.
+Moving label "net725" from metal2 to via2 in cell cache_controller.
+Moving label "net817" from metal1 to via1 in cell cache_controller.
+Moving label "net867" from metal2 to via1 in cell cache_controller.
+Moving label "net881" from metal1 to via1 in cell cache_controller.
+Moving label "reset" from metal2 to via2 in cell cache_controller.
+Moving label "tag_array.dirty0\[15\]" from metal1 to via1 in cell cache_controller.
+Moving label "tag_array.dirty0\[3\]" from metal1 to viali in cell cache_controller.
+Moving label "tag_array.tag0\[10\]\[10\]" from metal1 to via1 in cell cache_controller.
+Moving label "tag_array.tag0\[11\]\[14\]" from metal1 to viali in cell cache_controller.
+Moving label "tag_array.tag0\[11\]\[15\]" from metal1 to via1 in cell cache_controller.
+Moving label "tag_array.tag0\[11\]\[16\]" from metal1 to viali in cell cache_controller.
+Moving label "tag_array.tag0\[11\]\[22\]" from metal1 to viali in cell cache_controller.
+Moving label "tag_array.tag0\[11\]\[24\]" from metal1 to viali in cell cache_controller.
+Moving label "tag_array.tag0\[11\]\[9\]" from metal1 to via1 in cell cache_controller.
+Moving label "tag_array.tag0\[15\]\[14\]" from metal1 to via1 in cell cache_controller.
+Moving label "tag_array.tag0\[15\]\[19\]" from metal1 to via1 in cell cache_controller.
+Moving label "tag_array.tag0\[15\]\[21\]" from metal1 to via1 in cell cache_controller.
+Moving label "tag_array.tag0\[15\]\[23\]" from metal1 to via1 in cell cache_controller.
+Moving label "tag_array.tag0\[15\]\[5\]" from metal1 to via1 in cell cache_controller.
+Moving label "tag_array.tag0\[3\]\[11\]" from metal1 to via1 in cell cache_controller.
+Moving label "tag_array.tag0\[3\]\[13\]" from metal1 to via1 in cell cache_controller.
+Moving label "tag_array.tag0\[3\]\[17\]" from metal1 to via1 in cell cache_controller.
+Moving label "tag_array.tag0\[3\]\[1\]" from metal1 to via1 in cell cache_controller.
+Moving label "tag_array.tag0\[3\]\[20\]" from metal1 to via1 in cell cache_controller.
+Moving label "tag_array.tag0\[3\]\[2\]" from metal1 to via1 in cell cache_controller.
+Moving label "tag_array.tag0\[3\]\[8\]" from metal1 to via1 in cell cache_controller.
+Moving label "tag_array.tag0\[7\]\[14\]" from metal1 to via1 in cell cache_controller.
+Moving label "tag_array.tag0\[9\]\[16\]" from metal1 to via1 in cell cache_controller.
+Moving label "tag_array.tag1\[10\]\[22\]" from metal1 to via1 in cell cache_controller.
+Moving label "tag_array.tag1\[11\]\[0\]" from metal1 to via1 in cell cache_controller.
+Moving label "tag_array.tag1\[11\]\[14\]" from metal1 to via1 in cell cache_controller.
+Moving label "tag_array.tag1\[11\]\[18\]" from metal1 to via1 in cell cache_controller.
+Moving label "tag_array.tag1\[15\]\[11\]" from metal1 to via1 in cell cache_controller.
+Moving label "tag_array.tag1\[15\]\[12\]" from metal1 to via1 in cell cache_controller.
+Moving label "tag_array.tag1\[15\]\[21\]" from metal1 to viali in cell cache_controller.
+Moving label "tag_array.tag1\[15\]\[23\]" from metal1 to via1 in cell cache_controller.
+Moving label "tag_array.tag1\[3\]\[12\]" from metal1 to via1 in cell cache_controller.
+Moving label "tag_array.tag1\[3\]\[13\]" from metal1 to viali in cell cache_controller.
+Moving label "tag_array.tag1\[3\]\[17\]" from metal1 to via1 in cell cache_controller.
+Moving label "tag_array.tag1\[3\]\[20\]" from metal1 to viali in cell cache_controller.
+Moving label "tag_array.tag1\[3\]\[5\]" from metal1 to viali in cell cache_controller.
+Moving label "tag_array.tag1\[4\]\[4\]" from metal1 to via1 in cell cache_controller.
+Moving label "tag_array.tag1\[5\]\[11\]" from metal2 to via1 in cell cache_controller.
+Moving label "tag_array.tag1\[5\]\[24\]" from metal1 to via1 in cell cache_controller.
+Moving label "tag_array.tag1\[7\]\[10\]" from metal1 to viali in cell cache_controller.
+Moving label "tag_array.tag1\[7\]\[14\]" from metal1 to via1 in cell cache_controller.
+Moving label "tag_array.tag1\[7\]\[24\]" from metal1 to via1 in cell cache_controller.
+Moving label "tag_array.tag1\[8\]\[0\]" from metal1 to via1 in cell cache_controller.
+Moving label "tag_array.tag1\[8\]\[14\]" from metal1 to via1 in cell cache_controller.
+Moving label "tag_array.valid0\[4\]" from metal1 to via1 in cell cache_controller.
+Moving label "tag_array.valid1\[11\]" from metal1 to via1 in cell cache_controller.
+Moving label "tag_array.valid1\[15\]" from metal1 to via1 in cell cache_controller.
+Processing cache_controller
+Extracting sky130_ef_sc_hd__decap_12 into sky130_ef_sc_hd__decap_12.ext:
+Extracting sky130_fd_sc_hd__decap_3 into sky130_fd_sc_hd__decap_3.ext:
+Extracting sky130_fd_sc_hd__fill_1 into sky130_fd_sc_hd__fill_1.ext:
+Extracting sky130_fd_sc_hd__tapvpwrvgnd_1 into sky130_fd_sc_hd__tapvpwrvgnd_1.ext:
+Extracting sky130_fd_sc_hd__decap_4 into sky130_fd_sc_hd__decap_4.ext:
+Extracting sky130_fd_sc_hd__decap_6 into sky130_fd_sc_hd__decap_6.ext:
+Extracting sky130_fd_sc_hd__clkbuf_1 into sky130_fd_sc_hd__clkbuf_1.ext:
+Extracting sky130_fd_sc_hd__decap_8 into sky130_fd_sc_hd__decap_8.ext:
+Extracting sky130_fd_sc_hd__dfxtp_1 into sky130_fd_sc_hd__dfxtp_1.ext:
+Extracting sky130_fd_sc_hd__a22o_1 into sky130_fd_sc_hd__a22o_1.ext:
+Extracting sky130_fd_sc_hd__buf_4 into sky130_fd_sc_hd__buf_4.ext:
+Extracting sky130_fd_sc_hd__buf_2 into sky130_fd_sc_hd__buf_2.ext:
+Extracting sky130_fd_sc_hd__fill_2 into sky130_fd_sc_hd__fill_2.ext:
+Extracting sky130_fd_sc_hd__dlygate4sd3_1 into sky130_fd_sc_hd__dlygate4sd3_1.ext:
+Extracting sky130_fd_sc_hd__and2_1 into sky130_fd_sc_hd__and2_1.ext:
+Extracting sky130_fd_sc_hd__a21o_1 into sky130_fd_sc_hd__a21o_1.ext:
+Extracting sky130_fd_sc_hd__o21a_1 into sky130_fd_sc_hd__o21a_1.ext:
+Extracting sky130_fd_sc_hd__mux2_1 into sky130_fd_sc_hd__mux2_1.ext:
+Extracting sky130_fd_sc_hd__diode_2 into sky130_fd_sc_hd__diode_2.ext:
+Extracting sky130_fd_sc_hd__buf_6 into sky130_fd_sc_hd__buf_6.ext:
+Extracting sky130_fd_sc_hd__clkbuf_4 into sky130_fd_sc_hd__clkbuf_4.ext:
+Extracting sky130_fd_sc_hd__buf_8 into sky130_fd_sc_hd__buf_8.ext:
+Extracting sky130_fd_sc_hd__buf_1 into sky130_fd_sc_hd__buf_1.ext:
+Extracting sky130_fd_sc_hd__clkbuf_2 into sky130_fd_sc_hd__clkbuf_2.ext:
+Extracting sky130_fd_sc_hd__clkbuf_8 into sky130_fd_sc_hd__clkbuf_8.ext:
+Extracting sky130_fd_sc_hd__and2_2 into sky130_fd_sc_hd__and2_2.ext:
+Extracting sky130_fd_sc_hd__dlymetal6s2s_1 into sky130_fd_sc_hd__dlymetal6s2s_1.ext:
+Extracting sky130_fd_sc_hd__a221o_1 into sky130_fd_sc_hd__a221o_1.ext:
+Extracting sky130_fd_sc_hd__clkinv_8 into sky130_fd_sc_hd__clkinv_8.ext:
+Extracting sky130_fd_sc_hd__inv_6 into sky130_fd_sc_hd__inv_6.ext:
+Extracting sky130_fd_sc_hd__bufinv_16 into sky130_fd_sc_hd__bufinv_16.ext:
+Extracting sky130_fd_sc_hd__clkinv_2 into sky130_fd_sc_hd__clkinv_2.ext:
+Extracting sky130_fd_sc_hd__inv_8 into sky130_fd_sc_hd__inv_8.ext:
+Extracting sky130_fd_sc_hd__or2_1 into sky130_fd_sc_hd__or2_1.ext:
+Extracting sky130_fd_sc_hd__clkinvlp_4 into sky130_fd_sc_hd__clkinvlp_4.ext:
+Extracting sky130_fd_sc_hd__clkinv_4 into sky130_fd_sc_hd__clkinv_4.ext:
+Extracting sky130_fd_sc_hd__clkbuf_16 into sky130_fd_sc_hd__clkbuf_16.ext:
+Extracting sky130_fd_sc_hd__inv_12 into sky130_fd_sc_hd__inv_12.ext:
+Extracting sky130_fd_sc_hd__a31o_1 into sky130_fd_sc_hd__a31o_1.ext:
+Extracting sky130_fd_sc_hd__or4b_1 into sky130_fd_sc_hd__or4b_1.ext:
+Extracting sky130_fd_sc_hd__nand2_2 into sky130_fd_sc_hd__nand2_2.ext:
+Extracting sky130_fd_sc_hd__or3_1 into sky130_fd_sc_hd__or3_1.ext:
+Extracting sky130_fd_sc_hd__o31a_1 into sky130_fd_sc_hd__o31a_1.ext:
+Extracting sky130_fd_sc_hd__and2_4 into sky130_fd_sc_hd__and2_4.ext:
+Extracting sky130_fd_sc_hd__nand2_8 into sky130_fd_sc_hd__nand2_8.ext:
+Extracting sky130_fd_sc_hd__and2b_4 into sky130_fd_sc_hd__and2b_4.ext:
+Extracting sky130_fd_sc_hd__and2b_1 into sky130_fd_sc_hd__and2b_1.ext:
+Extracting sky130_fd_sc_hd__nand2b_2 into sky130_fd_sc_hd__nand2b_2.ext:
+Extracting sky130_fd_sc_hd__nand2_1 into sky130_fd_sc_hd__nand2_1.ext:
+Extracting sky130_fd_sc_hd__nor2_4 into sky130_fd_sc_hd__nor2_4.ext:
+Extracting sky130_fd_sc_hd__nor2_2 into sky130_fd_sc_hd__nor2_2.ext:
+Extracting sky130_fd_sc_hd__nor2_1 into sky130_fd_sc_hd__nor2_1.ext:
+Extracting sky130_fd_sc_hd__or2_2 into sky130_fd_sc_hd__or2_2.ext:
+Extracting sky130_fd_sc_hd__and3_4 into sky130_fd_sc_hd__and3_4.ext:
+Extracting sky130_fd_sc_hd__nand2b_1 into sky130_fd_sc_hd__nand2b_1.ext:
+Extracting sky130_fd_sc_hd__or4b_4 into sky130_fd_sc_hd__or4b_4.ext:
+Extracting sky130_fd_sc_hd__or4_1 into sky130_fd_sc_hd__or4_1.ext:
+Extracting sky130_fd_sc_hd__nand2b_4 into sky130_fd_sc_hd__nand2b_4.ext:
+Extracting sky130_fd_sc_hd__o31ai_2 into sky130_fd_sc_hd__o31ai_2.ext:
+Extracting sky130_fd_sc_hd__or4_4 into sky130_fd_sc_hd__or4_4.ext:
+Extracting sky130_fd_sc_hd__dfstp_1 into sky130_fd_sc_hd__dfstp_1.ext:
+Extracting sky130_fd_sc_hd__dfrtp_4 into sky130_fd_sc_hd__dfrtp_4.ext:
+Extracting sky130_fd_sc_hd__inv_2 into sky130_fd_sc_hd__inv_2.ext:
+Extracting sky130_fd_sc_hd__a21boi_1 into sky130_fd_sc_hd__a21boi_1.ext:
+Extracting sky130_fd_sc_hd__and3_1 into sky130_fd_sc_hd__and3_1.ext:
+Extracting sky130_fd_sc_hd__dfrtp_1 into sky130_fd_sc_hd__dfrtp_1.ext:
+Extracting sky130_fd_sc_hd__a31oi_2 into sky130_fd_sc_hd__a31oi_2.ext:
+Extracting sky130_fd_sc_hd__buf_12 into sky130_fd_sc_hd__buf_12.ext:
+Extracting sky130_fd_sc_hd__dfxtp_2 into sky130_fd_sc_hd__dfxtp_2.ext:
+Extracting sky130_fd_sc_hd__a221o_2 into sky130_fd_sc_hd__a221o_2.ext:
+Extracting sky130_fd_sc_hd__and2b_2 into sky130_fd_sc_hd__and2b_2.ext:
+Extracting sky130_fd_sc_hd__xor2_1 into sky130_fd_sc_hd__xor2_1.ext:
+Extracting sky130_fd_sc_hd__or2_4 into sky130_fd_sc_hd__or2_4.ext:
+Extracting sky130_fd_sc_hd__and3b_4 into sky130_fd_sc_hd__and3b_4.ext:
+Extracting sky130_fd_sc_hd__and3b_1 into sky130_fd_sc_hd__and3b_1.ext:
+Extracting sky130_fd_sc_hd__a221o_4 into sky130_fd_sc_hd__a221o_4.ext:
+Extracting sky130_fd_sc_hd__o21ai_1 into sky130_fd_sc_hd__o21ai_1.ext:
+Extracting sky130_fd_sc_hd__a211o_1 into sky130_fd_sc_hd__a211o_1.ext:
+Extracting sky130_fd_sc_hd__a2111o_1 into sky130_fd_sc_hd__a2111o_1.ext:
+Extracting sky130_fd_sc_hd__xnor2_1 into sky130_fd_sc_hd__xnor2_1.ext:
+Extracting sky130_fd_sc_hd__nor4_2 into sky130_fd_sc_hd__nor4_2.ext:
+Extracting sky130_fd_sc_hd__nor4_1 into sky130_fd_sc_hd__nor4_1.ext:
+Extracting sky130_fd_sc_hd__or3b_1 into sky130_fd_sc_hd__or3b_1.ext:
+Extracting sky130_fd_sc_hd__o41a_1 into sky130_fd_sc_hd__o41a_1.ext:
+Extracting sky130_fd_sc_hd__nor4_4 into sky130_fd_sc_hd__nor4_4.ext:
+Extracting sky130_fd_sc_hd__dlygate4sd1_1 into sky130_fd_sc_hd__dlygate4sd1_1.ext:
+Extracting sky130_fd_sc_hd__xor2_2 into sky130_fd_sc_hd__xor2_2.ext:
+Extracting sky130_fd_sc_hd__inv_16 into sky130_fd_sc_hd__inv_16.ext:
+Extracting cache_controller into cache_controller.ext:
+exttospice finished.
+Using technology "sky130A", version 1.0.493-0-g0fe599b

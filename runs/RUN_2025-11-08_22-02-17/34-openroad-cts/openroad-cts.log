@@ -1,0 +1,141 @@
+Reading timing models for corner nom_tt_025C_1v80…
+Reading timing library for the 'nom_tt_025C_1v80' corner at '/home/rg/.volare/volare/sky130/versions/0fe599b2afb6708d281543108caf8310912f54af/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib'…
+Reading timing models for corner nom_ff_n40C_1v95…
+Reading timing library for the 'nom_ff_n40C_1v95' corner at '/home/rg/.volare/volare/sky130/versions/0fe599b2afb6708d281543108caf8310912f54af/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__ff_n40C_1v95.lib'…
+Reading timing models for corner nom_ss_100C_1v60…
+Reading timing library for the 'nom_ss_100C_1v60' corner at '/home/rg/.volare/volare/sky130/versions/0fe599b2afb6708d281543108caf8310912f54af/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__ss_100C_1v60.lib'…
+Reading OpenROAD database at '/mnt/c/Users/User/Desktop/Cache_Controller/runs/RUN_2025-11-08_22-02-17/33-openroad-detailedplacement/cache_controller.odb'…
+Reading design constraints file at '/nix/store/ss2cw3sxbrwwx9jl0rrppbw4kgcmgi2n-python3-3.11.9-env/lib/python3.11/site-packages/openlane/scripts/base.sdc'…
+[INFO] Using clock clk…
+[INFO] Setting output delay to: 2.0
+[INFO] Setting input delay to: 2.0
+[INFO] Setting load to: 0.033442
+[INFO] Setting clock uncertainty to: 0.25
+[INFO] Setting clock transition to: 0.1499999999999999944488848768742172978818416595458984375
+[INFO] Setting timing derate to: 5%
+[INFO] Setting RC values…
+[INFO] Configuring cts characterization…
+[INFO] Performing clock tree synthesis…
+[INFO] Looking for the following net(s): clk
+[INFO] Running Clock Tree Synthesis…
+[INFO CTS-0050] Root buffer is sky130_fd_sc_hd__clkbuf_16.
+[INFO CTS-0051] Sink buffer is sky130_fd_sc_hd__clkbuf_8.
+[INFO CTS-0052] The following clock buffers will be used for CTS:
+                    sky130_fd_sc_hd__clkbuf_2
+                    sky130_fd_sc_hd__clkbuf_4
+                    sky130_fd_sc_hd__clkbuf_8
+[INFO CTS-0049] Characterization buffer is sky130_fd_sc_hd__clkbuf_8.
+[INFO CTS-0007] Net "clk" found for clock "clk".
+[INFO CTS-0010]  Clock net "clk" has 3117 sinks.
+[INFO CTS-0008] TritonCTS found 1 clock nets.
+[INFO CTS-0097] Characterization used 3 buffer(s) types.
+[INFO CTS-0200] 0 placement blockages have been identified.
+[INFO CTS-0201] 0 placed hard macros will be treated like blockages.
+[INFO CTS-0027] Generating H-Tree topology for net clk.
+[INFO CTS-0028]  Total number of sinks: 3117.
+[INFO CTS-0029]  Sinks will be clustered in groups of up to 25 and with maximum cluster diameter of 50.0 um.
+[INFO CTS-0030]  Number of static layers: 0.
+[INFO CTS-0020]  Wire segment unit: 13600  dbu (13 um).
+[INFO CTS-0204] A clustering solution was found from clustering size of 25 and clustering diameter of 50.
+[INFO CTS-0205] Better solution may be possible if either -sink_clustering_size, -sink_clustering_max_diameter, or both options are omitted to enable automatic clustering.
+[INFO CTS-0019]  Total number of sinks after clustering: 271.
+[INFO CTS-0024]  Normalized sink region: [(0.628309, 1.69779), (36.4982, 36.6985)].
+[INFO CTS-0025]     Width:  35.8699.
+[INFO CTS-0026]     Height: 35.0007.
+ Level 1
+    Direction: Horizontal
+    Sinks per sub-region: 136
+    Sub-region size: 17.9349 X 35.0007
+[INFO CTS-0034]     Segment length (rounded): 8.
+ Level 2
+    Direction: Vertical
+    Sinks per sub-region: 68
+    Sub-region size: 17.9349 X 17.5004
+[INFO CTS-0034]     Segment length (rounded): 8.
+ Level 3
+    Direction: Horizontal
+    Sinks per sub-region: 34
+    Sub-region size: 8.9675 X 17.5004
+[INFO CTS-0034]     Segment length (rounded): 4.
+ Level 4
+    Direction: Vertical
+    Sinks per sub-region: 17
+    Sub-region size: 8.9675 X 8.7502
+[INFO CTS-0034]     Segment length (rounded): 4.
+ Level 5
+    Direction: Horizontal
+    Sinks per sub-region: 9
+    Sub-region size: 4.4837 X 8.7502
+[INFO CTS-0034]     Segment length (rounded): 2.
+[INFO CTS-0032]  Stop criterion found. Max number of sinks is 15.
+[INFO CTS-0035]  Number of sinks covered: 271.
+[INFO CTS-0018]     Created 319 clock buffers.
+[INFO CTS-0012]     Minimum number of buffers in the clock path: 3.
+[INFO CTS-0013]     Maximum number of buffers in the clock path: 4.
+[INFO CTS-0015]     Created 319 clock nets.
+[INFO CTS-0016]     Fanout distribution for the current clock = 2:2, 3:1, 5:7, 6:7, 7:24, 8:35, 9:24, 10:33, 11:25, 12:37, 13:27, 14:26, 15:22, 16:12, 17:13, 18:2, 19:4, 20:1..
+[INFO CTS-0017]     Max level of the clock tree: 5.
+[INFO CTS-0098] Clock net "clk"
+[INFO CTS-0099]  Sinks 3364
+[INFO CTS-0100]  Leaf buffers 270
+[INFO CTS-0101]  Average sink wire length 844.43 um
+[INFO CTS-0102]  Path depth 3 - 4
+[INFO CTS-0207]  Leaf load cells 247
+[INFO] Repairing long wires on clock nets…
+[INFO RSZ-0058] Using max wire length 6335um.
+Setting global connections for newly added cells…
+[INFO] Setting global connections...
+Updating metrics…
+Cell type report:                       Count       Area
+  Fill cell                               370    1388.83
+  Tap cell                               3553    4445.51
+  Clock buffer                            362    5241.28
+  Timing Repair Buffer                   1651   11068.12
+  Inverter                                 19      71.32
+  Clock inverter                          204    2477.38
+  Sequential cell                        3117   62437.38
+  Multi-Input combinational cell         5754   57460.11
+  Total                                 15030  144589.92
+Writing OpenROAD database to '/mnt/c/Users/User/Desktop/Cache_Controller/runs/RUN_2025-11-08_22-02-17/34-openroad-cts/cache_controller.odb'…
+Writing netlist to '/mnt/c/Users/User/Desktop/Cache_Controller/runs/RUN_2025-11-08_22-02-17/34-openroad-cts/cache_controller.nl.v'…
+Writing powered netlist to '/mnt/c/Users/User/Desktop/Cache_Controller/runs/RUN_2025-11-08_22-02-17/34-openroad-cts/cache_controller.pnl.v'…
+Writing layout to '/mnt/c/Users/User/Desktop/Cache_Controller/runs/RUN_2025-11-08_22-02-17/34-openroad-cts/cache_controller.def'…
+Writing timing constraints to '/mnt/c/Users/User/Desktop/Cache_Controller/runs/RUN_2025-11-08_22-02-17/34-openroad-cts/cache_controller.sdc'…
+[INFO] Legalizing…
+Placement Analysis
+---------------------------------
+total displacement       3764.5 u
+average displacement        0.2 u
+max displacement           13.5 u
+original HPWL          361900.9 u
+legalized HPWL         368128.3 u
+delta HPWL                    2 %
+
+[INFO DPL-0020] Mirrored 2453 instances
+[INFO DPL-0021] HPWL before          368128.3 u
+[INFO DPL-0022] HPWL after           363821.4 u
+[INFO DPL-0023] HPWL delta               -1.2 %
+Setting global connections for newly added cells…
+[INFO] Setting global connections...
+Updating metrics…
+Cell type report:                       Count       Area
+  Fill cell                               370    1388.83
+  Tap cell                               3553    4445.51
+  Clock buffer                            362    5241.28
+  Timing Repair Buffer                   1651   11068.12
+  Inverter                                 19      71.32
+  Clock inverter                          204    2477.38
+  Sequential cell                        3117   62437.38
+  Multi-Input combinational cell         5754   57460.11
+  Total                                 15030  144589.92
+Writing OpenROAD database to '/mnt/c/Users/User/Desktop/Cache_Controller/runs/RUN_2025-11-08_22-02-17/34-openroad-cts/cache_controller.odb'…
+Writing netlist to '/mnt/c/Users/User/Desktop/Cache_Controller/runs/RUN_2025-11-08_22-02-17/34-openroad-cts/cache_controller.nl.v'…
+Writing powered netlist to '/mnt/c/Users/User/Desktop/Cache_Controller/runs/RUN_2025-11-08_22-02-17/34-openroad-cts/cache_controller.pnl.v'…
+Writing layout to '/mnt/c/Users/User/Desktop/Cache_Controller/runs/RUN_2025-11-08_22-02-17/34-openroad-cts/cache_controller.def'…
+Writing timing constraints to '/mnt/c/Users/User/Desktop/Cache_Controller/runs/RUN_2025-11-08_22-02-17/34-openroad-cts/cache_controller.sdc'…
+%OL_CREATE_REPORT cts.rpt
+[INFO CTS-0003] Total number of Clock Roots: 1.
+[INFO CTS-0004] Total number of Buffers Inserted: 319.
+[INFO CTS-0005] Total number of Clock Subnets: 319.
+[INFO CTS-0006] Total number of Sinks: 3117.
+%OL_END_REPORT

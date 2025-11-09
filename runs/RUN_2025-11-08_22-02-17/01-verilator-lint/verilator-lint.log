@@ -1,0 +1,12 @@
+%Warning-UNUSEDSIGNAL: src/fsm_logic.v:51:26: Signal is not used: 'addr_offset'
+                                            : ... note: In instance 'cache_controller.fsm'
+   51 |  wire [offset_width-1:0] addr_offset=cpu_addr[offset_width-1:0];
+      |                          ^~~~~~~~~~~
+                       ... For warning description see https://verilator.org/warn/UNUSEDSIGNAL?v=5.018
+                       ... Use "/* verilator lint_off UNUSEDSIGNAL */" and lint_on around source to disable this message.
+%Warning-CASEINCOMPLETE: src/fsm_logic.v:67:3: Case values incompletely covered (example pattern 0x6)
+   67 |   case(state)
+      |   ^~~~
+%Warning-CASEINCOMPLETE: src/fsm_logic.v:130:3: Case values incompletely covered (example pattern 0x6)
+  130 |   case(state)
+      |   ^~~~

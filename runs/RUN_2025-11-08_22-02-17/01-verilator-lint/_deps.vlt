@@ -1,0 +1,5 @@
+`verilator_config
+lint_off -rule DECLFILENAME
+lint_off -rule EOFNEWLINE
+lint_off -rule UNDRIVEN -file "/mnt/c/Users/User/Desktop/Cache_Controller/runs/RUN_2025-11-08_22-02-17/tmp/34641e67a34f4e0e863e4f16892aa398.bb.v"
+lint_off -rule UNUSEDSIGNAL -file "/mnt/c/Users/User/Desktop/Cache_Controller/runs/RUN_2025-11-08_22-02-17/tmp/34641e67a34f4e0e863e4f16892aa398.bb.v"

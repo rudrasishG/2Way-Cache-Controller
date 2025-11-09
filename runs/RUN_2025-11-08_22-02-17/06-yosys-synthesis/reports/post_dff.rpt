@@ -1,0 +1,40 @@
+127. Printing statistics.
+
+=== cache_controller ===
+
+   Number of wires:               8317
+   Number of wire bits:          11918
+   Number of public wires:         174
+   Number of public wire bits:    3601
+   Number of ports:                 14
+   Number of port bits:            328
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:              11751
+     $_ANDNOT_                    1083
+     $_AND_                        116
+     $_MUX_                       5921
+     $_NAND_                       500
+     $_NOR_                         18
+     $_NOT_                         25
+     $_ORNOT_                      162
+     $_OR_                         759
+     $_XOR_                         50
+     sky130_fd_sc_hd__dfrtp_2        5
+     sky130_fd_sc_hd__dfstp_2        1
+     sky130_fd_sc_hd__dfxtp_2     3111
+
+   Area for cell type $_NOT_ is unknown!
+   Area for cell type $_AND_ is unknown!
+   Area for cell type $_NAND_ is unknown!
+   Area for cell type $_OR_ is unknown!
+   Area for cell type $_NOR_ is unknown!
+   Area for cell type $_XOR_ is unknown!
+   Area for cell type $_ANDNOT_ is unknown!
+   Area for cell type $_ORNOT_ is unknown!
+   Area for cell type $_MUX_ is unknown!
+
+   Chip area for module '\cache_controller': 66329.865600
+     of which used for sequential elements: 66329.865600 (100.00%)
+

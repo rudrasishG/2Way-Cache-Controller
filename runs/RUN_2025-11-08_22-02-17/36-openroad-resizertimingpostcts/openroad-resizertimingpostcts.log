@@ -1,0 +1,241 @@
+Reading timing models for corner nom_tt_025C_1v80…
+Reading timing library for the 'nom_tt_025C_1v80' corner at '/home/rg/.volare/volare/sky130/versions/0fe599b2afb6708d281543108caf8310912f54af/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib'…
+Reading timing models for corner nom_ff_n40C_1v95…
+Reading timing library for the 'nom_ff_n40C_1v95' corner at '/home/rg/.volare/volare/sky130/versions/0fe599b2afb6708d281543108caf8310912f54af/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__ff_n40C_1v95.lib'…
+Reading timing models for corner nom_ss_100C_1v60…
+Reading timing library for the 'nom_ss_100C_1v60' corner at '/home/rg/.volare/volare/sky130/versions/0fe599b2afb6708d281543108caf8310912f54af/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__ss_100C_1v60.lib'…
+Reading OpenROAD database at '/mnt/c/Users/User/Desktop/Cache_Controller/runs/RUN_2025-11-08_22-02-17/34-openroad-cts/cache_controller.odb'…
+Reading design constraints file at '/nix/store/ss2cw3sxbrwwx9jl0rrppbw4kgcmgi2n-python3-3.11.9-env/lib/python3.11/site-packages/openlane/scripts/base.sdc'…
+[INFO] Using clock clk…
+[INFO] Setting output delay to: 2.0
+[INFO] Setting input delay to: 2.0
+[INFO] Setting load to: 0.033442
+[INFO] Setting clock uncertainty to: 0.25
+[INFO] Setting clock transition to: 0.1499999999999999944488848768742172978818416595458984375
+[INFO] Setting timing derate to: 5%
+[INFO] Setting RC values…
+[INFO RSZ-0094] Found 64 endpoints with setup violations.
+[INFO RSZ-0099] Repairing 64 out of 64 (100.00%) violating endpoints...
+   Iter   | Removed | Resized | Inserted | Cloned |  Pin  |    WNS   |   TNS      |  Viol  | Worst
+          | Buffers |  Gates  | Buffers  |  Gates | Swaps |          |            | Endpts | Endpt
+---------------------------------------------------------------------------------------------------
+        0 |       0 |       0 |        0 |      0 |     0 |   -1.605 |      -71.9 |     64 | cpu_rdata[15]
+       10 |       0 |       8 |        0 |      0 |     1 |   -0.900 |      -33.2 |     64 | cpu_rdata[15]
+       20 |       0 |      17 |        2 |      0 |     1 |   -0.766 |      -30.0 |     64 | cpu_rdata[33]
+       30 |       0 |      27 |        2 |      0 |     1 |   -0.716 |      -22.2 |     64 | cpu_rdata[4]
+       40 |       0 |      37 |        2 |      0 |     1 |   -0.487 |      -18.3 |     64 | cpu_rdata[33]
+       50 |       0 |      47 |        2 |      0 |     1 |   -0.474 |      -17.7 |     64 | cpu_rdata[49]
+       60 |       0 |      57 |        2 |      0 |     1 |   -0.442 |      -16.5 |     64 | cpu_rdata[15]
+       70 |       0 |      66 |        4 |      0 |     1 |   -0.346 |      -11.9 |     64 | cpu_rdata[21]
+       80 |       0 |      74 |        6 |      0 |     2 |   -0.311 |      -10.1 |     64 | cpu_rdata[15]
+       90 |       0 |      81 |        9 |      2 |     2 |   -0.241 |       -8.5 |     64 | cpu_rdata[15]
+      100 |       0 |      90 |        9 |      3 |     2 |   -0.202 |       -6.4 |     64 | cpu_rdata[0]
+      110 |       0 |      97 |        9 |      4 |     4 |   -0.318 |      -10.5 |     64 | cpu_rdata[15]
+      113 |       0 |      96 |       10 |      3 |     2 |   -0.209 |       -5.9 |     64 | cpu_rdata[15]
+      117 |       0 |      96 |       10 |      3 |     2 |   -0.209 |       -5.9 |     64 | cpu_rdata[15]
+      120 |       0 |      96 |       10 |      4 |     3 |   -0.298 |       -6.2 |     64 | cpu_rdata[24]
+      121 |       0 |      96 |       10 |      3 |     2 |   -0.209 |       -5.9 |     64 | cpu_rdata[15]
+      125 |       0 |      96 |       10 |      3 |     2 |   -0.209 |       -5.9 |     64 | cpu_rdata[15]
+      129 |       0 |      96 |       10 |      3 |     2 |   -0.209 |       -5.9 |     64 | cpu_rdata[15]
+      130 |       0 |      96 |       10 |      3 |     2 |   -0.209 |       -5.9 |     64 | cpu_rdata[15]
+      138 |       0 |     100 |       10 |      4 |     2 |   -0.162 |       -5.5 |     64 | cpu_rdata[24]
+      140 |       0 |     100 |       10 |      4 |     3 |   -0.188 |       -5.6 |     64 | cpu_rdata[24]
+      142 |       0 |     100 |       10 |      4 |     2 |   -0.162 |       -5.5 |     64 | cpu_rdata[24]
+      146 |       0 |     100 |       10 |      4 |     2 |   -0.162 |       -5.5 |     64 | cpu_rdata[24]
+      150 |       0 |     101 |       10 |      4 |     4 |   -0.206 |       -5.6 |     64 | cpu_rdata[42]
+      150 |       0 |     100 |       10 |      4 |     2 |   -0.162 |       -5.5 |     64 | cpu_rdata[24]
+      154 |       0 |     100 |       10 |      4 |     2 |   -0.162 |       -5.5 |     64 | cpu_rdata[24]
+      160 |       0 |     105 |       10 |      4 |     2 |   -0.168 |       -4.6 |     64 | cpu_rdata[41]
+      170 |       0 |     113 |       10 |      5 |     3 |   -0.168 |       -4.7 |     64 | cpu_rdata[24]
+      173 |       0 |     109 |       10 |      4 |     2 |   -0.162 |       -5.5 |     64 | cpu_rdata[24]
+      180 |       0 |     115 |       10 |      4 |     2 |   -0.168 |       -5.2 |     64 | cpu_rdata[24]
+      190 |       0 |     122 |       10 |      5 |     4 |   -0.168 |       -5.2 |     64 | cpu_rdata[24]
+      190 |       0 |     118 |       10 |      4 |     2 |   -0.162 |       -5.5 |     64 | cpu_rdata[24]
+      200 |       0 |     126 |       10 |      4 |     3 |   -0.168 |       -4.5 |     64 | cpu_rdata[24]
+      209 |       0 |     127 |       10 |      4 |     2 |   -0.162 |       -5.5 |     64 | cpu_rdata[24]
+      210 |       0 |     127 |       10 |      4 |     2 |   -0.162 |       -5.5 |     64 | cpu_rdata[24]
+      220 |       0 |     136 |       10 |      4 |     3 |   -0.168 |       -4.5 |     64 | cpu_rdata[24]
+      228 |       0 |     136 |       10 |      4 |     2 |   -0.162 |       -5.5 |     64 | cpu_rdata[24]
+      230 |       0 |     137 |       10 |      4 |     2 |   -0.165 |       -5.1 |     64 | cpu_rdata[15]
+      240 |       0 |     146 |       10 |      5 |     2 |   -0.296 |       -5.5 |     64 | cpu_rdata[18]
+      250 |       0 |     154 |       10 |      6 |     3 |   -0.296 |       -5.8 |     64 | cpu_rdata[18]
+      251 |       0 |     147 |       10 |      4 |     2 |   -0.162 |       -5.5 |     64 | cpu_rdata[24]
+      260 |       0 |     155 |       10 |      4 |     2 |   -0.168 |       -4.6 |     64 | cpu_rdata[24]
+      270 |       0 |     163 |       10 |      5 |     3 |   -0.168 |       -4.5 |     64 | cpu_rdata[24]
+      272 |       0 |     158 |       10 |      4 |     2 |   -0.162 |       -5.5 |     64 | cpu_rdata[24]
+      278 |       0 |     161 |       10 |      4 |     4 |   -0.162 |       -5.5 |     64 | cpu_rdata[24]
+      280 |       0 |     162 |       10 |      4 |     4 |   -0.162 |       -5.5 |     64 | cpu_rdata[24]
+      284 |       0 |     164 |       10 |      4 |     6 |   -0.162 |       -5.5 |     64 | cpu_rdata[24]
+      290 |       0 |     169 |       10 |      4 |     6 |   -0.168 |       -4.6 |     64 | cpu_rdata[41]
+      300 |       0 |     177 |       10 |      5 |     7 |   -0.168 |       -5.0 |     64 | cpu_rdata[24]
+      305 |       0 |     175 |       10 |      4 |     6 |   -0.162 |       -5.5 |     64 | cpu_rdata[24]
+      310 |       0 |     179 |       10 |      4 |     6 |   -0.165 |       -4.9 |     64 | cpu_rdata[15]
+      320 |       0 |     186 |       10 |      6 |     7 |   -0.382 |       -7.4 |     64 | cpu_rdata[26]
+      328 |       0 |     186 |       10 |      4 |     6 |   -0.162 |       -5.5 |     64 | cpu_rdata[24]
+      330 |       0 |     187 |       10 |      4 |     6 |   -0.165 |       -5.0 |     64 | cpu_rdata[15]
+      340 |       0 |     196 |       10 |      5 |     6 |   -0.296 |       -5.5 |     64 | cpu_rdata[18]
+      350 |       0 |     204 |       10 |      6 |     7 |   -0.296 |       -5.7 |     64 | cpu_rdata[18]
+      351 |       0 |     197 |       10 |      4 |     6 |   -0.162 |       -5.5 |     64 | cpu_rdata[24]
+      360 |       0 |     205 |       10 |      4 |     6 |   -0.168 |       -4.5 |     64 | cpu_rdata[24]
+      370 |       0 |     213 |       10 |      5 |     7 |   -0.168 |       -4.5 |     64 | cpu_rdata[24]
+      372 |       0 |     208 |       10 |      4 |     6 |   -0.162 |       -5.5 |     64 | cpu_rdata[24]
+      380 |       0 |     215 |       10 |      4 |     6 |   -0.168 |       -4.5 |     64 | cpu_rdata[41]
+      390 |       0 |     223 |       10 |      5 |     7 |   -0.168 |       -4.7 |     64 | cpu_rdata[24]
+      393 |       0 |     219 |       10 |      4 |     6 |   -0.162 |       -5.5 |     64 | cpu_rdata[24]
+      400 |       0 |     225 |       10 |      4 |     6 |   -0.166 |       -4.8 |     64 | cpu_rdata[24]
+      410 |       0 |     233 |       10 |      6 |     6 |   -0.296 |       -6.4 |     64 | cpu_rdata[18]
+      416 |       0 |     230 |       10 |      4 |     6 |   -0.162 |       -5.5 |     64 | cpu_rdata[24]
+      420 |       0 |     233 |       10 |      4 |     6 |   -0.162 |       -5.5 |     64 | cpu_rdata[24]
+      422 |       0 |     233 |       10 |      4 |     8 |   -0.162 |       -5.5 |     64 | cpu_rdata[24]
+      428 |       0 |     236 |       10 |      4 |     8 |   -0.162 |       -5.5 |     64 | cpu_rdata[24]
+      430 |       0 |     237 |       10 |      4 |     8 |   -0.162 |       -5.5 |     64 | cpu_rdata[24]
+      438 |       0 |     241 |       10 |      4 |     8 |   -0.203 |       -6.2 |     64 | cpu_rdata[24]
+      440 |       0 |     242 |       10 |      4 |     8 |   -0.203 |       -6.2 |     64 | cpu_rdata[24]
+      450 |       0 |     251 |       10 |      4 |     9 |   -0.210 |       -5.2 |     64 | cpu_rdata[24]
+      457 |       0 |     250 |       10 |      4 |     8 |   -0.203 |       -6.2 |     64 | cpu_rdata[24]
+      460 |       0 |     252 |       10 |      4 |     8 |   -0.205 |       -5.8 |     64 | cpu_rdata[24]
+      470 |       0 |     260 |       10 |      5 |     9 |   -0.210 |       -6.4 |     64 | cpu_rdata[24]
+      477 |       0 |     261 |       10 |      4 |     8 |   -0.203 |       -6.2 |     64 | cpu_rdata[24]
+      480 |       0 |     263 |       10 |      4 |     8 |   -0.204 |       -6.0 |     64 | cpu_rdata[24]
+      487 |       0 |     266 |       10 |      4 |     8 |   -0.203 |       -6.2 |     64 | cpu_rdata[24]
+      490 |       0 |     268 |       10 |      4 |     8 |   -0.203 |       -5.7 |     64 | cpu_rdata[24]
+      500 |       0 |     277 |       10 |      5 |     8 |   -0.296 |       -6.6 |     64 | cpu_rdata[18]
+      510 |       0 |     284 |       10 |      6 |    10 |   -0.296 |       -6.4 |     64 | cpu_rdata[18]
+      510 |       0 |     278 |       10 |      4 |     8 |   -0.203 |       -5.7 |     64 | cpu_rdata[24]
+      520 |       0 |     285 |       10 |      4 |    10 |   -0.210 |       -5.1 |     64 | cpu_rdata[24]
+      520 |       0 |     283 |       10 |      4 |     8 |   -0.203 |       -5.7 |     64 | cpu_rdata[24]
+      530 |       0 |     291 |       10 |      5 |     8 |   -0.296 |       -6.4 |     64 | cpu_rdata[18]
+      540 |       0 |     300 |       10 |      6 |     8 |   -0.296 |       -6.3 |     64 | cpu_rdata[18]
+      542 |       0 |     294 |       10 |      4 |     8 |   -0.203 |       -5.6 |     64 | cpu_rdata[24]
+      550 |       0 |     301 |       10 |      4 |     8 |   -0.207 |       -5.2 |     64 | cpu_rdata[24]
+      560 |       0 |     309 |       10 |      6 |     8 |   -0.296 |       -6.7 |     64 | cpu_rdata[18]
+      564 |       0 |     305 |       10 |      4 |     8 |   -0.203 |       -5.6 |     64 | cpu_rdata[24]
+      570 |       0 |     310 |       10 |      4 |     8 |   -0.207 |       -5.4 |     64 | cpu_rdata[24]
+      572 |       0 |     308 |       10 |      4 |     8 |   -0.203 |       -5.6 |     63 | cpu_rdata[24]
+      580 |       0 |     315 |       10 |      4 |     8 |   -0.207 |       -5.2 |     63 | cpu_rdata[24]
+      583 |       0 |     312 |       10 |      4 |     8 |   -0.203 |       -5.5 |     62 | cpu_rdata[24]
+      590 |       0 |     318 |       10 |      4 |     8 |   -0.208 |       -4.9 |     62 | cpu_rdata[24]
+      593 |       0 |     317 |       10 |      4 |     8 |   -0.203 |       -5.5 |     62 | cpu_rdata[24]
+      600 |       0 |     323 |       10 |      4 |     8 |   -0.207 |       -5.2 |     62 | cpu_rdata[24]
+      603 |       0 |     321 |       10 |      4 |     8 |   -0.203 |       -5.5 |     61 | cpu_rdata[24]
+      610 |       0 |     327 |       10 |      4 |     8 |   -0.208 |       -4.9 |     61 | cpu_rdata[24]
+      613 |       0 |     326 |       10 |      4 |     8 |   -0.203 |       -5.5 |     61 | cpu_rdata[24]
+      614 |       0 |     326 |       10 |      4 |     8 |   -0.203 |       -5.5 |     60 | cpu_rdata[24]
+      619 |       0 |     330 |       10 |      4 |     8 |   -0.203 |       -5.3 |     58 | cpu_rdata[24]
+      620 |       0 |     330 |       10 |      4 |     8 |   -0.203 |       -5.3 |     58 | cpu_rdata[24]
+      622 |       0 |     332 |       10 |      4 |     8 |   -0.203 |       -5.3 |     56 | cpu_rdata[24]
+      623 |       0 |     332 |       10 |      4 |     8 |   -0.203 |       -5.3 |     55 | cpu_rdata[24]
+      624 |       0 |     332 |       10 |      4 |     8 |   -0.203 |       -5.3 |     54 | cpu_rdata[24]
+      628 |       0 |     335 |       10 |      4 |     8 |   -0.203 |       -5.1 |     52 | cpu_rdata[24]
+      629 |       0 |     335 |       10 |      4 |     8 |   -0.203 |       -5.1 |     51 | cpu_rdata[24]
+      630 |       0 |     335 |       10 |      4 |     8 |   -0.203 |       -5.1 |     51 | cpu_rdata[24]
+      633 |       0 |     338 |       10 |      4 |     8 |   -0.203 |       -5.1 |     49 | cpu_rdata[24]
+      634 |       0 |     338 |       10 |      4 |     8 |   -0.203 |       -5.1 |     48 | cpu_rdata[24]
+      635 |       0 |     338 |       10 |      4 |     8 |   -0.203 |       -5.1 |     47 | cpu_rdata[24]
+      636 |       0 |     338 |       10 |      4 |     8 |   -0.203 |       -5.1 |     46 | cpu_rdata[24]
+      637 |       0 |     338 |       10 |      4 |     8 |   -0.203 |       -5.1 |     45 | cpu_rdata[24]
+      638 |       0 |     338 |       10 |      4 |     8 |   -0.203 |       -5.1 |     44 | cpu_rdata[24]
+      639 |       0 |     338 |       10 |      4 |     8 |   -0.203 |       -5.1 |     43 | cpu_rdata[24]
+      640 |       0 |     338 |       10 |      4 |     8 |   -0.203 |       -5.1 |     43 | cpu_rdata[24]
+      640 |       0 |     338 |       10 |      4 |     8 |   -0.203 |       -5.1 |     42 | cpu_rdata[24]
+      641 |       0 |     338 |       10 |      4 |     8 |   -0.203 |       -5.1 |     41 | cpu_rdata[24]
+      642 |       0 |     338 |       10 |      4 |     8 |   -0.203 |       -5.1 |     40 | cpu_rdata[24]
+      643 |       0 |     338 |       10 |      4 |     8 |   -0.203 |       -5.1 |     39 | cpu_rdata[24]
+      644 |       0 |     338 |       10 |      4 |     8 |   -0.203 |       -5.1 |     38 | cpu_rdata[24]
+      645 |       0 |     338 |       10 |      4 |     8 |   -0.203 |       -5.1 |     37 | cpu_rdata[24]
+      646 |       0 |     338 |       10 |      4 |     8 |   -0.203 |       -5.1 |     36 | cpu_rdata[24]
+      647 |       0 |     338 |       10 |      4 |     8 |   -0.203 |       -5.1 |     35 | cpu_rdata[24]
+      648 |       0 |     338 |       10 |      4 |     8 |   -0.203 |       -5.1 |     34 | cpu_rdata[24]
+      649 |       0 |     338 |       10 |      4 |     8 |   -0.203 |       -5.1 |     33 | cpu_rdata[24]
+      650 |       0 |     338 |       10 |      4 |     8 |   -0.203 |       -5.1 |     33 | cpu_rdata[24]
+      653 |       0 |     341 |       10 |      4 |     8 |   -0.203 |       -5.0 |     31 | cpu_rdata[24]
+     654* |       0 |     341 |       10 |      4 |     8 |   -0.203 |       -5.0 |     39 | cpu_rdata[24]
+     655* |       0 |     341 |       10 |      4 |     8 |   -0.203 |       -5.0 |     39 | cpu_rdata[24]
+     656* |       0 |     341 |       10 |      4 |     8 |   -0.203 |       -5.0 |     39 | cpu_rdata[24]
+     657* |       0 |     341 |       10 |      4 |     8 |   -0.203 |       -5.0 |     39 | cpu_rdata[24]
+     658* |       0 |     341 |       10 |      4 |     8 |   -0.203 |       -5.0 |     39 | cpu_rdata[24]
+     659* |       0 |     341 |       10 |      4 |     8 |   -0.203 |       -5.0 |     39 | cpu_rdata[24]
+     660* |       0 |     341 |       10 |      4 |     8 |   -0.203 |       -5.0 |     39 | cpu_rdata[24]
+     660* |       0 |     341 |       10 |      4 |     8 |   -0.203 |       -5.0 |     39 | cpu_rdata[24]
+     661* |       0 |     341 |       10 |      4 |     8 |   -0.203 |       -5.0 |     39 | cpu_rdata[24]
+     662* |       0 |     341 |       10 |      4 |     8 |   -0.203 |       -5.0 |     39 | cpu_rdata[24]
+     663* |       0 |     341 |       10 |      4 |     8 |   -0.203 |       -5.0 |     39 | cpu_rdata[24]
+     664* |       0 |     341 |       10 |      4 |     8 |   -0.203 |       -5.0 |     39 | cpu_rdata[24]
+     665* |       0 |     341 |       10 |      4 |     8 |   -0.203 |       -5.0 |     39 | cpu_rdata[24]
+     666* |       0 |     341 |       10 |      4 |     8 |   -0.203 |       -5.0 |     39 | cpu_rdata[24]
+     667* |       0 |     341 |       10 |      4 |     8 |   -0.203 |       -5.0 |     39 | cpu_rdata[24]
+     668* |       0 |     341 |       10 |      4 |     8 |   -0.203 |       -5.0 |     39 | cpu_rdata[24]
+     669* |       0 |     341 |       10 |      4 |     8 |   -0.203 |       -5.0 |     39 | cpu_rdata[24]
+     670* |       0 |     341 |       10 |      4 |     8 |   -0.203 |       -5.0 |     39 | cpu_rdata[24]
+     670* |       0 |     341 |       10 |      4 |     8 |   -0.203 |       -5.0 |     39 | cpu_rdata[24]
+     671* |       0 |     341 |       10 |      4 |     8 |   -0.203 |       -5.0 |     39 | cpu_rdata[24]
+     672* |       0 |     341 |       10 |      4 |     8 |   -0.203 |       -5.0 |     39 | cpu_rdata[24]
+     675* |       0 |     343 |       10 |      4 |     8 |   -0.203 |       -5.0 |     39 | cpu_rdata[24]
+     676* |       0 |     343 |       10 |      4 |     8 |   -0.203 |       -5.0 |     39 | cpu_rdata[24]
+     679* |       0 |     345 |       10 |      4 |     8 |   -0.203 |       -4.9 |     39 | cpu_rdata[24]
+     680* |       0 |     345 |       10 |      4 |     8 |   -0.203 |       -4.9 |     39 | cpu_rdata[24]
+     680* |       0 |     345 |       10 |      4 |     8 |   -0.203 |       -4.9 |     39 | cpu_rdata[24]
+     683* |       0 |     347 |       10 |      4 |     8 |   -0.203 |       -4.9 |     39 | cpu_rdata[24]
+     686* |       0 |     349 |       10 |      4 |     8 |   -0.203 |       -4.9 |     39 | cpu_rdata[24]
+     687* |       0 |     349 |       10 |      4 |     8 |   -0.203 |       -4.9 |     39 | cpu_rdata[24]
+     688* |       0 |     349 |       10 |      4 |     8 |   -0.203 |       -4.9 |     39 | cpu_rdata[24]
+     689* |       0 |     349 |       10 |      4 |     8 |   -0.203 |       -4.9 |     39 | cpu_rdata[24]
+     690* |       0 |     349 |       10 |      4 |     8 |   -0.203 |       -4.9 |     39 | cpu_rdata[24]
+     690* |       0 |     349 |       10 |      4 |     8 |   -0.203 |       -4.9 |     39 | cpu_rdata[24]
+     691* |       0 |     349 |       10 |      4 |     8 |   -0.203 |       -4.9 |     39 | cpu_rdata[24]
+     692* |       0 |     349 |       10 |      4 |     8 |   -0.203 |       -4.9 |     39 | cpu_rdata[24]
+     693* |       0 |     349 |       10 |      4 |     8 |   -0.203 |       -4.9 |     39 | cpu_rdata[24]
+     694* |       0 |     349 |       10 |      4 |     8 |   -0.203 |       -4.9 |     39 | cpu_rdata[24]
+     695* |       0 |     349 |       10 |      4 |     8 |   -0.203 |       -4.9 |     39 | cpu_rdata[24]
+     696* |       0 |     349 |       10 |      4 |     8 |   -0.203 |       -4.9 |     39 | cpu_rdata[24]
+     697* |       0 |     349 |       10 |      4 |     8 |   -0.203 |       -4.9 |     39 | cpu_rdata[24]
+     698* |       0 |     349 |       10 |      4 |     8 |   -0.203 |       -4.9 |     39 | cpu_rdata[24]
+     699* |       0 |     349 |       10 |      4 |     8 |   -0.203 |       -4.9 |     39 | cpu_rdata[24]
+     700* |       0 |     349 |       10 |      4 |     8 |   -0.203 |       -4.9 |     39 | cpu_rdata[24]
+     700* |       0 |     349 |       10 |      4 |     8 |   -0.203 |       -4.9 |     39 | cpu_rdata[24]
+    final |       0 |     349 |       10 |      4 |     8 |   -0.203 |       -4.9 |     39 | cpu_rdata[24]
+---------------------------------------------------------------------------------------------------
+[INFO RSZ-0040] Inserted 5 buffers.
+[INFO RSZ-0041] Resized 349 instances.
+[INFO RSZ-0043] Swapped pins on 8 instances.
+[INFO RSZ-0049] Cloned 4 instances.
+[WARNING RSZ-0062] Unable to repair all setup violations.
+[INFO RSZ-0046] Found 2939 endpoints with hold violations.
+Iteration | Resized | Buffers | Cloned Gates |   WNS   |   TNS   | Endpoint
+---------------------------------------------------------------------------
+        0 |       0 |       0 |            0 |  -0.133 |  -0.666 | _14347_/RESET_B
+    final |       0 |    2933 |            0 |   0.136 |   0.000 | _14348_/D
+---------------------------------------------------------------------------
+[INFO RSZ-0032] Inserted 2933 hold buffers.
+Placement Analysis
+---------------------------------
+total displacement      20055.4 u
+average displacement        1.1 u
+max displacement           21.6 u
+original HPWL          374008.9 u
+legalized HPWL         399573.0 u
+delta HPWL                    7 %
+
+[INFO DPL-0020] Mirrored 5001 instances
+[INFO DPL-0021] HPWL before          399573.0 u
+[INFO DPL-0022] HPWL after           390032.7 u
+[INFO DPL-0023] HPWL delta               -2.4 %
+[INFO] Setting RC values…
+Setting global connections for newly added cells…
+[INFO] Setting global connections...
+Updating metrics…
+Cell type report:                       Count       Area
+  Fill cell                               370    1388.83
+  Tap cell                               3553    4445.51
+  Clock buffer                            362    5241.28
+  Timing Repair Buffer                   4593   40797.88
+  Inverter                                 19      71.32
+  Clock inverter                          204    2477.38
+  Sequential cell                        3117   62446.14
+  Multi-Input combinational cell         5754   57502.65
+  Total                                 17972  174370.99
+Writing OpenROAD database to '/mnt/c/Users/User/Desktop/Cache_Controller/runs/RUN_2025-11-08_22-02-17/36-openroad-resizertimingpostcts/cache_controller.odb'…
+Writing netlist to '/mnt/c/Users/User/Desktop/Cache_Controller/runs/RUN_2025-11-08_22-02-17/36-openroad-resizertimingpostcts/cache_controller.nl.v'…
+Writing powered netlist to '/mnt/c/Users/User/Desktop/Cache_Controller/runs/RUN_2025-11-08_22-02-17/36-openroad-resizertimingpostcts/cache_controller.pnl.v'…
+Writing layout to '/mnt/c/Users/User/Desktop/Cache_Controller/runs/RUN_2025-11-08_22-02-17/36-openroad-resizertimingpostcts/cache_controller.def'…
+Writing timing constraints to '/mnt/c/Users/User/Desktop/Cache_Controller/runs/RUN_2025-11-08_22-02-17/36-openroad-resizertimingpostcts/cache_controller.sdc'…

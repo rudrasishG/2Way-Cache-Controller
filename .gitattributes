@@ -1,2 +1,2 @@
-*.v linguist-language=Verilog
+*.v.bak linguist-language=Verilog
 *.sv linguist-language=SystemVerilog
