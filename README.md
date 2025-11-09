@@ -57,3 +57,5 @@ Generated final GDSII file, verified for design rule compliance.
 Loaded the .gds file in KLayout to visualize physical layout.
 
 The layout shows all standard cells, interconnects, and I/O pins clearly.
+<img width="1424" height="862" alt="Screenshot 2025-11-09 132001" src="https://github.com/user-attachments/assets/ae8177bf-26c0-4fa4-ae73-e689f70b7167" />
+
