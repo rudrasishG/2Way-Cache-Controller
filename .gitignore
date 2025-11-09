@@ -1,0 +1,17 @@
+# OpenLane/ASIC build outputs
+runs/
+db/*.sld_design_entry.sci
+db/*.ipinfo
+*.log
+*.json
+*.txt
+*.lib
+*.v
+*.vlt
+*.sdf
+*.odb
+*.def
+*.rpt
+*.csv
+*.tcl
+*_env_*.tcl

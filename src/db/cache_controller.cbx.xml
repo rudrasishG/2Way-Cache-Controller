@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="cache_controller">
+		<CBX_INST_ENTRY INSTANCE_NAME="|cache_controller|data_array:data_array|altsyncram:data0_rtl_0" CBX_FILE_NAME="altsyncram_ahm1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|cache_controller|tag_array:tag_array|altsyncram:tag0_rtl_0" CBX_FILE_NAME="altsyncram_8gm1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|cache_controller|tag_array:tag_array|altsyncram:tag1_rtl_0" CBX_FILE_NAME="altsyncram_9gm1.tdf"/>
+	</PROJECT>
+</LOG_ROOT>

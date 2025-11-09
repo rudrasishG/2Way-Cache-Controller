@@ -1,0 +1,222 @@
+module fsm_logic#(
+	parameter address_width=32,
+	parameter index_width=4,
+	parameter offset_width=3,
+	parameter line_width=64,
+	parameter tag_width=address_width-index_width-offset_width
+)(
+ `ifdef USE_POWER_PINS
+    inout vccd1,vssd1,
+ `endif
+	input wire clk,
+	input wire reset,
+	input wire cpu_read,
+	input wire cpu_write
+	input wire [address_width-1:0] cpu_addr,
+	input wire [line_width-1:0] cpu_wdata,
+	// tag/lru output
+	input wire [tag_width-1:0] tag_out0,
+	input wire [tag_width-1:0] tag_out1,
+	input wire valid0,
+	input wire valid1,
+	input wire dirty0,
+	input wire dirty1,
+	input wire lru_out,
+	//data array output
+	input wire [line_width-1:0] data_out0,
+	input wire [line_width-1:0] data_out1,
+	//memory interface
+	input wire [line_width-1:0] mem_rdata,
+	input wire mem_ready,
+	//control outputs
+	output reg mem_read,
+	output reg mem_write,
+	output reg [address_width-1:0] mem_addr,
+	output reg [line_width-1:0] mem_wdata,
+	output reg tag_we,
+	output reg tag_way,
+	output reg [tag_width-1:0] tag_in,
+	output reg valid_in,
+	output reg dirty_in,
+	output reg data_we0,
+	output reg data_we1,
+	output reg [line_width-1:0] data_in0,
+	output reg [line_width-1:0] data_in1,
+	output reg lru_we,
+	output reg lru_in,
+	output reg [line_width-1:0] cpu_rdata,
+	output reg cpu_ready
+	);
+	// decompose address
+	wire [offset_width-1:0] addr_offset=cpu_addr[offset_width-1:0];
+	wire [index_width-1:0] addr_index=cpu_addr[offset_width+index_width-1:offset_width];
+	wire [tag_width-1:0] addr_tag=cpu_addr[address_width-1:offset_width+index_width];
+	//state encoding
+	localparam idle=3'd0;
+	localparam compare=3'd1;
+	localparam hit=3'd2;
+	localparam miss=3'd3;
+	localparam writeback=3'd4,
+	localparam allocate=3'd5;
+	
+	reg[2:0] state,next_state;
+	
+	//next state
+	always@(*) begin
+		next_state=state;
+		case(state)
+			idle: begin
+				if(cpu_read || cpu_write)
+					next_state=compare;
+			end
+			compare:begin
+				if((valid0 &&(tag_out0==addr_tag)) || (valid1 &&(tag_out1==addr_tag)))
+					next_state=hit;
+				else
+					next_state=miss;
+			end
+			hit:begin
+				next_state=idle;
+			end
+			miss:begin
+			//checking for dirty
+			if(((lru_out==1'b0)&& valid0 && dirty0)||((lru_out=1'b1)&& valid1 && dirty1))
+				next_state=writeback;
+			else
+				next_state=allocate;
+			end
+			writeback:begin
+				if(mem_ready)
+					next_state=allocate;
+				else
+					next_state=writeback;
+			end
+			allocate:begin
+				if(mem_ready)
+					next_state=idle;
+				else
+					next_state=allocate;
+			end
+		endcase
+	end
+	//state reg
+	always @(posedge cclk or posedge reset)begin
+		if(reset)
+			state<=idle;
+		else
+			state<=next_state;
+	end
+	
+	//default output values
+	always @(*)begin
+		mem_read=1'b0;
+		merm_write=1'b0;
+		mem_addr={address_width{1'b0}};
+		mem_wdata={line_width{1'b0}};
+		tag_we=1'b0;
+		tag_way=1'b0;
+		tag_in={tag_width{1'b0}};
+		valid_in=1'b0;
+		dirty_in=1'b0;
+		data_we0=1'b0;
+		data_we1=1'b0;
+		data_in0={line_width{1'b0}};
+		data_in1={line_width{1'b0}};
+		lru_we=1'b0;
+		lru_in=1'b0;
+		cpu_rdata={line_width{1'b0}};
+		cpu_ready=1'b0;
+		
+		case(state)
+			idle:begin
+			end
+			compare:begin
+			end
+			hit:begin
+				if(valid0 &&(tag_out0==addr_tag))begin
+				 if (cpu_read)begin
+					cpu_rdata=data_out0;
+				 end
+				 if(cpu_write)begin
+					data_we0=1'b1;
+					data_in0=cpu_wdata;
+					tag_we=1'b1;
+					tag_way=1'b0;
+					tag_in=tag_out0;
+					valid_in=valid0;
+					dirty_in=1'b1;
+				 end
+				 lru_we=1'b1;
+				 lru_in=1'b1;
+			   end
+				else if(valid1 &&(tag_out1==addr_tag))begin
+					if(cpu_read)begin
+						cpu_rdata=data_out1;
+					end
+					if(cpu_write)begin
+						data_we1=1'b1;
+						data_in1=cpu_wdata;
+						tag_we=1'b1;
+						tag_way=1'b1;
+						tag_in=tag_out1;
+						valid_in=valid1;
+						dirty_in=1'b1;
+					end
+					lru_we=1'b1;
+					lru_in=1'b0;
+				end
+				cpu_ready=1'b1;
+			end
+			miss:begin
+				if((lru_out==1'b0)&& valid0)begin
+					mem_addr={tag_out0,addr_index,{offset_width{1'b0}}};
+					mem_wdata=data_out0;
+				end
+				else if((lru_out==1'b1)&& valid1)begin
+					mem_addr={tag_out1,addr_index,{offset_width{1'b0}}};
+					mem_wdata=data_out1;
+				end
+			end
+			writeback:begin
+				mem_write=1'b1;
+				if(lru_out==1'b0) begin
+					mem_addr={tag_out0,addr_index,{offset_width{1'b0}}};
+					mem_wdata=data_out1;
+				end
+			end
+			allocate:begin
+				mem_read=1'b1;
+				mem_addr=cpu_addr; //base address
+				if(mem_ready)begin
+					tag_we=1'b1;
+					tag_way=(lru_out==1'b0)? 1'b0:1'b1;
+					tag_in=addr_tag;
+					valid_in=1'b1;
+					dirty_in=cpu_write? 1'b1:1'b0;
+					if(lru_out==1'b0)begin
+						data_we0=1'b1;
+						data_in0=cpu_write? cpu_wdata:mem_rdata;
+					end else begin
+						data_we1=1'b1;
+						data_in1=cpu_write? cpu_wdata:mem_rdata;
+					end
+					if(cpu_read)begin
+					cpu_rdata=mem_rdata;
+					end
+					cpu_ready=1'b1;
+					lru_we=1'b1;
+					lru_in=(lru_out==1'b0)? 1'b1:1'b0;
+				end
+			end
+		endcase
+	end
+endmodule
+
+			
+
+			
+				
+				
+
+	
+	

@@ -1,0 +1,30 @@
+module lru_array#(
+	parameter index_width=4
+)(
+ `ifdef USE_POWER_PINS
+	inout vccd1,vssd1,
+ `endif
+	input wire [index_width-1:0] index,
+	input wire clk,
+	input wire we,
+	inmput wire data_in,
+	output reg data_out
+ );
+	 reg lru_mem [0:(1<<index_width)-1]; //bit per set
+	 always@(posedge clk)begin
+			if(we) begin
+				lru_mem[index]<=data_in;
+			end
+			data_out<=lru_mem[index];
+	 end
+ `ifndef SYNTHESIS
+	integer k;
+	initial begin
+		for(k=0;k<(1<<index_width);k=k+1) begin
+			lru_mem[k]=1'b0;
+		end
+	end
+ `endif
+endmodule
+
+

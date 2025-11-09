@@ -1,0 +1,161 @@
+module cache_controller#(
+	parameter address_width=32,
+	parameter index_width=4,
+	parameter offset_width=3,
+	parameter line_width=64
+)(
+ `ifdef USE_POWER_PINS
+	inout vccd1,vssd1,
+ `endif
+	input wire clk,
+	input wire reset,
+	//cpu
+	input wire cpu_read,
+	input wire cpu_write,
+	input wire [address_width-1:0] cpu_addr,
+	input wire [line_width-1:0] cpu_wdata,
+	output wire [line_width-1:0] cpu_rdata,
+	output wire cpu_ready,
+	//memory
+	input wire [line_width-1:0] mem_rdata,
+	input wire mem_ready,
+	output wire mem_read,
+	output wire mem_write,
+	output wire [address_width-1:0] mem_addr,
+	output wire [line_width-1:0] mem_wdata
+);
+	localparam tag_width=address_width-index_width-offset_width;
+	//tag,data,lru wires
+	wire [tag_width-1:0] tag_way0,tag_way1;
+	wire valid_way0,valid_way1;
+	wire dirty_way0,dirty_way1;
+	wire [line_width-1:0] data_way0,data_way1;
+	wire lru_bit;
+	//control signals
+	wire tag_we;
+	wire tag_way;
+	wire [tag_width-1:0] tag_in;
+	wire valid_in;
+	wire dirty_in;
+	wire data_we0,data_we1;
+	wire [line_width-1:0] data_in0,data_in1;
+	wire lru_we;
+	wire lru_in;
+	wire fsm_mem_read, fsm_mem_write;
+	wire [address_width-1:0] fsm_mem_addr;
+	wire [line_width-1:0] fgsm_mem_wdata;
+	wire [line_width-1:0] fsm_cpu_rdata;
+	wire fsm_cpu_ready;
+	
+	//tag array instance
+	tag_array#(
+		.address_width(address_width),
+		.index_width(index_width),
+		.offset_width(offset_width)
+	)tag_array(
+`ifdef USE_POWER_PINS
+		.vccd1(vccd1),.vssd1(vssd1),
+`endif
+		.clk(clk),
+		.index(cpu_addr[offset_width+index_width-1:offset_width]),
+		.we(tag_we),
+		.way(tag_way),
+		.tag_in(tag_in),
+		.valid_in(valid_in),
+		.dirty_in(dirty_in),
+		.tag_out0(tag_way0),
+		.tag_out1(tag_way1),
+		.valid_out0(valid_way0),
+		.valid_out1(valid_way1),
+		.dirty_out0(dirty_way0),
+		.dirty_out1(dirty_way1)
+	);
+	//data array instance
+	data_array#(
+		.index_width(indx_width),
+		.line_width(line_width)
+	)data_array(
+`ifdef USE_POWER_PINS
+		.vccd1(vccd1),.vssd1(vssd1),
+`endif
+		.clk(clk),
+		.index(cpu_addr[offset_width+index_width-1:offset_width)],
+		.we0(data_we0),
+		.we1(dat_we1),
+		.wdata0(data_in0),
+		.wdata1(data_in1),
+		.rdata0(data_way0),
+		.rdata1(data_way1)
+	);
+	//lru array instance
+	lru_array#(
+		.index_width(index_width)
+	)lru_array(
+`ifdef USE_POWER_PINS
+		.vccd1(vccd1),.vssd1(vssd1),
+`endif
+		.clk(clk),
+		.index(cpu_addr[offset_width+index_width-1:offset_width]),
+		.we(lru_we),
+		.data_in(lru_in),
+		.data_out(lru_bit)
+	);
+	//fsm controller instance
+	fsm_logic#(
+		.address_width(address_width),
+		.index_width(index_width),
+		.offset_width(offset_width),
+		.line_width(line_width)
+	) fsm(
+	`ifdef USE_POWER_PINS
+		.vccd1(vccd1),.vssd1(vssd1),
+	`endif
+		.clk(clk),
+		.reset(reset),
+		.cpu_read(cpu_read),
+		.cpu_write(cpu_write),
+		.cpu_addr(cpu_addr),
+		.cpu_wdata(cpu_wdata),
+		.tag_out0(tag_way0),
+		.tag_out1(tag_way1),
+		.valid0(valid_way0),
+		.valid1(valid_way1),
+		.dirty0(dirty_way0),
+		.dirty1(dirty_way1),
+		.lru_out(lru_bit),
+		.data_out0(data_way0),
+		.data_out1(data_way1),
+		.mem_rdata(mem_rdata),
+		.mem_ready(mem_ready),
+		.mem_read(fsm_mem_read),
+		.mem_write(fsm_mem_write),
+		.mem_addr(fsm_mem_addr),
+		.mem_wdata(fsm_mem_wdata),
+		.tag_we(tag_we),
+		.tag_way(tag_way),
+		.tag_in(tag_in),
+		.valid_in(valid_in),
+		.dirty_in(dirty_in),
+		.data_we0(data_we0),
+		.data_we1(data_we1),
+		.data_in0(data_in0),
+		.data_in1(data_in1),
+		.lru_we(lru_we),
+		.lru_in(lru_in),
+		.cpu_rdata(fsm_cpu_rdata),
+		.cpu_ready(fsm_cpu_ready)
+	);
+	//fsm to top
+	assign mem_read=fsm_mem_read;
+	assign mem_write=fsm_mem_write;
+	assign mem_addr=fsm_mem_addr;
+	assign mem_wdata=fsm_mem_wdata;
+	assign cpu_rdata=fsm_cpu_rdata;
+	assign cpu_ready=fsm_cpu_ready;
+endmodule
+
+		
+		
+		
+		
+	

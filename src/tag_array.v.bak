@@ -1,0 +1,69 @@
+module tag_array#(
+	parameter address_width=32,
+	parameter index_width=4,
+	parameter offset_width=3,
+	parameter tag_width=address_width-index_width-offset_width
+)(
+ `ifdef USE_POWER_PINS
+	inout vccd1,vssd1,
+ `endif
+	input wire clk,
+	input wire [index_width-1:0] index,
+	input wire we,
+	input wire way,
+	input wire [tag_width-1:0] tag_in,
+	input wire valid_in,
+	input wire dirty_in,
+	output reg [tag_width-1:0] tag_out0,
+	output reg [tag_width-1:0] tag_out1,
+	output reg valid_out0,
+	output reg valid_out1,
+	output reg dirty_out0,
+	output reg dirty_out1,
+);
+	// memory array
+	reg [tag_width-1:0] tag0[0:(1<<index_width)-1];
+	reg [tag_width-1:0] tag1[0:(1<<index_width)-1];
+	reg valid0 [0:(1<<index_width)-1];
+	reg valid1[0:(1<<index_width)-1];
+	reg dirty0[0:(1<<index_width)-1];
+	reg dirty1[0:(1<<index_width)-1];
+	//read/write
+	always@(posedge clk)begin
+		//read output
+		tag_out0<=tag0[index];
+		tag_out1<=tag1[index];
+		valid_out0 <=valid0[index];
+		valid_out1<=valid1[index];
+		dirty_out0<=dirty0[index];
+		dirty_out1<=dirty1[index];
+		//write if we pos
+		if(we)begin
+			if(way==1'b0) begin
+				tag0[index] <=tag_in;
+				valid0[index]<=valid_in;
+				dirty0[index]<=dirty_in;
+			end else begin
+				tag1[index]<=tag_in;
+				valid1[index]<=valid_in;
+				dirty1[index]<=dirty_in;
+			end
+		end
+	end
+`ifndef SYNTHESIS
+	integer i;
+	initial begin
+		for(i=0;i<(1<<index_width);i=i+1)begin
+			tag[i]={tag_width{1'b0}};
+			tag[i]={tag_width{1'b0}};
+			valid0[i]=1'b0;
+			valid1[i]=1'b0;
+			dirty0[i]=1'b0;
+			dirty1[i]=1'b0;
+		end
+	end
+`endif
+endmodule
+		
+		
+	
